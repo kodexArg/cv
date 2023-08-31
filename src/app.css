@@ -1,6 +1,36 @@
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Oswald&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+  @apply font-oswald text-3xl text-white mb-6 text-center;
+  @apply drop-shadow-lg shadow-mate-800;
+}
+
+h2 {
+  @apply font-oswald text-2xl text-mate-300 text-center mt-3 mb-5;
+}
+
+h3 {
+  @apply font-oswald text-mate-400 mt-2;
+}
+
+h4 {
+  @apply font-oswald text-sm text-mate-400 mt-4 mb-1;
+}
+
+p {
+  @apply text-xs text-justify text-mate-700 mt-2 leading-relaxed;
+}
+
+
+article {
+  @apply flex flex-col w-full h-fit border-mate-100 border-b-2 pb-4;
+}
+
+i {
+  @apply mr-1;
+}

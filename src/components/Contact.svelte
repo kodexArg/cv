@@ -1,10 +1,10 @@
 <a href="https://www.linkedin.com/in/gabriel-cavedal/" target="_blank" class="flex items-center text-mate-700 hover:text-mate-400">
-  <i class="fa fa-linkedin align-middle" aria-hidden="true" />
+  <i class="fa-brands fa-linkedin align-middle" aria-hidden="true" />
   <span class="text-sm ml-2 align-middle">www.linkedin.com/in/gabriel-cavedal/</span>
 </a>
 
 <a href="https://github.com/kodexArg" target="_blank" class="flex items-center text-mate-700 hover:text-mate-400">
-  <i class="fa fa-github align-middle" aria-hidden="true"></i>
+  <i class="fa-brands fa-github align-middle" aria-hidden="true"></i>
   <span class="text-sm ml-2 align-middle">github.com/kodexArg</span>
 </a>
 
@@ -14,6 +14,6 @@
 </a>
 
 <a href="https://t.me/KodexArg" target="_blank" class="flex items-center text-mate-700 hover:text-mate-400">
-  <i class="fa fa-telegram align-middle" aria-hidden="true"></i>
+  <i class="fa-brands fa-telegram align-middle" aria-hidden="true"></i>
   <span class="text-sm ml-2 align-middle">t.me/KodexArg</span>
 </a>
