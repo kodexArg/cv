@@ -1,6 +1,25 @@
 <section>
-  <h1>HABILIDADES</h1>
+  <h1 class="w-full flex justify-center items-end text-pullover-300 text-2xl pb-5">
+    <i class="fa fa-chevron-left !text-pullover-300 !text-xl" />
+    HABILIDADES /
+    <i class="fa fa-chevron-right !text-pullover-300 !text-xl" />
+  </h1>
   <ul>
+    <li>
+      <i class="fa-solid fa-flag-usa mr-2 text-pullover-200" />Inglés
+      <ul>
+        <li>
+          <i
+            class="fa-brands fa-readme mr-1 !text-pullover-400 !text-base"
+          />Excelente
+        </li>
+        <li>
+          <i
+            class="fa-solid fa-microphone-lines mr-1 ml-0.5 !text-pullover-400 !text-base"
+          /> Avanzado (B2)
+        </li>
+      </ul>
+    </li>
     <li>
       <i class="fab fa-python" /> Python
       <ul>
@@ -41,7 +60,11 @@
                 <li>python-telegram-bot</li>
               </ul>
             </li>
-            <li>Windows (Python Tasks)</li>
+            <li>
+              Windows <ul>
+                <li>Python Tasks</li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -264,25 +287,26 @@
 
 <!-- TODO: GRAPHIC DESIGN!!!!-->
 
-<style>
+<style lang="postcss">
+  i {
+    @apply text-pullover-400 text-lg;
+  }
+
   ul {
     @apply -ml-1;
-    @apply text-mate-700 font-bold;
+    @apply text-pullover-500 font-bold;
   }
 
   ul ul {
-    @apply ml-6 mb-6;
-    @apply text-mate-600 font-normal;
+    @apply ml-6 mb-3 font-normal;
   }
 
   ul ul ul {
-    @apply mb-2 ml-2;
-    @apply text-sm text-mate-600 font-light;
+    @apply mb-1 ml-2;
+    @apply text-sm 
   }
 
   ul ul ul ul {
-    @apply text-xs italic list-["+"] text-mate-400 font-light;
+    @apply text-xs italic list-["+"] text-pullover-600 font-light;
   }
-
-
 </style>

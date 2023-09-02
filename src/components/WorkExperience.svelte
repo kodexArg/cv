@@ -88,9 +88,11 @@
   </article>
 
   <article>
-    <h3>Casino Buenos Aires:<br>"Técnico de Tragamonedas / Técnico de Sistemas"</h3>
+    <h3>Casino Buenos Aires:<br />"Técnico de Tragamonedas / Técnico de Sistemas"</h3>
     <span>2003 - 2005</span>
-    <p>Fui la segunda persona a cargo de la sala (casino) de Rivadavia, donde aprendí y capacité a otros en la configuración de tragamonedas y en brindar soluciones de sistemas.</p>
+    <p>
+      Fui la segunda persona a cargo de la sala (casino) de Rivadavia, donde aprendí y capacité a otros en la configuración de tragamonedas y en brindar soluciones de sistemas.
+    </p>
     <div>
       <h4>Mis funciones</h4>
       <ul>
@@ -112,7 +114,10 @@
   <article>
     <h3>Casino Buenos Aires: "Asistente de Tragamonedas"</h3>
     <span>Octubre de 2002 - 2003</span>
-    <p>Trabajé en San Martín de Mendoza en un casino recién formado, formando parte de un equipo reducido junto a compañeros y gerenetes.</p>
+    <p>
+      Trabajé en San Martín de Mendoza en un casino recién formado, integrando un equipo reducido junto a compañeros y gerentes que se convirtieron en compañeros de vida por muchos
+      años.
+    </p>
     <h4>Mi aprendizaje</h4>
     <ul>
       <li>Conocimientos sobre el funcionamiento interno e integral de un casino y sus sistemas.</li>

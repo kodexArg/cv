@@ -5,13 +5,29 @@
 @tailwind components;
 @tailwind utilities;
 
+section {
+  @apply flex flex-col;
+}
+
+article {
+  @apply flex flex-col w-full h-fit border-pullover-50 border-b-2 pb-4;
+}
+
+i {
+  @apply mr-1;
+}
+
 h1 {
   @apply font-oswald text-3xl text-white mb-6 text-center;
   @apply drop-shadow-lg shadow-mate-800;
 }
 
+h1 {
+  @apply font-oswald text-4xl text-mate-500 mb-3;
+}
+
 h2 {
-  @apply font-oswald text-2xl text-mate-300 text-center mt-3 mb-5;
+  @apply font-oswald text-2xl text-mate-500 text-center mt-5 mb-1;
 }
 
 h3 {
@@ -23,14 +39,9 @@ h4 {
 }
 
 p {
-  @apply text-xs text-justify text-mate-700 mt-2 leading-relaxed;
+  @apply text-xs text-justify text-mate-400 mt-2 leading-relaxed;
 }
 
-
-article {
-  @apply flex flex-col w-full h-fit border-mate-100 border-b-2 pb-4;
-}
-
-i {
-  @apply mr-1;
+button {
+  @apply text-xs text-pullover-400;
 }
