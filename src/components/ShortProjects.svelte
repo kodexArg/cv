@@ -36,7 +36,7 @@
 
     <p>
       <i class="fa-brands fa-raspberry-pi" />Sistema IoT para sensar temperatura
-      y humedad, guardar datos en ddbb remota y enviar la informacón (incluyendo
+      y humedad, guardar datos en ddbb remota y enviar la información (incluyendo
       fotos) por telegram.
     </p>
     <p>
@@ -165,7 +165,6 @@
       comfyui
     </p>
 
-    <h4 />
   </article>
 </section>
 
