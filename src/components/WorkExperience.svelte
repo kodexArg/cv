@@ -46,10 +46,10 @@
     </p>
   </article>
 
-
   <article>
     <h3>
-      Mendoza Central Entretenimiento S.A.:<br />Jefe de Organización y Sistemas
+      Mendoza Central Entretenimiento S.A.:<br />“Jefe de Organización y
+      Sistemas”
     </h3>
     <span>2005 - Diciembre 2016</span>
     <p>
@@ -169,7 +169,7 @@
 
   <article>
     <h3>
-      Casino Buenos Aires:<br />"Técnico de Tragamonedas / Técnico de Sistemas"
+      Casino Buenos Aires:<br />“Técnico de Tragamonedas / Técnico de Sistemas”
     </h3>
     <span>2003 - 2005</span>
     <p>
@@ -202,7 +202,7 @@
   </article>
 
   <article>
-    <h3>Casino Buenos Aires: "Asistente de Tragamonedas"</h3>
+    <h3>Casino Buenos Aires: “Asistente de Tragamonedas”</h3>
     <span>Octubre de 2002 - 2003</span>
     <p>
       Trabajé en San Martín de Mendoza en un casino recién formado, integrando

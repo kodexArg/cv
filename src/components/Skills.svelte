@@ -1,5 +1,7 @@
 <section>
-  <h1 class="w-full flex justify-center items-end text-pullover-300 text-2xl pb-5">
+  <h1
+    class="w-full flex justify-center items-end text-pullover-300 text-2xl pb-2"
+  >
     <i class="fa fa-chevron-left !text-pullover-300 !text-xl" />
     HABILIDADES /
     <i class="fa fa-chevron-right !text-pullover-300 !text-xl" />
@@ -39,15 +41,13 @@
         </li>
         <li>
           Ciencia de Datos <ul>
-            <li>Pandas y Numpy</li>
-            <li>Pyplot y Matplotlib</li>
-            <li>Scrapy</li>
-            <li>
-              IA <ul>
-                <li>Stable Diffusion</li>
-                <li>PyTorch</li>
-              </ul>
-            </li>
+            <ul>
+              <li>Pandas (+Numpy)</li>
+              <li>PyTorch</li>
+              <li>Pyplot y Matplotlib</li>
+              <li>Scrapy</li>
+              <li>Stable Diffusion</li>
+            </ul>
           </ul>
         </li>
         <li>
@@ -73,24 +73,38 @@
       <i class="fab fa-linux" /> Linux SysAdmin
       <ul>
         <li>
-          Distros más usadas
+          Distros usadas
           <ul>
-            <li>Debian (+Ubuntu)</li>
-            <li>Red Hat / Fedora / OEL</li>
+            <ul>
+              <li>Debian</li>
+              <li>Kubuntu</li>
+              <li>Red Hat / Fedora / OEL</li>
+            </ul>
           </ul>
         </li>
         <li>
-          Lo que más uso
+          Herramientas
           <ul>
-            <li>vim, tmux, ssh</li>
-            <li>nmap, mtr</li>
-            <li>tcpdump, ipef</li>
-            <li>ufw, firewalld</li>
-            <li>iptables, dnsmasq</li>
-            <li>ffmpeg, cvlc</li>
-            <li>Docker</li>
-            <li>Samba</li>
-            <li>Nginx</li>
+            <li>
+              Uso frecuente:
+              <ul>
+                <li>vim / tmux / ssh</li>
+              </ul>
+            </li>
+            <li>
+              Networking: <ul>
+                <li>
+                  nmap, +mtr, +tcpdump, +ipef, +ufw y firewalld, +iptables,
+                  +dnsmasq
+                </li>
+              </ul>
+            </li>
+            <li>
+              Apoyo diseño: <ul><li>ffmpeg, +cvlc</li></ul>
+            </li>
+            <li>
+              Desarrollo: <ul><li>Docker, +Samba, +Nginx</li></ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -98,16 +112,18 @@
     <li>
       <i class="fas fa-database" /> Databases
       <ul>
-        <li>MySQL / MariaDB</li>
-        <li>PostgreSQL</li>
-        <li>
-          Manejo de DDBBB:
-          <ul>
-            <li>SQL language</li>
-            <li>Django ORM</li>
-            <li>SQLAlchemy</li>
-          </ul>
-        </li>
+        <ul>
+          <li>MySQL y MariaDB</li>
+          <li>PostgreSQL</li>
+          <li>
+            Herramientas:
+            <ul>
+              <li>SQL language</li>
+              <li>Django ORM</li>
+              <li>SQLAlchemy</li>
+            </ul>
+          </li>
+        </ul>
       </ul>
     </li>
     <li>
@@ -115,12 +131,13 @@
       <ul>
         <li>Svelte (Sveltekit)</li>
         <li>
-          CSS y Frameworks
+          CSS y Frameworks:
           <ul>
-            <li>Tailwind</li>
-            <li>Flowbite</li>
-            <li>CSS</li>
-            <li>Bootstrap</li>
+            <ul>
+              <li>Tailwind</li>
+              <li>Flowbite</li>
+              <li>Bootstrap</li>
+            </ul>
           </ul>
         </li>
       </ul>
@@ -205,19 +222,15 @@
           </ul>
         </li>
         <li>
-          Gestión en sitios <ul>
+          Gestión
+          <ul>
+            <li>Telefonía IP</li>
             <li>
               Contratación ISP
               <ul>
                 <li>Selección</li>
                 <li>Negociación de contratos</li>
                 <li>Monitoreo de SLAs</li>
-              </ul>
-            </li>
-            <li>
-              Servicios Adicionales
-              <ul>
-                <li>Telefonía IP</li>
               </ul>
             </li>
           </ul>
@@ -234,7 +247,7 @@
           Gestión y Monitoreo <ul>
             <li>SNMP</li>
             <li>
-              Herramientas usadas:
+              Herramientas:
               <ul>
                 <li>Zabix</li>
                 <li>PRTG</li>
@@ -259,7 +272,7 @@
           Office 365 <ul>
             <li>
               Administración <ul>
-                <li>Usuarios</li>
+                <li>Gestión de Usuarios</li>
                 <li>Sharepoint</li>
                 <li>Teams</li>
               </ul>
@@ -272,41 +285,65 @@
       </ul>
     </li>
     <li>
-      <i class="fa fa-code" />Programación
+      <i class="fa fa-code" />Otros Lenguajes
       <ul>
-        <li>Python</li>
-        <li>SQL</li>
-        <li>JavaScript</li>
-        <li>CSS</li>
-        <li>PineScript</li>
-        <li>VBA</li>
+        <li>SQL <span class="text-xs">(avanzado)</span></li>
+        <li>
+          Bash <span class="text-xs">(avanzado)</span>
+        </li>
+        <li>JavaScript <span class="text-xs">(intermedio)</span></li>
+        <li>CSS <span class="text-xs">(intermedio)</span></li>
+        <li>Pine Script <span class="text-xs">(avanzado)</span></li>
+      </ul>
+    </li>
+    <li>
+  <i class="fa fa-palette" /> Diseño Gráfico
+  <ul>
+    <li>
+      Herramientas:
+      <ul><ul><li>Figma, +Illustrator, +AfterEffect, +Inkscape, +Sketchup</li></ul>
+        
+      </ul>
+    </li>
+    <li>
+      Conocimientos:
+      <ul><ul><li>Diseño de UX/UI</li>
+        <li>Presentaciones Empresariales</li>
+        <li>Esta currícula fue realizada sin plantilla, 100% en Svelte con Tailwind.</li></ul>
+
       </ul>
     </li>
   </ul>
+</li>
+
+  </ul>
+
 </section>
 
 <!-- TODO: GRAPHIC DESIGN!!!!-->
 
 <style lang="postcss">
   i {
-    @apply text-pullover-400 text-lg;
+    @apply text-pullover-400;
   }
 
   ul {
     @apply -ml-1;
-    @apply text-pullover-500 font-bold;
+    @apply text-pullover-500 font-bold text-base;
   }
 
   ul ul {
-    @apply ml-6 mb-3 font-normal;
+    @apply mb-5 ml-6;
+    @apply font-normal leading-none;
   }
 
   ul ul ul {
-    @apply mb-1 ml-2;
-    @apply text-sm 
+    @apply mb-3 ml-2;
+    @apply text-sm;
   }
 
   ul ul ul ul {
-    @apply text-xs italic list-["+"] text-pullover-600 font-light;
+    @apply mb-0.5;
+    @apply italic list-["+"] text-pullover-600 font-light;
   }
 </style>
