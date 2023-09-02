@@ -1,13 +1,14 @@
 <script>
-  import AboutMe from "../components/AboutMe.svelte";
   import Avatar from "../components/Avatar.svelte";
   import Contact from "../components/Contact.svelte";
-  import Education from "../components/Education.svelte";
-  import Line from "../components/Line.svelte";
-  import Projects from "../components/Projects.svelte";
   import Skills from "../components/Skills.svelte";
   import Title from "../components/Title.svelte";
-  import WorkExperience from "../components/WorkExperience.svelte";
+  import Line from "../components/Line.svelte";
+  import AboutMe from "../components/AboutMe.svelte";
+  import ShortWorkEsperience from "../components/ShortWorkEsperience.svelte";
+  import ShortEducation from "../components/ShortEducation.svelte";
+  import ShortProjects from "../components/ShortProjects.svelte";
+    import Footer from "../components/Footer.svelte";
 </script>
 
 <main class="background flex flex-col space-y-6">
@@ -22,14 +23,15 @@
         <Contact />
         <Line />
         <AboutMe />
-        <WorkExperience />
-        <Education />
-        <Projects />
+        <ShortWorkEsperience />
+        <ShortEducation />
+        <ShortProjects />
+        <Footer />
       </div>
     </div>
+
   </section>
 </main>
-
 
 <style lang="postcss">
   .a4 {
