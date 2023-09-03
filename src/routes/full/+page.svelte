@@ -26,7 +26,6 @@
         <WorkExperience />
         <ShortEducation />
         <Projects />
-        <Footer />
       </div>
     </div>
   </section>
