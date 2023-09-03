@@ -1,5 +1,5 @@
 <section>
-  <h2>Experiencia</h2>
+  <h2>Experiencia Laboral</h2>
   <article>
     <h3>Grupo AVS: “Líder de Soporte Técnico”</h3>
     <span>Diciembre 2016 - Presente</span>
@@ -53,7 +53,7 @@
     </h3>
     <span>2005 - Diciembre 2016</span>
     <p>
-      La empresa prestaba servicio de Tragamonedas, incluyendo toda la
+      La empresa prestaba servicio de Tragamonedas, incluyendo la
       infraestructura técnica, a <b>Casino de Mendoza</b> hasta el fin de la licitación
       en 2019.
     </p>
@@ -169,7 +169,7 @@
 
   <article>
     <h3>
-      Casino Buenos Aires:<br />“Técnico de Tragamonedas / Técnico de Sistemas”
+      Casino Buenos Aires:<br />“Técnico de Tragamonedas / Área Sistemas”
     </h3>
     <span>2003 - 2005</span>
     <p>
@@ -217,17 +217,42 @@
       </li>
     </ul>
   </article>
+  <article>
+    <h3>Duek 2000: “Técnico de sistemas”</h3>
+    <span>Octubre de 2099 - 2002</span>
+    <p>
+      Trabajé armando computadoras, y en la última etapa desarrollando sitios web, utilizando IIS + ASP.
+    </p>
+    <h4>Mi aprendizaje</h4>
+    <ul>
+      <li>
+        Conocimientos sobre hardware.
+      </li>
+      <li>
+        Inicio en desarrollo web.
+      </li>
+      <li>
+        Mis primeras nociones en redes e internet.
+      </li>
+    </ul>
+  </article>
 </section>
 
 <style lang="postcss">
+  section {
+    @apply border-b-2;
+  }
   article {
-    @apply overflow-hidden relative;
+    @apply mt-2;
   }
   span {
-    @apply text-xs italic font-thin text-right;
+    @apply text-xs italic text-pullover-300 text-right;
+  }
+  ul {
+    @apply text-mate-700 text-xs list-disc ml-5 leading-relaxed;
   }
 
-  li {
-    @apply text-xs text-justify list-disc ml-5 text-mate-700 leading-relaxed;
+  ul ul {
+    @apply italic list-[+] ml-2;
   }
 </style>

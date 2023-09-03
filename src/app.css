@@ -18,24 +18,24 @@ i {
 }
 
 h1 {
-  @apply font-oswald text-4xl text-mate-400 mb-2 text-center;
+  @apply font-oswald text-4xl text-mate-500 mb-2 text-center;
   @apply drop-shadow-lg shadow-mate-500;
 }
 
 h2 {
-  @apply font-oswald text-2xl text-pullover-300 text-center mt-2 mb-1;
+  @apply font-oswald text-2xl text-mate-500 text-center mt-2 mb-1;
 }
 
 h3 {
-  @apply font-oswald text-mate-400 mt-3;
+  @apply font-oswald text-mate-500 mt-3;
 }
 
 h4 {
-  @apply font-oswald text-sm text-mate-400 mt-3 mb-1;
+  @apply font-oswald text-sm text-mate-500 mt-3 mb-1 tracking-wide;
 }
 
 p {
-  @apply text-xs text-justify text-mate-700 mt-2 leading-relaxed;
+  @apply text-xs text-justify text-mate-600 mt-2 leading-relaxed;
 }
 
 button {

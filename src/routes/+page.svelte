@@ -8,7 +8,7 @@
   import ShortWorkEsperience from "../components/ShortWorkEsperience.svelte";
   import ShortEducation from "../components/ShortEducation.svelte";
   import ShortProjects from "../components/ShortProjects.svelte";
-    import Footer from "../components/Footer.svelte";
+  import Footer from "../components/Footer.svelte";
 </script>
 
 <main class="background flex flex-col space-y-6">
@@ -29,7 +29,6 @@
         <Footer />
       </div>
     </div>
-
   </section>
 </main>
 

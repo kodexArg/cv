@@ -31,7 +31,7 @@
     @apply border-b-0 -mt-2;
   }
   span {
-    @apply text-sm italic text-mate-300 text-right;
+    @apply text-sm italic text-mate-600 text-right;
   }
 
   section {
