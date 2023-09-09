@@ -1,4 +1,4 @@
-<div class="space-y-1 pt-1 pb-0.5">
+<div class="space-y-1 pt-5 pb-2">
   <a
     href="https://www.linkedin.com/in/gabriel-cavedal/"
     target="_blank"
@@ -37,3 +37,9 @@
     <span class="text-sm ml-2 align-middle">t.me/KodexArg</span>
   </a>
 </div>
+
+<style lang="postcss">
+  span {
+    @apply text-lg;
+  }
+</style>

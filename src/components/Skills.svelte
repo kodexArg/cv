@@ -1,10 +1,10 @@
 <section>
   <h1
-    class="w-full flex justify-center items-end text-pullover-300 text-2xl pb-2"
+    class="w-full flex justify-center items-end text-pullover-300 text-3xl pb-3 pt-0 mt-0"
   >
-    <i class="fa fa-chevron-left !text-pullover-300 !text-xl" />
+    <i class="fa fa-chevron-left !text-pullover-300 !text-3xl" />
     HABILIDADES /
-    <i class="fa fa-chevron-right !text-pullover-300 !text-xl" />
+    <i class="fa fa-chevron-right !text-pullover-300 !text-3xl" />
   </h1>
   <ul>
     <li>
@@ -18,7 +18,7 @@
         <li>
           <i
             class="fa-solid fa-microphone-lines mr-1 ml-0.5 !text-pullover-400 !text-base"
-          /> Avanzado (B2)
+          /> Avanzado B2
         </li>
       </ul>
     </li>
@@ -26,42 +26,26 @@
       <i class="fab fa-python" /> Python
       <ul>
         <li>
-          Backend Frameworks <ul>
-            <li>
-              Django
-              <ul>
-                <li>django-allauth</li>
-                <li>django-rest-framework</li>
-                <li>Internationalization</li>
-              </ul>
-            </li>
+          Backend Frameworks
+          <ul>
+            <li>Django</li>
             <li>Flask</li>
             <li>FastAPI</li>
           </ul>
         </li>
-        <li>
-          Ciencia de Datos <ul>
-            <ul>
-              <li>Pandas (+Numpy)</li>
-              <li>PyTorch</li>
-              <li>Pyplot y Matplotlib</li>
-              <li>Scrapy</li>
-              <li>Stable Diffusion</li>
-            </ul>
-          </ul>
-        </li>
+        <li>Ciencia de Datos</li>
         <li>
           Scripting
           <ul>
             <li>
-              Linux <ul>
-                <li>AWS Lambda (+Boto3)</li>
-                <li>Raspberry Pi</li>
-                <li>python-telegram-bot</li>
+              Linux
+              <ul>
+                <li>AWS Lambda Boto3, Raspberry Pi, python-telegram-bot</li>
               </ul>
             </li>
             <li>
-              Windows <ul>
+              Windows
+              <ul>
                 <li>Python Tasks</li>
               </ul>
             </li>
@@ -92,18 +76,20 @@
               </ul>
             </li>
             <li>
-              Networking: <ul>
+              Networking:
+              <ul>
                 <li>
-                  nmap, +mtr, +tcpdump, +ipef, +ufw y firewalld, +iptables,
-                  +dnsmasq
+                  nmap, mtr, tcpdump, ipef, ufw y firewalld, iptables, dnsmasq
                 </li>
               </ul>
             </li>
             <li>
-              Apoyo diseño: <ul><li>ffmpeg, +cvlc</li></ul>
+              Apoyo diseño:
+              <ul><li>ffmpeg, cvlc</li></ul>
             </li>
             <li>
-              Desarrollo: <ul><li>Docker, +Samba, +Nginx</li></ul>
+              Desarrollo:
+              <ul><li>Docker, Samba, Nginx</li></ul>
             </li>
           </ul>
         </li>
@@ -129,7 +115,7 @@
     <li>
       <i class="fa-brands fa-html5" /> Desarrollo Web
       <ul>
-        <li>Svelte (Sveltekit)</li>
+        <li>Svelte Sveltekit</li>
         <li>
           CSS y Frameworks:
           <ul>
@@ -146,7 +132,8 @@
       <i class="fa-brands fa-github" />Version Control
       <ul>
         <li>
-          Git & GitHub <ul>
+          Git & GitHub
+          <ul>
             <li>CI/CD GitHub Actions</li>
             <li>GitHub Pages</li>
           </ul>
@@ -160,15 +147,17 @@
           AWS
           <ul>
             <li>
-              Administración <ul>
+              Administración
+              <ul>
                 <li>IAM</li>
-                <li>Cost Management (Explorer)</li>
+                <li>Cost Management Explorer</li>
                 <li>Budgets</li>
                 <li>CloudWatch</li>
               </ul>
             </li>
             <li>
-              Arquitectura de Red <ul>
+              Arquitectura de Red
+              <ul>
                 <li>Diseño de infraestructuras</li>
                 <li>Route 53</li>
                 <li>API Gateway</li>
@@ -186,8 +175,9 @@
               </ul>
             </li>
             <li>
-              Almacenamiento <ul>
-                <li>S3 (+policies)</li>
+              Almacenamiento
+              <ul>
+                <li>S3 policies</li>
                 <li>Backups inmutables</li>
               </ul>
             </li>
@@ -196,8 +186,8 @@
         <li>
           Otros Ecosistemas:
           <ul>
-            <li>Azure (backups)</li>
-            <li>Huawei (discontinuado)</li>
+            <li>Azure backups</li>
+            <li>Huawei discontinuado</li>
           </ul>
         </li>
       </ul>
@@ -216,7 +206,7 @@
               <ul>
                 <li>IPsec</li>
                 <li>L2TP</li>
-                <li>VPN a Clouds (AWS)</li>
+                <li>VPN a Clouds AWS</li>
               </ul>
             </li>
           </ul>
@@ -244,7 +234,8 @@
           </ul>
         </li>
         <li>
-          Gestión y Monitoreo <ul>
+          Gestión y Monitoreo
+          <ul>
             <li>SNMP</li>
             <li>
               Herramientas:
@@ -269,55 +260,21 @@
         <li>Active Directory</li>
         <li>Tango Gestión</li>
         <li>
-          Office 365 <ul>
+          Office 365
+          <ul>
             <li>
-              Administración <ul>
+              Administración
+              <ul>
                 <li>Gestión de Usuarios</li>
                 <li>Sharepoint</li>
                 <li>Teams</li>
               </ul>
             </li>
-            <li>Excel Avanzado</li>
-            <li>Visio</li>
-            <li>Project</li>
           </ul>
         </li>
       </ul>
     </li>
-    <li>
-      <i class="fa fa-code" />Otros Lenguajes
-      <ul>
-        <li>SQL <span class="text-xs">(avanzado)</span></li>
-        <li>
-          Bash <span class="text-xs">(avanzado)</span>
-        </li>
-        <li>JavaScript <span class="text-xs">(intermedio)</span></li>
-        <li>CSS <span class="text-xs">(intermedio)</span></li>
-        <li>Pine Script <span class="text-xs">(avanzado)</span></li>
-      </ul>
-    </li>
-    <li>
-  <i class="fa fa-palette" /> Diseño Gráfico
-  <ul>
-    <li>
-      Herramientas:
-      <ul><ul><li>Figma, +Illustrator, +AfterEffect, +Inkscape, +Sketchup</li></ul>
-        
-      </ul>
-    </li>
-    <li>
-      Conocimientos:
-      <ul><ul><li>Diseño de UX/UI</li>
-        <li>Presentaciones Empresariales</li>
-        <li>Esta currícula fue realizada sin plantilla, 100% en Svelte con Tailwind.</li></ul>
-
-      </ul>
-    </li>
   </ul>
-</li>
-
-  </ul>
-
 </section>
 
 <!-- TODO: GRAPHIC DESIGN!!!!-->
@@ -344,6 +301,6 @@
 
   ul ul ul ul {
     @apply mb-0.5;
-    @apply italic list-["+"] text-pullover-600 font-light;
+    @apply italic list-[""] text-pullover-600 font-light;
   }
 </style>
