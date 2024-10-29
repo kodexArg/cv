@@ -35,10 +35,10 @@
 <style lang="postcss">
   .a4 {
     @apply bg-white rounded-lg shadow-lg shadow-gray-700 flex flex-col p-0.5;
-    @apply w-[33.81rem];
+    @apply w-[900px];
     /* @apply h-[47.817rem]; */
-    /* 1.414 -> aspect relation A4 */
   }
+
   .background {
     @apply font-lato;
     @apply h-full flex justify-center items-center py-4;
