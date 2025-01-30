@@ -42,11 +42,17 @@
         <li>
           Ciencia de Datos <ul>
             <ul>
-              <li>Pandas (+Numpy)</li>
-              <li>PyTorch</li>
-              <li>Pyplot y Matplotlib</li>
-              <li>Scrapy</li>
-              <li>Stable Diffusion</li>
+              <li>Análisis y Visualización</li>
+              <ul>
+                <li>Pandas (+Numpy)</li>
+                <li>Jupyter Notebooks</li>
+                <li>Pyplot y Matplotlib</li>
+              </ul>
+              <li>Machine Learning</li>
+              <ul>
+                <li>PyTorch</li>
+                <li>Stable Diffusion</li>
+              </ul>
             </ul>
           </ul>
         </li>
@@ -110,11 +116,16 @@
       </ul>
     </li>
     <li>
-      <i class="fas fa-database" /> Databases
+      <i class="fas fa-database" /> Databases & Analytics
       <ul>
         <ul>
           <li>MySQL y MariaDB</li>
           <li>PostgreSQL</li>
+          <li>Business Intelligence:</li>
+          <ul>
+            <li>Power BI</li>
+            <li>Tableau</li>
+          </ul>
           <li>
             Herramientas:
             <ul>
@@ -294,6 +305,7 @@
         <li>JavaScript <span class="text-xs">(intermedio)</span></li>
         <li>CSS <span class="text-xs">(intermedio)</span></li>
         <li>Pine Script <span class="text-xs">(avanzado)</span></li>
+        <li>Scrapy <span class="text-xs">(intermedio)</span></li>
       </ul>
     </li>
     <li>

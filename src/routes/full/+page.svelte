@@ -8,17 +8,20 @@
   import ShortEducation from "../../components/ShortEducation.svelte";
   import Projects from "../../components/Projects.svelte";
   import Footer from "../../components/Footer.svelte";
-    import WorkExperience from "../../components/WorkExperience.svelte";
+  import WorkExperience from "../../components/WorkExperience.svelte";
+  import { isMaximized } from '../../lib/stores';
+  import MaximizeButton from "../../components/MaximizeButton.svelte";
 </script>
 
+<MaximizeButton />
 <main class="background flex flex-col space-y-6">
   <section class="a4">
-    <div class="flex w-full h-full">
-      <div class="w-fib-5 bg-mate-100 rounded-l-md flex flex-col p-4 space-y-4">
+    <div class="flex w-full h-full content-wrapper">
+      <div class="left-col bg-mate-100 rounded-l-md flex flex-col p-4 space-y-4">
         <Avatar />
         <Skills />
       </div>
-      <div class="w-fib-8 flex flex-col p-4 space-y-1">
+      <div class="right-col flex flex-col p-4 space-y-1">
         <Title />
         <Contact />
         <Line />
@@ -34,13 +37,31 @@
 <style lang="postcss">
   .a4 {
     @apply bg-white rounded-lg shadow-lg shadow-gray-700 flex flex-col p-0.5;
-    @apply w-[33.81rem];
-    /* @apply h-[47.817rem]; */
-    /* 1.414 -> aspect relation A4 */
+    @apply w-[33.81rem] mx-auto mt-12;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  :global(.maximized) .a4 {
+    @apply w-[52rem];
+  }
+  .left-col {
+    @apply w-fib-5;
+    transition: all 0.3s ease;
+  }
+  .right-col {
+    @apply w-fib-8;
+    transition: all 0.3s ease;
+  }
+  :global(.maximized) .left-col {
+    @apply w-1/4;
+  }
+  :global(.maximized) .right-col {
+    @apply w-3/4;
   }
   .background {
-    @apply font-lato;
-    @apply h-full flex justify-center items-center py-4;
+    @apply font-lato min-h-screen w-full;
+    @apply flex justify-center;
+    @apply py-8 px-4 md:px-8 lg:px-12;
     @apply bg-fixed bg-gradient-to-b from-[#B8BAB7] to-mate-300;
   }
 </style>
