@@ -1,5 +1,8 @@
 <script>
   import "../app.css";
+  import { isMaximized } from '../lib/stores';
 </script>
 
-<slot />
+<div class:maximized={$isMaximized}>
+  <slot />
+</div>

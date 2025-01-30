@@ -1,5 +1,24 @@
 <section>
   <h2>Proyectos Realizados</h2>
+  
+  <article>
+    <h3>
+      Indoor Monitor IoT <i class="fa-regular fa-star text-xs ml-2"></i>
+    </h3>
+    <p>
+      <i class="fa-brands fa-github"></i> kodexArg/dj-indoor-monitor
+    </p>
+    <p>
+      API REST y aplicación web en producción desarrollada con Django 5 + DRF. 
+      Centraliza datos de múltiples Raspberry Pi distribuidos para monitorear 
+      variables ambientales en tiempo real.
+    </p>
+    <p>
+      <strong>keywords:</strong>
+      <span>django 5, drf, htmx, iot, raspberry pi, plotly, power bi, pandas</span>
+    </p>
+  </article>
+
   <article>
     <h3>
       Portal Web B2B - Estación de Servicio<i

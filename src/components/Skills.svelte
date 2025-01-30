@@ -33,7 +33,23 @@
             <li>FastAPI</li>
           </ul>
         </li>
-        <li>Ciencia de Datos</li>
+        <li>
+          Ciencia de Datos <ul>
+            <ul>
+              <li>Análisis y Visualización</li>
+              <ul>
+                <li>Pandas (+Numpy)</li>
+                <li>Jupyter Notebooks</li>
+                <li>Pyplot y Matplotlib</li>
+              </ul>
+              <li>Machine Learning</li>
+              <ul>
+                <li>PyTorch</li>
+                <li>Stable Diffusion</li>
+              </ul>
+            </ul>
+          </ul>
+        </li>
         <li>
           Scripting
           <ul>
@@ -96,11 +112,16 @@
       </ul>
     </li>
     <li>
-      <i class="fas fa-database" /> Databases
+      <i class="fas fa-database" /> Databases & Analytics
       <ul>
         <ul>
           <li>MySQL y MariaDB</li>
           <li>PostgreSQL</li>
+          <li>Business Intelligence:</li>
+          <ul>
+            <li>Power BI</li>
+            <li>Tableau</li>
+          </ul>
           <li>
             Herramientas:
             <ul>
@@ -274,6 +295,39 @@
         </li>
       </ul>
     </li>
+    <li>
+      <i class="fa fa-code" />Otros Lenguajes
+      <ul>
+        <li>SQL <span class="text-xs">(avanzado)</span></li>
+        <li>
+          Bash <span class="text-xs">(avanzado)</span>
+        </li>
+        <li>JavaScript <span class="text-xs">(intermedio)</span></li>
+        <li>CSS <span class="text-xs">(intermedio)</span></li>
+        <li>Pine Script <span class="text-xs">(avanzado)</span></li>
+        <li>Scrapy <span class="text-xs">(intermedio)</span></li>
+      </ul>
+    </li>
+    <li>
+  <i class="fa fa-palette" /> Diseño Gráfico
+  <ul>
+    <li>
+      Herramientas:
+      <ul><ul><li>Figma, +Illustrator, +AfterEffect, +Inkscape, +Sketchup</li></ul>
+        
+      </ul>
+    </li>
+    <li>
+      Conocimientos:
+      <ul><ul><li>Diseño de UX/UI</li>
+        <li>Presentaciones Empresariales</li>
+        <li>Esta currícula fue realizada sin plantilla, 100% en Svelte con Tailwind.</li></ul>
+
+      </ul>
+    </li>
+  </ul>
+</li>
+
   </ul>
 </section>
 

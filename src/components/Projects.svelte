@@ -4,6 +4,32 @@
     A continuación, un listado de los proyectos que de alguna manera se
     relacionan con el nuevo rumbo que busco para mi carrera profesional.
   </p>
+
+  <article>
+    <h3>
+      Indoor Monitor IoT <i class="fa-regular fa-star text-xs ml-2"></i>
+    </h3>
+    <p>
+      <i class="fa-brands fa-github"></i> kodexArg/dj-indoor-monitor
+    </p>
+    <p>
+      API REST y aplicación web en producción desarrollada con <b>Django 5</b> + <b>DRF</b> que 
+      centraliza datos de múltiples <b>Raspberry Pi</b> distribuidos. El sistema permite 
+      monitorear en tiempo real variables ambientales (temperatura, humedad, etc.) 
+      en distintas locaciones.
+    </p>
+    <p>
+      La plataforma está en constante evolución, incorporando nuevas funcionalidades 
+      como reportes históricos, filtros avanzados y visualización de datos mediante 
+      <b>Power BI</b>. Actualmente se utiliza para monitorear ambientes críticos 
+      que requieren control constante de variables ambientales.
+    </p>
+    <p>
+      <strong>keywords:</strong>
+      <span>django 5, drf, htmx, iot, raspberry pi, plotly, power bi, pandas</span>
+    </p>
+  </article>
+
   <article>
     <h3>
       Portal Web B2B - Estación de Servicio<i
