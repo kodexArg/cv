@@ -156,13 +156,8 @@
           <ul>
             <li>
               Administración
-              <ul>
-                <li>IAM</li>
-                <li>Cost Management Explorer</li>
-                <li>Budgets</li>
-                <li>CloudWatch</li>
-              </ul>
             </li>
+            <ul><li>IAM, Cost Management Explorer, Budgets, CloudWatch, EKS, ECS, CodePipeline, varias </li></ul>
             <li>
               Arquitectura de Red
               <ul>
@@ -185,7 +180,7 @@
             <li>
               Almacenamiento
               <ul>
-                <li>S3 policies</li>
+                <li>S3 (policies, seguridad, exposición)</li>
                 <li>Backups inmutables</li>
               </ul>
             </li>
