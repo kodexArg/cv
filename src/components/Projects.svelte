@@ -11,6 +11,10 @@
     </h3>
     <p>
       <i class="fa-brands fa-github"></i> kodexArg/dj-indoor-monitor
+      <span class="ml-3">
+        <i class="fa-solid fa-link"></i>
+        <a href="https://kcbd.grupoalvs.com" target="_blank" rel="noopener">kcbd.grupoalvs.com</a>
+      </span>
     </p>
     <p>
       API REST y aplicación web en producción desarrollada con <b>Django 5</b> + <b>DRF</b> que 
