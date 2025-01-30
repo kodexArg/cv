@@ -3,7 +3,7 @@
     class="w-full flex justify-center items-end text-pullover-300 text-3xl pb-3 pt-0 mt-0"
   >
     <i class="fa fa-chevron-left !text-pullover-300 !text-3xl" />
-    HABILIDADES /
+    SKILLS 
     <i class="fa fa-chevron-right !text-pullover-300 !text-3xl" />
   </h1>
   <ul>
@@ -71,47 +71,29 @@
     </li>
     <li>
       <i class="fab fa-linux" /> Linux SysAdmin
-      <ul>
-        <li>
-          Distros usadas
-          <ul>
-            <ul>
-              <li>Debian</li>
-              <li>Kubuntu</li>
-              <li>Red Hat / Fedora / OEL</li>
-            </ul>
-          </ul>
-        </li>
-        <li>
-          Herramientas
-          <ul>
-            <li>
-              Uso frecuente:
-              <ul>
-                <li>vim / tmux / ssh</li>
-              </ul>
-            </li>
-            <li>
-              Networking:
-              <ul>
-                <li>
-                  nmap, mtr, tcpdump, ipef, ufw y firewalld, iptables, dnsmasq
-                </li>
-              </ul>
-            </li>
-            <li>
-              Apoyo diseño:
-              <ul><li>ffmpeg, cvlc</li></ul>
-            </li>
-            <li>
-              Desarrollo:
-              <ul><li>Docker, Samba, Nginx</li></ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
+      <ul><ul>
+      <li>OpenVPN</li>
+      <li>OpenSSH</li>
+      <li>Docker</li>
+      <li>Nginx</li>
+      <li>Samba</li>
+      <li>Dominio de comandos:
+        <ul>
+        <li>nmap, mtr, tcpdump, iperf, ufw, firewalld, iptables, dnsmasq, netcat</li>
+        </ul>
+      </li>
+      <li>Video edit:
+        <ul>
+        <li>ffmpeg, cvlc</li>
+        </ul>
+      </li>
+      <li>Cloud:
+        <ul>
+        <li>aws-cli, azure-cli</li>
+        </ul>
+      </li>
+
+      </ul></ul>
       <i class="fas fa-database" /> Databases & Analytics
       <ul>
         <ul>
@@ -136,15 +118,20 @@
     <li>
       <i class="fa-brands fa-html5" /> Desarrollo Web
       <ul>
-        <li>Svelte Sveltekit</li>
         <li>
-          CSS y Frameworks:
+          Librerías y Frameworks:
           <ul>
-            <ul>
-              <li>Tailwind</li>
-              <li>Flowbite</li>
-              <li>Bootstrap</li>
-            </ul>
+            <li>HTMX</li>
+            <li>Django Templates</li>
+            <li>Astro</li>
+            <li>Svelte/SvelteKit</li>
+          </ul>
+        </li>
+        <li>
+          CSS Frameworks:
+          <ul>
+            <li>Tailwind</li>
+            <li>Bootstrap</li>
           </ul>
         </li>
       </ul>
