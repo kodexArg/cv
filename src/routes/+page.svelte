@@ -38,15 +38,17 @@
 <style lang="postcss">
   .a4 {
     @apply bg-white rounded-lg shadow-lg shadow-gray-700 flex flex-col p-0.5;
-    @apply w-[33.81rem] mx-auto mt-12;
+    @apply w-[42rem] mx-auto mt-12;
     transition: all 0.3s ease;
     transform-origin: center;
   }
+  
   :global(.maximized) .a4 {
-    @apply w-[52rem];
+    @apply w-full h-screen rounded-none shadow-none mt-0 mx-0;
   }
+  
   .left-col {
-    @apply w-fib-5;
+    @apply w-fib-5 min-w-[9.6rem];
     transition: all 0.3s ease;
   }
   .right-col {
@@ -54,15 +56,21 @@
     transition: all 0.3s ease;
   }
   :global(.maximized) .left-col {
-    @apply w-1/4;
+    @apply w-1/4 min-w-[12.8rem];
   }
   :global(.maximized) .right-col {
     @apply w-3/4;
   }
+  
   .background {
     @apply font-lato min-h-screen w-full;
     @apply flex justify-center;
     @apply py-8 px-4 md:px-8 lg:px-12;
     @apply bg-fixed bg-gradient-to-b from-[#B8BAB7] to-mate-300;
+    transition: all 0.3s ease;
+  }
+  
+  :global(.maximized) .background {
+    @apply p-0 bg-none bg-white;
   }
 </style>

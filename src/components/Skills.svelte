@@ -1,6 +1,6 @@
 <section>
   <h1
-    class="w-full flex justify-center items-end text-pullover-300 text-2xl pb-2"
+    class="w-full flex justify-center items-end text-pullover-300 text-2xl pb-2 whitespace-nowrap"
   >
     <i class="fa fa-chevron-left !text-pullover-300 !text-xl" />
     HABILIDADES /

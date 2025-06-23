@@ -19,11 +19,7 @@
       continuar.
     </p>
     <p>
-      Mis curos realizados en Platzi pueden ser consultados aquí: <b>
-        <a href="https://platzi.com/p/gcavedal/">
-          https://platzi.com/p/gcavedal/
-        </a>
-      </b>
+      <a href="https://platzi.com/p/gcavedal/">Platzi</a>
     </p>
     <p>
       Lo cierto es que soy un apasionado por el conocimiento, devorador de
