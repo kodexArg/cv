@@ -1,3 +1,7 @@
+<script>
+  import DropdownItem from './DropdownItem.svelte';
+</script>
+
 <section>
   <h1
     class="w-full flex justify-center items-end text-pullover-300 text-2xl pb-2 whitespace-nowrap"
@@ -7,329 +11,215 @@
     <i class="fa fa-chevron-right !text-pullover-300 !text-xl" />
   </h1>
   <ul>
-    <li>
-      <i class="fa-solid fa-flag-usa mr-2 text-pullover-200" />Inglés
-      <ul>
-        <li>
-          <i
-            class="fa-brands fa-readme mr-1 !text-pullover-400 !text-base"
-          />Excelente
-        </li>
-        <li>
-          <i
-            class="fa-solid fa-microphone-lines mr-1 ml-0.5 !text-pullover-400 !text-base"
-          /> Avanzado (B2)
-        </li>
-      </ul>
-    </li>
-    <li>
-      <i class="fab fa-python" /> Python
-      <ul>
-        <li>
-          Backend Frameworks <ul>
-            <li>
-              Django
-              <ul>
-                <li>django-allauth</li>
-                <li>django-rest-framework</li>
-                <li>Internationalization</li>
-              </ul>
-            </li>
-            <li>Flask</li>
-            <li>FastAPI</li>
-          </ul>
-        </li>
-        <li>
-          Ciencia de Datos <ul>
-            <ul>
-              <li>Análisis y Visualización</li>
-              <ul>
-                <li>Pandas (+Numpy)</li>
-                <li>Jupyter Notebooks</li>
-                <li>Pyplot y Matplotlib</li>
-              </ul>
-              <li>Machine Learning</li>
-              <ul>
-                <li>PyTorch</li>
-                <li>Stable Diffusion</li>
-              </ul>
-            </ul>
-          </ul>
-        </li>
-        <li>
-          Scripting
-          <ul>
-            <li>
-              Linux <ul>
-                <li>AWS Lambda (+Boto3)</li>
-                <li>Raspberry Pi</li>
-                <li>python-telegram-bot</li>
-              </ul>
-            </li>
-            <li>
-              Windows <ul>
-                <li>Python Tasks</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <i class="fab fa-linux" /> Linux SysAdmin
-      <ul>
-        <li>
-          Distros usadas
-          <ul>
-            <ul>
-              <li>Debian</li>
-              <li>Kubuntu</li>
-              <li>Red Hat / Fedora / OEL</li>
-            </ul>
-          </ul>
-        </li>
-        <li>
-          Herramientas
-          <ul>
-            <li>
-              Uso frecuente:
-              <ul>
-                <li>vim / tmux / ssh</li>
-              </ul>
-            </li>
-            <li>
-              Networking: <ul>
-                <li>
-                  nmap, +mtr, +tcpdump, +ipef, +ufw y firewalld, +iptables,
-                  +dnsmasq
-                </li>
-              </ul>
-            </li>
-            <li>
-              Apoyo diseño: <ul><li>ffmpeg, +cvlc</li></ul>
-            </li>
-            <li>
-              Desarrollo: <ul><li>Docker, +Samba, +Nginx</li></ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <i class="fas fa-database" /> Databases & Analytics
-      <ul>
-        <ul>
-          <li>MySQL y MariaDB</li>
-          <li>PostgreSQL</li>
-          <li>Business Intelligence:</li>
-          <ul>
-            <li>Power BI</li>
-            <li>Tableau</li>
-          </ul>
-          <li>
-            Herramientas:
-            <ul>
-              <li>SQL language</li>
-              <li>Django ORM</li>
-              <li>SQLAlchemy</li>
-            </ul>
-          </li>
-        </ul>
-      </ul>
-    </li>
-    <li>
-      <i class="fa-brands fa-html5" /> Desarrollo Web
-      <ul>
-        <li>Svelte (Sveltekit)</li>
-        <li>
-          CSS y Frameworks:
-          <ul>
-            <ul>
-              <li>Tailwind</li>
-              <li>Flowbite</li>
-              <li>Bootstrap</li>
-            </ul>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <i class="fa-brands fa-github" />Version Control
-      <ul>
-        <li>
-          Git & GitHub <ul>
-            <li>CI/CD GitHub Actions</li>
-            <li>GitHub Pages</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <i class="fa-solid fa-cloud" /> Cloud Computing
-      <ul>
-        <li>
-          AWS
-          <ul>
-            <li>
-              Administración <ul>
-                <li>IAM</li>
-                <li>Cost Management (Explorer)</li>
-                <li>Budgets</li>
-                <li>CloudWatch</li>
-              </ul>
-            </li>
-            <li>
-              Arquitectura de Red <ul>
-                <li>Diseño de infraestructuras</li>
-                <li>Route 53</li>
-                <li>API Gateway</li>
-                <li>Direct Connect</li>
-                <li>VPN on-premise</li>
-                <li>Seguridad</li>
-              </ul>
-            </li>
-            <li>
-              Computación
-              <ul>
-                <li>EC2</li>
-                <li>Lambda</li>
-                <li>Rekognition</li>
-              </ul>
-            </li>
-            <li>
-              Almacenamiento <ul>
-                <li>S3 (+policies)</li>
-                <li>Backups inmutables</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          Otros Ecosistemas:
-          <ul>
-            <li>Azure (backups)</li>
-            <li>Huawei (discontinuado)</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <i class="fa-solid fa-network-wired" />Redes
-      <ul>
-        <li>
-          Arquitectura
-          <ul>
-            <li>Diseño de Topologías</li>
-            <li>Seguridad en Bordes</li>
-            <li>Subredes / VLans</li>
-            <li>
-              VPN entre Sitios
-              <ul>
-                <li>IPsec</li>
-                <li>L2TP</li>
-                <li>VPN a Clouds (AWS)</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          Gestión
-          <ul>
-            <li>Telefonía IP</li>
-            <li>
-              Contratación ISP
-              <ul>
-                <li>Selección</li>
-                <li>Negociación de contratos</li>
-                <li>Monitoreo de SLAs</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          Tecnologías usadas
-          <ul>
-            <li>Mikrotik</li>
-            <li>Unifi</li>
-            <li>FortiGate</li>
-          </ul>
-        </li>
-        <li>
-          Gestión y Monitoreo <ul>
-            <li>SNMP</li>
-            <li>
-              Herramientas:
-              <ul>
-                <li>Zabix</li>
-                <li>PRTG</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <i class="fa-brands fa-raspberry-pi" />IoT
-      <ul>
-        <li>Raspberry Pi</li>
-      </ul>
-    </li>
-    <li>
-      <i class="fab fa-windows" /> Windows
-      <ul>
-        <li>Active Directory</li>
-        <li>Tango Gestión</li>
-        <li>
-          Office 365 <ul>
-            <li>
-              Administración <ul>
-                <li>Gestión de Usuarios</li>
-                <li>Sharepoint</li>
-                <li>Teams</li>
-              </ul>
-            </li>
-            <li>Excel Avanzado</li>
-            <li>Visio</li>
-            <li>Project</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <i class="fa fa-code" />Otros Lenguajes
-      <ul>
-        <li>SQL <span class="text-xs">(avanzado)</span></li>
-        <li>
-          Bash <span class="text-xs">(avanzado)</span>
-        </li>
-        <li>JavaScript <span class="text-xs">(intermedio)</span></li>
-        <li>CSS <span class="text-xs">(intermedio)</span></li>
-        <li>Pine Script <span class="text-xs">(avanzado)</span></li>
-        <li>Scrapy <span class="text-xs">(intermedio)</span></li>
-      </ul>
-    </li>
-    <li>
-  <i class="fa fa-palette" /> Diseño Gráfico
-  <ul>
-    <li>
-      Herramientas:
-      <ul><ul><li>Figma, +Illustrator, +AfterEffect, +Inkscape, +Sketchup</li></ul>
-        
-      </ul>
-    </li>
-    <li>
-      Conocimientos:
-      <ul><ul><li>Diseño de UX/UI</li>
-        <li>Presentaciones Empresariales</li>
-        <li>Esta currícula fue realizada sin plantilla, 100% en Svelte con Tailwind.</li></ul>
+    <DropdownItem title="Inglés" icon="fa-solid fa-flag-usa" hasChildren={true} level={1}>
+      <DropdownItem title="Excelente" icon="fa-brands fa-readme" level={3} />
+      <DropdownItem title="Avanzado (B2)" icon="fa-solid fa-microphone-lines" level={3} />
+    </DropdownItem>
 
-      </ul>
-    </li>
+    <DropdownItem title="Python" icon="fab fa-python" hasChildren={true} level={1}>
+      <DropdownItem title="Django" hasChildren={true} level={2}>
+        <DropdownItem title="django-allauth" level={3} />
+        <DropdownItem title="django-rest-framework" level={3} />
+        <DropdownItem title="Internationalization" level={3} />
+        <DropdownItem title="Templates & Forms" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Flask" level={2} />
+      <DropdownItem title="FastAPI" hasChildren={true} level={2}>
+        <DropdownItem title="Pydantic" level={3} />
+        <DropdownItem title="OpenAPI" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Ciencia de Datos" hasChildren={true} level={2}>
+        <DropdownItem title="Pandas & Numpy" level={3} />
+        <DropdownItem title="Jupyter Notebooks" level={3} />
+        <DropdownItem title="Pyplot & Matplotlib" level={3} />
+        <DropdownItem title="PyTorch" level={3} />
+        <DropdownItem title="Stable Diffusion" level={3} />
+      </DropdownItem>
+      <DropdownItem title="AWS Lambda" hasChildren={true} level={2}>
+        <DropdownItem title="Boto3" level={3} />
+        <DropdownItem title="Serverless Functions" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Telegram Bots" hasChildren={true} level={2}>
+        <DropdownItem title="python-telegram-bot" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Scrapy" level={2} />
+    </DropdownItem>
+
+    <DropdownItem title="Linux SysAdmin" icon="fab fa-linux" hasChildren={true} level={1}>
+      <DropdownItem title="Debian" level={2} />
+      <DropdownItem title="Kubuntu" level={2} />
+      <DropdownItem title="Red Hat / Fedora / OEL" level={2} />
+      <DropdownItem title="Docker" hasChildren={true} level={2}>
+        <DropdownItem title="Containerización" level={3} />
+        <DropdownItem title="Docker Compose" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Nginx" hasChildren={true} level={2}>
+        <DropdownItem title="Reverse Proxy" level={3} />
+        <DropdownItem title="Load Balancing" level={3} />
+      </DropdownItem>
+      <DropdownItem title="vim / tmux / ssh" level={2} />
+      <DropdownItem title="Networking Tools" hasChildren={true} level={2}>
+        <DropdownItem title="nmap" level={3} />
+        <DropdownItem title="tcpdump" level={3} />
+        <DropdownItem title="iptables" level={3} />
+        <DropdownItem title="dnsmasq" level={3} />
+      </DropdownItem>
+      <DropdownItem title="ffmpeg" level={2} />
+      <DropdownItem title="Samba" level={2} />
+    </DropdownItem>
+
+    <DropdownItem title="Databases & Analytics" icon="fas fa-database" hasChildren={true} level={1}>
+      <DropdownItem title="MySQL / MariaDB" level={2} />
+      <DropdownItem title="PostgreSQL" level={2} />
+      <DropdownItem title="Power BI" hasChildren={true} level={2}>
+        <DropdownItem title="DAX" level={3} />
+        <DropdownItem title="Power Query" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Tableau" level={2} />
+      <DropdownItem title="SQL" hasChildren={true} level={2}>
+        <DropdownItem title="Complex Queries" level={3} />
+        <DropdownItem title="Stored Procedures" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Django ORM" level={2} />
+      <DropdownItem title="SQLAlchemy" level={2} />
+    </DropdownItem>
+
+    <DropdownItem title="Desarrollo Web" icon="fa-brands fa-html5" hasChildren={true} level={1}>
+      <DropdownItem title="Svelte" hasChildren={true} level={2}>
+        <DropdownItem title="SvelteKit" level={3} />
+        <DropdownItem title="Reactive Programming" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Tailwind CSS" hasChildren={true} level={2}>
+        <DropdownItem title="Utility-first CSS" level={3} />
+        <DropdownItem title="Responsive Design" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Flowbite" level={2} />
+      <DropdownItem title="Bootstrap" level={2} />
+      <DropdownItem title="JavaScript" hasChildren={true} level={2}>
+        <DropdownItem title="ES6+" level={3} />
+        <DropdownItem title="DOM Manipulation" level={3} />
+      </DropdownItem>
+    </DropdownItem>
+
+    <DropdownItem title="Version Control" icon="fa-brands fa-github" hasChildren={true} level={1}>
+      <DropdownItem title="Git" hasChildren={true} level={2}>
+        <DropdownItem title="Branching Strategies" level={3} />
+        <DropdownItem title="Merge Conflicts" level={3} />
+      </DropdownItem>
+      <DropdownItem title="GitHub Actions" hasChildren={true} level={2}>
+        <DropdownItem title="CI/CD Pipelines" level={3} />
+        <DropdownItem title="Automated Testing" level={3} />
+      </DropdownItem>
+      <DropdownItem title="GitHub Pages" level={2} />
+    </DropdownItem>
+
+    <DropdownItem title="Cloud Computing" icon="fa-solid fa-cloud" hasChildren={true} level={1}>
+      <DropdownItem title="AWS IAM" hasChildren={true} level={2}>
+        <DropdownItem title="User Management" level={3} />
+        <DropdownItem title="Policies & Roles" level={3} />
+      </DropdownItem>
+      <DropdownItem title="AWS EC2" hasChildren={true} level={2}>
+        <DropdownItem title="Instance Management" level={3} />
+        <DropdownItem title="Security Groups" level={3} />
+      </DropdownItem>
+      <DropdownItem title="AWS S3" hasChildren={true} level={2}>
+        <DropdownItem title="Bucket Policies" level={3} />
+        <DropdownItem title="Lifecycle Management" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Route 53" level={2} />
+      <DropdownItem title="API Gateway" level={2} />
+      <DropdownItem title="CloudWatch" hasChildren={true} level={2}>
+        <DropdownItem title="Monitoring" level={3} />
+        <DropdownItem title="Alarms" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Cost Management" level={2} />
+      <DropdownItem title="Azure Backups" level={2} />
+    </DropdownItem>
+
+    <DropdownItem title="Redes" icon="fa-solid fa-network-wired" hasChildren={true} level={1}>
+      <DropdownItem title="Mikrotik" hasChildren={true} level={2}>
+        <DropdownItem title="RouterOS" level={3} />
+        <DropdownItem title="Scripting" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Unifi" level={2} />
+      <DropdownItem title="FortiGate" hasChildren={true} level={2}>
+        <DropdownItem title="Firewall Rules" level={3} />
+        <DropdownItem title="VPN Setup" level={3} />
+      </DropdownItem>
+      <DropdownItem title="VPN Technologies" hasChildren={true} level={2}>
+        <DropdownItem title="IPsec" level={3} />
+        <DropdownItem title="L2TP" level={3} />
+        <DropdownItem title="Site-to-Site" level={3} />
+      </DropdownItem>
+      <DropdownItem title="SNMP" level={2} />
+      <DropdownItem title="Zabbix" level={2} />
+      <DropdownItem title="PRTG" level={2} />
+      <DropdownItem title="Telefonía IP" level={2} />
+    </DropdownItem>
+
+    <DropdownItem title="IoT" icon="fa-brands fa-raspberry-pi" hasChildren={true} level={1}>
+      <DropdownItem title="Raspberry Pi" hasChildren={true} level={2}>
+        <DropdownItem title="GPIO Programming" level={3} />
+        <DropdownItem title="Sensors Integration" level={3} />
+      </DropdownItem>
+    </DropdownItem>
+
+    <DropdownItem title="Windows" icon="fab fa-windows" hasChildren={true} level={1}>
+      <DropdownItem title="Active Directory" hasChildren={true} level={2}>
+        <DropdownItem title="User Management" level={3} />
+        <DropdownItem title="Group Policies" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Office 365" hasChildren={true} level={2}>
+        <DropdownItem title="SharePoint" level={3} />
+        <DropdownItem title="Teams Administration" level={3} />
+        <DropdownItem title="Exchange Online" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Excel Avanzado" hasChildren={true} level={2}>
+        <DropdownItem title="Macros VBA" level={3} />
+        <DropdownItem title="Power Query" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Visio" level={2} />
+      <DropdownItem title="Project" level={2} />
+      <DropdownItem title="Tango Gestión" level={2} />
+    </DropdownItem>
+
+    <DropdownItem title="Otros Lenguajes" icon="fa fa-code" hasChildren={true} level={1}>
+      <DropdownItem title="SQL" hasChildren={true} level={2}>
+        <DropdownItem title="Nivel avanzado" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Bash" hasChildren={true} level={2}>
+        <DropdownItem title="Nivel avanzado" level={3} />
+        <DropdownItem title="Scripting automation" level={3} />
+      </DropdownItem>
+      <DropdownItem title="JavaScript" hasChildren={true} level={2}>
+        <DropdownItem title="Nivel intermedio" level={3} />
+      </DropdownItem>
+      <DropdownItem title="CSS" hasChildren={true} level={2}>
+        <DropdownItem title="Nivel intermedio" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Pine Script" hasChildren={true} level={2}>
+        <DropdownItem title="Nivel avanzado" level={3} />
+        <DropdownItem title="Trading Indicators" level={3} />
+      </DropdownItem>
+    </DropdownItem>
+
+    <DropdownItem title="Diseño Gráfico" icon="fa fa-palette" hasChildren={true} level={1}>
+      <DropdownItem title="Figma" hasChildren={true} level={2}>
+        <DropdownItem title="UI/UX Design" level={3} />
+        <DropdownItem title="Prototyping" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Illustrator" level={2} />
+      <DropdownItem title="After Effects" hasChildren={true} level={2}>
+        <DropdownItem title="Motion Graphics" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Inkscape" level={2} />
+      <DropdownItem title="SketchUp" level={2} />
+      <DropdownItem title="Presentaciones Empresariales" hasChildren={true} level={2}>
+        <DropdownItem title="PowerPoint Avanzado" level={3} />
+        <DropdownItem title="Storytelling Visual" level={3} />
+      </DropdownItem>
+    </DropdownItem>
   </ul>
-</li>
-
-  </ul>
-
 </section>
 
 <!-- TODO: GRAPHIC DESIGN!!!!-->
