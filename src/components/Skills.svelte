@@ -23,11 +23,14 @@
         <DropdownItem title="Internationalization" level={3} />
         <DropdownItem title="Templates & Forms" level={3} />
       </DropdownItem>
-      <DropdownItem title="Flask" level={2} />
-      <DropdownItem title="FastAPI" hasChildren={true} level={2}>
+      
+      <DropdownItem title="API Frameworks" hasChildren={true} level={2}>
+        <DropdownItem title="Flask" level={3} />
+        <DropdownItem title="FastAPI" level={3} />
         <DropdownItem title="Pydantic" level={3} />
         <DropdownItem title="OpenAPI" level={3} />
       </DropdownItem>
+      
       <DropdownItem title="Ciencia de Datos" hasChildren={true} level={2}>
         <DropdownItem title="Pandas & Numpy" level={3} />
         <DropdownItem title="Jupyter Notebooks" level={3} />
@@ -35,37 +38,74 @@
         <DropdownItem title="PyTorch" level={3} />
         <DropdownItem title="Stable Diffusion" level={3} />
       </DropdownItem>
-      <DropdownItem title="AWS Lambda" hasChildren={true} level={2}>
-        <DropdownItem title="Boto3" level={3} />
-        <DropdownItem title="Serverless Functions" level={3} />
-      </DropdownItem>
-      <DropdownItem title="Telegram Bots" hasChildren={true} level={2}>
+      
+      <DropdownItem title="Automation & Bots" hasChildren={true} level={2}>
+        <DropdownItem title="Scrapy" level={3} />
         <DropdownItem title="python-telegram-bot" level={3} />
+        <DropdownItem title="Web Scraping" level={3} />
       </DropdownItem>
-      <DropdownItem title="Scrapy" level={2} />
     </DropdownItem>
 
     <DropdownItem title="Linux SysAdmin" icon="fab fa-linux" hasChildren={true} level={1}>
-      <DropdownItem title="Debian" level={2} />
-      <DropdownItem title="Kubuntu" level={2} />
-      <DropdownItem title="Red Hat / Fedora / OEL" level={2} />
-      <DropdownItem title="Docker" hasChildren={true} level={2}>
-        <DropdownItem title="Containerización" level={3} />
+      <DropdownItem title="Distribuciones" hasChildren={true} level={2}>
+        <DropdownItem title="Debian" level={3} />
+        <DropdownItem title="Kubuntu" level={3} />
+        <DropdownItem title="Red Hat / Fedora / OEL" level={3} />
+      </DropdownItem>
+      
+      <DropdownItem title="Containerización" hasChildren={true} level={2}>
+        <DropdownItem title="Docker" level={3} />
         <DropdownItem title="Docker Compose" level={3} />
       </DropdownItem>
-      <DropdownItem title="Nginx" hasChildren={true} level={2}>
+      
+      <DropdownItem title="Web Server" hasChildren={true} level={2}>
+        <DropdownItem title="Nginx" level={3} />
         <DropdownItem title="Reverse Proxy" level={3} />
         <DropdownItem title="Load Balancing" level={3} />
       </DropdownItem>
-      <DropdownItem title="vim / tmux / ssh" level={2} />
-      <DropdownItem title="Networking Tools" hasChildren={true} level={2}>
+      
+      <DropdownItem title="Network Tools" hasChildren={true} level={2}>
+        <DropdownItem title="ssh" level={3} />
         <DropdownItem title="nmap" level={3} />
         <DropdownItem title="tcpdump" level={3} />
         <DropdownItem title="iptables" level={3} />
         <DropdownItem title="dnsmasq" level={3} />
       </DropdownItem>
-      <DropdownItem title="ffmpeg" level={2} />
-      <DropdownItem title="Samba" level={2} />
+      
+      <DropdownItem title="Herramientas Varias" hasChildren={true} level={2}>
+        <DropdownItem title="vim" level={3} />
+        <DropdownItem title="tmux" level={3} />
+        <DropdownItem title="ffmpeg" level={3} />
+        <DropdownItem title="Samba" level={3} />
+      </DropdownItem>
+    </DropdownItem>
+
+    <DropdownItem title="Cloud Computing" icon="fa-solid fa-cloud" hasChildren={true} level={1}>
+      <DropdownItem title="AWS IAM" hasChildren={true} level={2}>
+        <DropdownItem title="User Management" level={3} />
+        <DropdownItem title="Policies & Roles" level={3} />
+      </DropdownItem>
+      <DropdownItem title="AWS EC2" hasChildren={true} level={2}>
+        <DropdownItem title="Instance Management" level={3} />
+        <DropdownItem title="Security Groups" level={3} />
+      </DropdownItem>
+      <DropdownItem title="AWS Lambda" hasChildren={true} level={2}>
+        <DropdownItem title="Boto3" level={3} />
+        <DropdownItem title="Serverless Functions" level={3} />
+        <DropdownItem title="Python Integration" level={3} />
+      </DropdownItem>
+      <DropdownItem title="AWS S3" hasChildren={true} level={2}>
+        <DropdownItem title="Bucket Policies" level={3} />
+        <DropdownItem title="Lifecycle Management" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Route 53" level={2} />
+      <DropdownItem title="API Gateway" level={2} />
+      <DropdownItem title="CloudWatch" hasChildren={true} level={2}>
+        <DropdownItem title="Monitoring" level={3} />
+        <DropdownItem title="Alarms" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Cost Management" level={2} />
+      <DropdownItem title="Azure Backups" level={2} />
     </DropdownItem>
 
     <DropdownItem title="Databases & Analytics" icon="fas fa-database" hasChildren={true} level={1}>
@@ -111,57 +151,6 @@
         <DropdownItem title="Automated Testing" level={3} />
       </DropdownItem>
       <DropdownItem title="GitHub Pages" level={2} />
-    </DropdownItem>
-
-    <DropdownItem title="Cloud Computing" icon="fa-solid fa-cloud" hasChildren={true} level={1}>
-      <DropdownItem title="AWS IAM" hasChildren={true} level={2}>
-        <DropdownItem title="User Management" level={3} />
-        <DropdownItem title="Policies & Roles" level={3} />
-      </DropdownItem>
-      <DropdownItem title="AWS EC2" hasChildren={true} level={2}>
-        <DropdownItem title="Instance Management" level={3} />
-        <DropdownItem title="Security Groups" level={3} />
-      </DropdownItem>
-      <DropdownItem title="AWS S3" hasChildren={true} level={2}>
-        <DropdownItem title="Bucket Policies" level={3} />
-        <DropdownItem title="Lifecycle Management" level={3} />
-      </DropdownItem>
-      <DropdownItem title="Route 53" level={2} />
-      <DropdownItem title="API Gateway" level={2} />
-      <DropdownItem title="CloudWatch" hasChildren={true} level={2}>
-        <DropdownItem title="Monitoring" level={3} />
-        <DropdownItem title="Alarms" level={3} />
-      </DropdownItem>
-      <DropdownItem title="Cost Management" level={2} />
-      <DropdownItem title="Azure Backups" level={2} />
-    </DropdownItem>
-
-    <DropdownItem title="Redes" icon="fa-solid fa-network-wired" hasChildren={true} level={1}>
-      <DropdownItem title="Mikrotik" hasChildren={true} level={2}>
-        <DropdownItem title="RouterOS" level={3} />
-        <DropdownItem title="Scripting" level={3} />
-      </DropdownItem>
-      <DropdownItem title="Unifi" level={2} />
-      <DropdownItem title="FortiGate" hasChildren={true} level={2}>
-        <DropdownItem title="Firewall Rules" level={3} />
-        <DropdownItem title="VPN Setup" level={3} />
-      </DropdownItem>
-      <DropdownItem title="VPN Technologies" hasChildren={true} level={2}>
-        <DropdownItem title="IPsec" level={3} />
-        <DropdownItem title="L2TP" level={3} />
-        <DropdownItem title="Site-to-Site" level={3} />
-      </DropdownItem>
-      <DropdownItem title="SNMP" level={2} />
-      <DropdownItem title="Zabbix" level={2} />
-      <DropdownItem title="PRTG" level={2} />
-      <DropdownItem title="Telefonía IP" level={2} />
-    </DropdownItem>
-
-    <DropdownItem title="IoT" icon="fa-brands fa-raspberry-pi" hasChildren={true} level={1}>
-      <DropdownItem title="Raspberry Pi" hasChildren={true} level={2}>
-        <DropdownItem title="GPIO Programming" level={3} />
-        <DropdownItem title="Sensors Integration" level={3} />
-      </DropdownItem>
     </DropdownItem>
 
     <DropdownItem title="Windows" icon="fab fa-windows" hasChildren={true} level={1}>
@@ -217,6 +206,34 @@
       <DropdownItem title="Presentaciones Empresariales" hasChildren={true} level={2}>
         <DropdownItem title="PowerPoint Avanzado" level={3} />
         <DropdownItem title="Storytelling Visual" level={3} />
+      </DropdownItem>
+    </DropdownItem>
+
+    <DropdownItem title="Redes" icon="fa-solid fa-network-wired" hasChildren={true} level={1}>
+      <DropdownItem title="Mikrotik" hasChildren={true} level={2}>
+        <DropdownItem title="RouterOS" level={3} />
+        <DropdownItem title="Scripting" level={3} />
+      </DropdownItem>
+      <DropdownItem title="Unifi" level={2} />
+      <DropdownItem title="FortiGate" hasChildren={true} level={2}>
+        <DropdownItem title="Firewall Rules" level={3} />
+        <DropdownItem title="VPN Setup" level={3} />
+      </DropdownItem>
+      <DropdownItem title="VPN Technologies" hasChildren={true} level={2}>
+        <DropdownItem title="IPsec" level={3} />
+        <DropdownItem title="L2TP" level={3} />
+        <DropdownItem title="Site-to-Site" level={3} />
+      </DropdownItem>
+      <DropdownItem title="SNMP" level={2} />
+      <DropdownItem title="Zabbix" level={2} />
+      <DropdownItem title="PRTG" level={2} />
+      <DropdownItem title="Telefonía IP" level={2} />
+    </DropdownItem>
+
+    <DropdownItem title="IoT" icon="fa-brands fa-raspberry-pi" hasChildren={true} level={1}>
+      <DropdownItem title="Raspberry Pi" hasChildren={true} level={2}>
+        <DropdownItem title="GPIO Programming" level={3} />
+        <DropdownItem title="Sensors Integration" level={3} />
       </DropdownItem>
     </DropdownItem>
   </ul>
