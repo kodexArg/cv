@@ -55,7 +55,7 @@
     transition: all 0.3s ease;
   }
   :global(.maximized) .left-col {
-    @apply w-1/4 min-w-[12.8rem];
+    @apply w-1/4 min-w-[12.8rem] bg-transparent;
   }
   :global(.maximized) .right-col {
     @apply w-3/4;

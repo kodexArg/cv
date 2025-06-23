@@ -22,11 +22,11 @@
       <i class="{icon} mr-2 text-pullover-400" />
     {/if}
     {#if level === 3}
-      <span class="plus-sign">+ </span>
+      <span class="plus-sign">+&nbsp;</span>
     {/if}
     {title}
     {#if isCollapsible}
-      <i class="fa fa-chevron-right ml-1 text-xs text-pullover-400 transition-transform {isOpen ? 'rotate-90' : ''}" />
+      <i class="fa fa-chevron-right ml-2 text-[0.5rem] text-pullover-400 transition-transform {isOpen ? 'rotate-90' : ''}" />
     {/if}
   </span>
   
@@ -52,11 +52,11 @@
   }
   
   .level-2 {
-    @apply mb-1 ml-6 font-normal leading-none text-pullover-500;
+    @apply mb-2 ml-10 font-normal leading-none text-pullover-500;
   }
   
   .level-3 {
-    @apply mb-0.5 ml-8 text-xs font-light text-pullover-600;
+    @apply mb-1 ml-4 text-xs font-light text-pullover-600;
   }
   
   .plus-sign {

@@ -12,8 +12,15 @@
   </h1>
   <ul>
     <DropdownItem title="Inglés" icon="fa-solid fa-flag-usa" hasChildren={true} level={1}>
-      <DropdownItem title="Excelente" icon="fa-brands fa-readme" level={3} />
-      <DropdownItem title="Avanzado (B2)" icon="fa-solid fa-microphone-lines" level={3} />
+      <DropdownItem title="Excelente" icon="fa-brands fa-readme" level={2} />
+      <DropdownItem title="Avanzado (B2)" icon="fa-solid fa-microphone-lines" level={2} />
+    </DropdownItem>
+
+    <DropdownItem title="Ciencia de Datos & AI" icon="fa-solid fa-brain" hasChildren={true} level={1}>
+      <DropdownItem title="Pandas & Numpy" level={2} />
+      <DropdownItem title="Pyplot & Matplotlib" level={2} />
+      <DropdownItem title="PyTorch" level={2} />
+      <DropdownItem title="Stable Diffusion" level={2} />
     </DropdownItem>
 
     <DropdownItem title="Python" icon="fab fa-python" hasChildren={true} level={1}>
@@ -21,22 +28,12 @@
         <DropdownItem title="django-allauth" level={3} />
         <DropdownItem title="django-rest-framework" level={3} />
         <DropdownItem title="Internationalization" level={3} />
-        <DropdownItem title="Templates & Forms" level={3} />
+        <DropdownItem title="Vite Templates" level={3} />
       </DropdownItem>
       
       <DropdownItem title="API Frameworks" hasChildren={true} level={2}>
         <DropdownItem title="Flask" level={3} />
         <DropdownItem title="FastAPI" level={3} />
-        <DropdownItem title="Pydantic" level={3} />
-        <DropdownItem title="OpenAPI" level={3} />
-      </DropdownItem>
-      
-      <DropdownItem title="Ciencia de Datos" hasChildren={true} level={2}>
-        <DropdownItem title="Pandas & Numpy" level={3} />
-        <DropdownItem title="Jupyter Notebooks" level={3} />
-        <DropdownItem title="Pyplot & Matplotlib" level={3} />
-        <DropdownItem title="PyTorch" level={3} />
-        <DropdownItem title="Stable Diffusion" level={3} />
       </DropdownItem>
       
       <DropdownItem title="Automation & Bots" hasChildren={true} level={2}>
