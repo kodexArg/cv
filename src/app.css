@@ -52,6 +52,10 @@ h4 {
   }
 }
 
+.maximized h1, .maximized h2, .maximized h3 {
+  page-break-after: avoid;
+}
+
 p {
   font-family: 'Source Sans Pro', sans-serif;
   @apply text-lg text-justify text-mate-600 mt-2 leading-relaxed font-normal;

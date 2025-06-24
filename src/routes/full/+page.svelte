@@ -11,9 +11,11 @@
   import WorkExperience from "../../components/WorkExperience.svelte";
   import { isMaximized } from '../../lib/stores';
   import MaximizeButton from "../../components/MaximizeButton.svelte";
+  import ExpandButton from "../../components/ExpandButton.svelte";
 </script>
 
 <MaximizeButton />
+<ExpandButton />
 <main class="background flex flex-col space-y-6">
   <section class="a4">
     <div class="flex w-full h-full content-wrapper">
@@ -37,7 +39,7 @@
 <style lang="postcss">
   .a4 {
     @apply bg-white rounded-lg shadow-lg shadow-gray-700 flex flex-col p-0.5;
-    @apply w-[42rem] mx-auto mt-12;
+    @apply w-[800px] mx-auto mt-12;
     transition: all 0.3s ease;
     transform-origin: center;
   }

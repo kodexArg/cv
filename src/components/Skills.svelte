@@ -304,8 +304,6 @@
   </ul>
 </section>
 
-<!-- TODO: GRAPHIC DESIGN!!!!-->
-
 <style lang="postcss">
   i {
     @apply text-pullover-400;
@@ -314,20 +312,5 @@
   ul {
     @apply -ml-1;
     @apply text-pullover-500 font-bold text-base mb-5;
-  }
-
-  ul ul {
-    @apply mb-5 ml-6 mt-2;
-    @apply font-normal leading-none;
-  }
-
-  ul ul ul {
-    @apply mb-3 ml-2;
-    @apply text-sm;
-  }
-
-  ul ul ul ul {
-    @apply mb-0.5;
-    @apply italic list-["+"] text-pullover-600 font-light;
   }
 </style>

@@ -4,76 +4,93 @@
   export let title = '';
   export let icon = '';
   export let hasChildren = false;
-  export let isOpen = false;
-  export let level = 0;
-
-  // Solo nivel 2 puede ser colapsable, el resto siempre abierto
-  $: isCollapsible = level === 2 && hasChildren;
-  $: shouldShowChildren = level < 2 || !hasChildren || isOpen || $isExpanded;
-
+  export let level = 1;
+  
+  let isOpen = false;
+  
   function toggle() {
-    if (isCollapsible && !$isExpanded) {
+    if (hasChildren && !$isExpanded) {
       isOpen = !isOpen;
     }
   }
 </script>
 
-<li class="skill-item level-{level}">
-  <span class="flex flex-wrap items-center {isCollapsible ? 'cursor-pointer' : ''}" on:click={toggle} role="button" tabindex="0" on:keydown={(e) => e.key === 'Enter' && toggle()}>
-    {#if icon}
-      <i class="{icon} mr-2 text-pullover-400" />
+{#if level === 1}
+  <li class="level-1" class:has-children={hasChildren}>
+    <div class="title">
+      {#if icon}
+        <i class="{icon}"></i>
+      {/if}
+      <span>{title}</span>
+    </div>
+    
+    {#if hasChildren}
+      <ul class="level-2">
+        <slot />
+      </ul>
     {/if}
-    {#if level === 3}
-      <span class="plus-sign">+&nbsp;</span>
+  </li>
+{:else if level === 2}
+  <li class="level-2" class:has-children={hasChildren}>
+    <div class="title" role="button" tabindex="0" on:click={toggle} on:keydown={(e) => e.key === 'Enter' && toggle()}>
+      <div class="title-content">
+        {#if icon}
+          <i class="{icon}"></i>
+        {/if}
+        <span>{title}</span>
+      </div>
+      {#if hasChildren}
+        <i class="fa fa-chevron-right transition-transform text-xs {(isOpen || $isExpanded) ? 'rotate-90' : ''}"></i>
+      {/if}
+    </div>
+    
+    {#if hasChildren && (isOpen || $isExpanded)}
+      <ul class="level-3">
+        <slot />
+      </ul>
     {/if}
-    <span class="flex-1 min-w-0">{title}</span>
-    {#if isCollapsible}
-      <i class="fa fa-chevron-right ml-2 text-[0.5rem] text-pullover-400 transition-transform {(isOpen || $isExpanded) ? 'rotate-90' : ''} flex-shrink-0" />
-    {/if}
-  </span>
-  
-  {#if shouldShowChildren}
-    <ul class="{isCollapsible ? 'transition-all duration-300 ease-in-out' : ''}">
-      <slot />
-    </ul>
-  {/if}
-</li>
+  </li>
+{:else}
+  <li class="level-{level}">
+    <span>{title}</span>
+  </li>
+{/if}
 
 <style lang="postcss">
-  .cursor-pointer:hover {
-    @apply text-pullover-300;
-  }
-  
-  /* Estructura de 3 niveles */
-  .skill-item {
-    @apply text-pullover-500 font-bold text-base;
-  }
-  
   .level-1 {
-    @apply ml-1 mb-4;
+    @apply mb-4;
   }
-  
+
+  .level-1 .title {
+    @apply flex items-center gap-2 text-pullover-500 font-bold text-lg;
+  }
+
   .level-2 {
-    @apply mb-2 ml-10 font-normal leading-none text-pullover-500;
+    @apply ml-5 mt-1 mb-2 font-normal leading-none;
   }
-  
-  .level-2:first-child {
-    @apply mt-2;
+
+  .level-2 .title {
+    @apply flex items-center justify-between cursor-pointer mb-1 text-base;
   }
-  
+
+  .level-2 .title-content {
+    @apply flex items-center gap-2;
+  }
+
+  .level-2 .title:hover {
+    @apply text-pullover-400;
+  }
+
   .level-3 {
-    @apply mb-1 ml-4 text-xs font-light text-pullover-600;
+    @apply ml-2 mb-1 text-sm;
   }
-  
-  .level-3:first-child {
-    @apply mt-1;
+
+  .level-3 span::before {
+    content: "+ ";
+    @apply text-pullover-600;
   }
-  
-  .plus-sign {
-    @apply text-pullover-600 font-light;
-  }
-  
-  ul {
-    @apply -ml-1;
+
+  i {
+    @apply text-pullover-400;
   }
 </style> 

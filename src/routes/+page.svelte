@@ -40,7 +40,7 @@
 <style lang="postcss">
   .a4 {
     @apply bg-white rounded-lg shadow-lg shadow-gray-700 flex flex-col p-0.5;
-    @apply w-[63rem] mx-auto mt-12;
+    @apply w-[800px] mx-auto mt-12;
     transition: all 0.3s ease;
     transform-origin: center;
   }

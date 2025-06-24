@@ -70,4 +70,8 @@
   section {
     @apply border-b-2;
   }
+
+  .grid-layout.maximized {
+    @apply lg:grid-cols-1 lg:gap-0;
+  }
 </style>

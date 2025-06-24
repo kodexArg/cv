@@ -262,4 +262,8 @@
       @apply text-sm italic text-mate-300 ml-5 my-1 leading-tight block;
     }
   }
+
+  .grid-layout.maximized {
+    @apply lg:grid-cols-1 lg:gap-0;
+  }
 </style>

@@ -27,10 +27,10 @@
 
   <article>
     <div class="certification-item">
-      <h4 class="certification-title" on:click={togglePlatzi} role="button" tabindex="0" on:keydown={(e) => e.key === 'Enter' && togglePlatzi()}>
+      <button class="certification-title" on:click={togglePlatzi} on:keydown={(e) => e.key === 'Enter' && togglePlatzi()}>
         Certificaciones Técnicas - Platzi:
         <i class="fa fa-chevron-right ml-2 text-xs text-mate-400 transition-transform {(isPlatziOpen || $isExpanded) ? 'rotate-90' : ''}" />
-      </h4>
+      </button>
       
       {#if isPlatziOpen || $isExpanded}
         <span><strong>Inteligencia Artificial y Ciencia de Datos:</strong></span>
@@ -80,7 +80,9 @@
   }
 
   .certification-title {
-    @apply cursor-pointer flex items-center justify-between;
+    @apply cursor-pointer flex items-center justify-between bg-transparent border-none p-0 text-left w-full;
+    font-family: inherit;
+    color: inherit;
   }
 
   .certification-title:hover {
