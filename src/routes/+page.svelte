@@ -11,9 +11,11 @@
   import Footer from "../components/Footer.svelte";
   import { isMaximized } from '../lib/stores';
   import MaximizeButton from "../components/MaximizeButton.svelte";
+  import ExpandButton from "../components/ExpandButton.svelte";
 </script>
 
 <MaximizeButton />
+<ExpandButton />
 <main class="background flex flex-col space-y-6">
   <section class="a4">
     <div class="flex w-full h-full content-wrapper">
@@ -62,7 +64,7 @@
   }
   
   :global(.maximized) .right-col {
-    @apply w-5/6;
+    @apply w-5/6 ml-4 mr-10;
   }
   
   .background {

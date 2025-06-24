@@ -1,4 +1,6 @@
 <script>
+  import { isExpanded } from '../lib/stores';
+  
   export let title = '';
   export let icon = '';
   export let hasChildren = false;
@@ -7,10 +9,10 @@
 
   // Solo nivel 2 puede ser colapsable, el resto siempre abierto
   $: isCollapsible = level === 2 && hasChildren;
-  $: shouldShowChildren = level < 2 || !hasChildren || isOpen;
+  $: shouldShowChildren = level < 2 || !hasChildren || isOpen || $isExpanded;
 
   function toggle() {
-    if (isCollapsible) {
+    if (isCollapsible && !$isExpanded) {
       isOpen = !isOpen;
     }
   }
@@ -26,7 +28,7 @@
     {/if}
     <span class="flex-1 min-w-0">{title}</span>
     {#if isCollapsible}
-      <i class="fa fa-chevron-right ml-2 text-[0.5rem] text-pullover-400 transition-transform {isOpen ? 'rotate-90' : ''} flex-shrink-0" />
+      <i class="fa fa-chevron-right ml-2 text-[0.5rem] text-pullover-400 transition-transform {(isOpen || $isExpanded) ? 'rotate-90' : ''} flex-shrink-0" />
     {/if}
   </span>
   
