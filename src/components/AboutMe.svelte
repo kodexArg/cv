@@ -2,11 +2,13 @@
   <h2>Acerca de mí</h2>
   <article>
     <p>
-      Como Líder Técnico, dirijo un equipo multidisciplinario que gestiona operaciones IT para diversas empresas. Mi rol incluye la coordinación de proyectos, implementación de soluciones cloud y la optimización de procesos críticos de negocio.
+      Como Líder Técnico, dirijo un equipo multidisciplinario implementando soluciones IT en diversas unidades de negocio. Estas empresas de rubros muy diversos están integradas en un ecosistema común, donde damos soporte a la infraestructura y creamos herramientas de acuerdo a las necesidades específicas de cada una.
+      </p>
+      <p> Domino la coordinación de proyectos tecnológicos, arquitectura de soluciones cloud y optimización de procesos. Mi enfoque se orienta hacia soluciones duraderas.
     </p>
 
     <p>
-      Soy un lector voraz y un autodidacta responsable, características que me mantienen en constante actualización tecnológica. Mi experiencia abarca desarrollo full-stack, diseño de APIs, y administración avanzada de sistemas Linux. Me especializo en ciencia de datos con énfasis en Python y dominio de tecnologías cloud.
+      En cuanto a mis propias habilidades, tengo experiencia en desarrollo full-stack, AWS y administración de sistemas Linux. Trabajo frecuentemente con ciencia de datos utilizando Python, automatización de procesos con n8n y despliegue en cloud.
     </p>
 
     <p>

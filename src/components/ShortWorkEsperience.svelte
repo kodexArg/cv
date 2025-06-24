@@ -1,37 +1,59 @@
 <section>
   <h2>Experiencia Laboral</h2>
   <article>
-    <h4>Grupo AVS: “Líder de Soporte Técnico”</h4>
-    <span>Diciembre 2016 - Presente</span>
+    <div class="job-item">
+      <h4>Grupo AVS: "Líder de Soporte Técnico"</h4>
+      <span>Diciembre 2016 - Presente</span>
+    </div>
   </article>
 
   <article>
-    <h4>
-      Mendoza Central Entretenimiento S.A.:<br />“Jefe de Organización y
-      Sistemas”
-    </h4>
-    <span>2005 - Diciembre 2016</span>
+    <div class="job-item">
+      <h4>
+        Mendoza Central Entretenimiento S.A.:<br />"Jefe de Organización y
+        Sistemas"
+      </h4>
+      <span>2005 - Diciembre 2016</span>
+    </div>
   </article>
 
   <article>
-    <h4>
-      Casino Buenos Aires:<br />“Técnico de Tragamonedas / Área Sistemas”
-    </h4>
-    <span>2003 - 2005</span>
+    <div class="job-item">
+      <h4>
+        Casino Buenos Aires:<br />"Técnico de Tragamonedas / Área Sistemas"
+      </h4>
+      <span>2003 - 2005</span>
+    </div>
   </article>
 
   <article>
-    <h4>Casino Buenos Aires: “Asistente de Tragamonedas”</h4>
-    <span>Octubre de 2002 - 2003</span>
+    <div class="job-item">
+      <h4>Casino Buenos Aires: "Asistente de Tragamonedas"</h4>
+      <span>Octubre de 2002 - 2003</span>
+    </div>
   </article>
 </section>
 
 <style lang="postcss">
   article {
-    @apply border-b-0 -mt-2;
+    @apply border-b-0 mb-1 pb-2;
+    border-bottom: 1px dashed #f0f2f0;
   }
-  span {
-    @apply text-sm italic text-mate-600 text-right;
+
+  article:last-child {
+    border-bottom: none;
+  }
+
+  .job-item {
+    @apply flex flex-wrap justify-between items-baseline;
+  }
+
+  .job-item h4 {
+    @apply flex-1 min-w-0 mr-4;
+  }
+
+  .job-item span {
+    @apply text-sm italic text-mate-600 flex-shrink-0 mt-0;
   }
 
   section {

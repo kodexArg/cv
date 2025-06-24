@@ -38,7 +38,7 @@
 <style lang="postcss">
   .a4 {
     @apply bg-white rounded-lg shadow-lg shadow-gray-700 flex flex-col p-0.5;
-    @apply w-[42rem] mx-auto mt-12;
+    @apply w-[63rem] mx-auto mt-12;
     transition: all 0.3s ease;
     transform-origin: center;
   }
@@ -51,15 +51,18 @@
     @apply w-fib-5 min-w-[11.2rem];
     transition: all 0.3s ease;
   }
+  
   .right-col {
     @apply w-fib-8;
     transition: all 0.3s ease;
   }
+  
   :global(.maximized) .left-col {
-    @apply w-1/4 min-w-[14.4rem] bg-transparent;
+    @apply w-1/6 min-w-[14.4rem] bg-transparent;
   }
+  
   :global(.maximized) .right-col {
-    @apply w-3/4;
+    @apply w-5/6;
   }
   
   .background {
