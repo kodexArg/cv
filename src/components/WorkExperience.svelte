@@ -1,7 +1,7 @@
 <section>
   <h2>Experiencia Laboral</h2>
   <article>
-    <h3>Grupo AVS: “Líder de Soporte Técnico”</h3>
+    <h3>Grupo AVS: "Líder de Soporte Técnico"</h3>
     <span>Diciembre 2016 - Presente</span>
     <p>
       Grupo AVS es un conglomerado de empresas, entre las que destacan <b
@@ -48,8 +48,8 @@
 
   <article>
     <h3>
-      Mendoza Central Entretenimiento S.A.:<br />“Jefe de Organización y
-      Sistemas”
+      Mendoza Central Entretenimiento S.A.:<br />"Jefe de Organización y
+      Sistemas"
     </h3>
     <span>2005 - Diciembre 2016</span>
     <p>
@@ -169,7 +169,7 @@
 
   <article>
     <h3>
-      Casino Buenos Aires:<br />“Técnico de Tragamonedas / Área Sistemas”
+      Casino Buenos Aires:<br />"Técnico de Tragamonedas / Área Sistemas"
     </h3>
     <span>2003 - 2005</span>
     <p>
@@ -202,7 +202,7 @@
   </article>
 
   <article>
-    <h3>Casino Buenos Aires: “Asistente de Tragamonedas”</h3>
+    <h3>Casino Buenos Aires: "Asistente de Tragamonedas"</h3>
     <span>Octubre de 2002 - 2003</span>
     <p>
       Trabajé en San Martín de Mendoza en un casino recién formado, integrando
@@ -218,7 +218,7 @@
     </ul>
   </article>
   <article>
-    <h3>Duek 2000: “Técnico de sistemas”</h3>
+    <h3>Duek 2000: "Técnico de sistemas"</h3>
     <span>Octubre de 2099 - 2002</span>
     <p>
       Trabajé armando computadoras, y en la última etapa desarrollando sitios web, utilizando IIS + ASP.
@@ -257,7 +257,7 @@
   }
 
   /* Cambiar layout cuando está maximizado en viewports grandes */
-  @media (min-width: 1024px) {
+  @media (min-width: 1100px) {
     :global(.maximized) span {
       @apply text-sm italic text-mate-300 ml-5 my-1 leading-tight block;
     }

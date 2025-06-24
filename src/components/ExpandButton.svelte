@@ -8,7 +8,7 @@
 
 <button
   on:click={toggleExpand}
-  class="fixed top-4 right-20 bg-mate-100 hover:bg-mate-200 p-2 rounded-full shadow-md z-50 print:hidden"
+  class="fixed top-4 right-4 bg-mate-100 hover:bg-mate-200 p-2 rounded-full shadow-md z-50 print:hidden"
 >
   {#if !$isExpanded}
     <!-- Font Awesome caret-square-down outline -->

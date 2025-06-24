@@ -57,7 +57,7 @@
   }
 
   /* Cambiar layout cuando está maximizado en viewports grandes */
-  @media (min-width: 1024px) {
+  @media (min-width: 1100px) {
     :global(.maximized) .job-item {
       @apply flex-col items-start;
     }

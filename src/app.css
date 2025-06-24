@@ -35,7 +35,7 @@ h4 {
 }
 
 /* Estilos para títulos cuando está maximizado en viewports grandes */
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .maximized h1,
   .maximized h2,
   .maximized h3,
