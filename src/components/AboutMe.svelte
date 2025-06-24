@@ -2,9 +2,9 @@
   <h2>Acerca de mí</h2>
   <article>
     <p>
-      Como Líder Técnico, dirijo un equipo multidisciplinario implementando soluciones IT en diversas unidades de negocio. Estas empresas de rubros muy diversos están integradas en un ecosistema común, donde damos soporte a la infraestructura y creamos herramientas de acuerdo a las necesidades específicas de cada una.
+      Tengo el cargo de Líder Técnico de Soporte e Infraestructura IT de un grupo de empresas. Dirijo un equipo multidisciplinario implementando soluciones IT en diferentes unidades de negocio. Estas empresas, de rubros muy diversos, están integradas en un ecosistema común, donde coordino el soporte a la infraestructura y donde creamos herramientas de acuerdo a las necesidades específicas de cada una.
       </p>
-      <p> Domino la coordinación de proyectos tecnológicos, arquitectura de soluciones cloud y optimización de procesos. Mi enfoque se orienta hacia soluciones duraderas.
+      <p> Domino la coordinación de proyectos tecnológicos, arquitectura de soluciones cloud y optimización de procesos. Mi enfoque se orienta hacia soluciones duraderas y seguras.
     </p>
 
     <p>

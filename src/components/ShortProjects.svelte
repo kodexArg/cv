@@ -47,6 +47,12 @@
       <strong>keywords:</strong>
       <span>django 5, drf, htmx, iot, raspberry pi, plotly, power bi, pandas</span>
     </p>
+    <p class="font-light italic text-sm">
+      Una versión funcional puede verse en 
+      <a href="https://kcbd.grupoalvs.com/" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline">
+        kcbd.grupoalvs.com
+      </a>
+    </p>
   </article>
 
   <article>
@@ -161,11 +167,27 @@
   </article>
 
   <article>
-    <h3>Seguimiento Online Clima en Salas</h3>
-
+    <h3>Automatización AWS Route53 + EC2</h3>
+    <p>
+      <a href="https://github.com/kodexArg/lambda-update-route53" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i> kodexArg/lambda-update-route53
+      </a>
+    </p>
+    <p>
+      Un script simple pero muy valioso que convierte automáticamente todas las instancias EC2 en registros Route53, permitiendo acceso por nombre de dominio a cada servidor. Automatiza una tarea común en equipos DevOps, ejecutándose cada vez que cambia el estado de las instancias.
+    </p>
     <p class="text-sm">
-      <strong>keywords: </strong>raspberry pi, sensores dht11 y dht22, django,
-      chartjs
+      <strong>keywords:</strong> AWS, Lambda, Route53, EC2, DevOps, Infrastructure Automation, DNS Management, Python
+    </p>
+  </article>
+
+  <article>
+    <h3>Seguimiento Online Clima en Salas</h3>
+    <p>
+      Proyecto accesorio que colocó sensores de temperatura y humedad en equipos de cartelería digital distribuidos por toda la sala del casino, creando un perfecto mapa térmico en tiempo real que reaprovecharía la infraestructura existente. Funcionó ininterrumpidamente durante muchos años.
+    </p>
+    <p class="text-sm">
+      <strong>keywords:</strong> Raspberry Pi, sensores DHT11/DHT22, Django, ChartJS, IoT, Digital signage, Environmental monitoring
     </p>
   </article>
 
