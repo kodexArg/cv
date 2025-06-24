@@ -17,16 +17,16 @@
 </script>
 
 <li class="skill-item level-{level}">
-  <span class="flex items-center {isCollapsible ? 'cursor-pointer' : ''}" on:click={toggle} role="button" tabindex="0" on:keydown={(e) => e.key === 'Enter' && toggle()}>
+  <span class="flex flex-wrap items-center {isCollapsible ? 'cursor-pointer' : ''}" on:click={toggle} role="button" tabindex="0" on:keydown={(e) => e.key === 'Enter' && toggle()}>
     {#if icon}
       <i class="{icon} mr-2 text-pullover-400" />
     {/if}
     {#if level === 3}
       <span class="plus-sign">+&nbsp;</span>
     {/if}
-    {title}
+    <span class="flex-1 min-w-0">{title}</span>
     {#if isCollapsible}
-      <i class="fa fa-chevron-right ml-2 text-[0.5rem] text-pullover-400 transition-transform {isOpen ? 'rotate-90' : ''}" />
+      <i class="fa fa-chevron-right ml-2 text-[0.5rem] text-pullover-400 transition-transform {isOpen ? 'rotate-90' : ''} flex-shrink-0" />
     {/if}
   </span>
   
@@ -48,15 +48,23 @@
   }
   
   .level-1 {
-    @apply ml-1 mb-3;
+    @apply ml-1 mb-4;
   }
   
   .level-2 {
     @apply mb-2 ml-10 font-normal leading-none text-pullover-500;
   }
   
+  .level-2:first-child {
+    @apply mt-2;
+  }
+  
   .level-3 {
     @apply mb-1 ml-4 text-xs font-light text-pullover-600;
+  }
+  
+  .level-3:first-child {
+    @apply mt-1;
   }
   
   .plus-sign {

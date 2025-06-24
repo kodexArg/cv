@@ -48,7 +48,7 @@
   }
   
   .left-col {
-    @apply w-fib-5 min-w-[9.6rem];
+    @apply w-fib-5 min-w-[11.2rem];
     transition: all 0.3s ease;
   }
   .right-col {
@@ -56,7 +56,7 @@
     transition: all 0.3s ease;
   }
   :global(.maximized) .left-col {
-    @apply w-1/4 min-w-[12.8rem] bg-transparent;
+    @apply w-1/4 min-w-[14.4rem] bg-transparent;
   }
   :global(.maximized) .right-col {
     @apply w-3/4;

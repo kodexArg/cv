@@ -172,19 +172,6 @@
     <h4>Machine Learning aplicado a DDBB Tragamonedas</h4>
     <p><strong>keywords: </strong>algoritmos de clasificación, python, pandas, tensorflow, machine learning, matplotlib</p>
   </article>
-
-  <article>
-    <h3>Estudios y prácticas recientes</h3>
-    <h4>Stable Diffusion</h4>
-    <p>
-      Instalación y uso desde cero. Luego pruebas con Automatic1111 y ComfyUI.
-    </p>
-    <p>
-      <strong>keywords: </strong>python, aws, ec2, ai, pytorch, automatic111,
-      comfyui
-    </p>
-
-  </article>
 </section>
 
 <style lang="postcss">

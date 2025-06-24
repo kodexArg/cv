@@ -360,8 +360,10 @@
       tensorflow, machine learning, matplotlib
     </p>
   </article>
+  
   <article>
-    <h3>Estudios y prácticas recientes</h3>
+    <h3>Estudios y prácticas recientes <span class="text-sm font-light italic text-pullover-400">(Experimentales)</span></h3>
+    
     <h4>Stable Diffusion</h4>
     <p>
       En el ámbito de la inteligencia artificial, he realizado una investigación
@@ -381,7 +383,16 @@
     </p>
     <p>
       <strong>keywords: </strong>python, aws, ec2, ai, pytorch, automatic111,
-      comfyui, Midjurney
+      comfyui, midjourney
+    </p>
+    
+    <h4>Automatización con N8N & MCP</h4>
+    <p>
+      He trabajado con todos los grandes modelos, tengo fuertes conocimientos en N8N y MCP, 
+      ambos los he montado con éxito. Hago énfasis en los flujos de automatizaciones.
+    </p>
+    <p>
+      <strong>keywords: </strong>n8n, mcp, automation workflows, llm, ai orchestration
     </p>
   </article>
 </section>
