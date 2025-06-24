@@ -45,15 +45,30 @@
   }
 
   .job-item {
-    @apply flex flex-wrap justify-between items-baseline;
+    @apply flex flex-col;
   }
 
   .job-item h4 {
-    @apply flex-1 min-w-0 mr-4;
+    @apply mb-1;
   }
 
   .job-item span {
-    @apply text-sm italic text-mate-600 flex-shrink-0 mt-0;
+    @apply text-sm italic text-mate-600 text-right;
+  }
+
+  /* Layout horizontal en pantallas medianas y grandes */
+  @media (min-width: 768px) {
+    .job-item {
+      @apply flex-row justify-between items-baseline;
+    }
+    
+    .job-item h4 {
+      @apply flex-1 min-w-0 mr-4 mb-0;
+    }
+    
+    .job-item span {
+      @apply flex-shrink-0 text-left;
+    }
   }
 
   /* Cambiar layout cuando está maximizado en viewports grandes */

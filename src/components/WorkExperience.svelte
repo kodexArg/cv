@@ -245,8 +245,25 @@
   article {
     @apply mt-2;
   }
-  span {
-    @apply text-xs italic text-pullover-300 text-right;
+  
+  /* Layout responsive para título y fecha */
+  h3 + span {
+    @apply text-xs italic text-pullover-300 text-right block mb-2;
+  }
+  
+  /* En pantallas medianas y grandes, mostrar en línea */
+  @media (min-width: 768px) {
+    article {
+      @apply relative;
+    }
+    
+    h3 + span {
+      @apply absolute top-0 right-0 text-left mb-0;
+    }
+    
+    h3 {
+      @apply pr-32;
+    }
   }
   ul {
     @apply text-mate-700 text-xs list-disc ml-5 leading-relaxed;
