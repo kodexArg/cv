@@ -255,4 +255,11 @@
   ul ul {
     @apply italic list-[+] ml-2;
   }
+
+  /* Cambiar layout cuando está maximizado en viewports grandes */
+  @media (min-width: 1024px) {
+    :global(.maximized) span {
+      @apply text-sm italic text-mate-300 ml-5 my-1 leading-tight block;
+    }
+  }
 </style>

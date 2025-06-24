@@ -34,6 +34,24 @@ h4 {
   @apply font-oswald text-lg text-mate-500 mt-3 mb-1 tracking-wide;
 }
 
+/* Estilos para títulos cuando está maximizado en viewports grandes */
+@media (min-width: 1024px) {
+  .maximized h1,
+  .maximized h2,
+  .maximized h3,
+  .maximized h4 {
+    text-align: left !important;
+  }
+  
+  .maximized h1 {
+    margin: 0 0 1rem 0 !important;
+  }
+  
+  .maximized h2 {
+    text-align: left !important;
+  }
+}
+
 p {
   font-family: 'Source Sans Pro', sans-serif;
   @apply text-lg text-justify text-mate-600 mt-2 leading-relaxed font-normal;

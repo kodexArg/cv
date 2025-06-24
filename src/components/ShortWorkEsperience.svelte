@@ -56,6 +56,17 @@
     @apply text-sm italic text-mate-600 flex-shrink-0 mt-0;
   }
 
+  /* Cambiar layout cuando está maximizado en viewports grandes */
+  @media (min-width: 1024px) {
+    :global(.maximized) .job-item {
+      @apply flex-col items-start;
+    }
+    
+    :global(.maximized) .job-item span {
+      @apply text-sm italic text-mate-300 ml-5 my-1 leading-tight block;
+    }
+  }
+
   section {
     @apply border-b-2;
   }
