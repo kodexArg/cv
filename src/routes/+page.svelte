@@ -9,21 +9,30 @@
   import ShortEducation from "../components/ShortEducation.svelte";
   import ShortProjects from "../components/ShortProjects.svelte";
   import Footer from "../components/Footer.svelte";
-  import { isMaximized } from '../lib/stores';
+  import { isMaximized, isLeftPanelVisible } from '../lib/stores';
   import MaximizeButton from "../components/MaximizeButton.svelte";
   import ExpandButton from "../components/ExpandButton.svelte";
+  import PictureToggleButton from "../components/PictureToggleButton.svelte";
 </script>
 
-<MaximizeButton />
-<ExpandButton />
+<!-- Contenedor de botones en la esquina superior derecha -->
+<div class="fixed top-4 right-4 flex space-x-2 z-50 print:hidden">
+  {#if $isLeftPanelVisible}
+    <ExpandButton />
+  {/if}
+  <MaximizeButton />
+  <PictureToggleButton />
+</div>
 <main class="background flex flex-col space-y-6">
   <section class="a4">
     <div class="flex w-full h-full content-wrapper">
-      <div class="left-col bg-mate-100 rounded-l-md flex flex-col p-4 space-y-4">
-        <Avatar />
-        <Skills />
-      </div>
-      <div class="right-col flex flex-col p-4 space-y-1">
+      {#if $isLeftPanelVisible}
+        <div class="left-col bg-mate-100 rounded-l-md flex flex-col p-4 space-y-4 transition-all duration-300 ease-in-out">
+          <Avatar />
+          <Skills />
+        </div>
+      {/if}
+      <div class="right-col flex flex-col p-4 space-y-1 transition-all duration-300 ease-in-out" class:full-width={!$isLeftPanelVisible}>
         <Title />
         <Contact />
         <Line />
@@ -57,6 +66,10 @@
   .right-col {
     @apply w-fib-8;
     transition: all 0.3s ease;
+  }
+  
+  .right-col.full-width {
+    @apply w-full;
   }
   
   :global(.maximized) .left-col {

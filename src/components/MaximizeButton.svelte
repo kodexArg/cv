@@ -26,7 +26,7 @@
 {#if showButton}
   <button 
     on:click={toggleMaximize}
-    class="fixed top-4 right-20 bg-mate-100 hover:bg-mate-200 p-2 rounded-full shadow-md z-50 print:hidden"
+    class="bg-mate-100 hover:bg-mate-200 p-2 rounded-full shadow-md border-3 border-amber-800"
   >
     {#if $isMaximized}
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

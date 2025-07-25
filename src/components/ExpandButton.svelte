@@ -8,19 +8,17 @@
 
 <button
   on:click={toggleExpand}
-  class="fixed top-4 right-4 bg-mate-100 hover:bg-mate-200 p-2 rounded-full shadow-md z-50 print:hidden"
+  class="bg-mate-100 hover:bg-mate-200 p-2 rounded-full shadow-md border-3 border-amber-800"
 >
   {#if !$isExpanded}
-    <!-- Font Awesome caret-square-down outline -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512" fill="none" stroke="currentColor" stroke-width="32">
-      <rect x="32" y="32" width="384" height="448" rx="48" ry="48" fill="none" stroke="currentColor" stroke-width="32"/>
-      <polygon points="144,245 304,245 224,325" fill="currentColor"/>
+    <!-- Icono de lista desplegable (chevron-down) -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6,9 12,15 18,9"/>
     </svg>
   {:else}
-    <!-- Font Awesome caret-square-up outline -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512" fill="none" stroke="currentColor" stroke-width="32">
-      <rect x="32" y="32" width="384" height="448" rx="48" ry="48" fill="none" stroke="currentColor" stroke-width="32"/>
-      <polygon points="144,325 304,325 224,245" fill="currentColor"/>
+    <!-- Icono de lista contraída (chevron-up) -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18,15 12,9 6,15"/>
     </svg>
   {/if}
-</button> 
+</button>
