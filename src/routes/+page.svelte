@@ -18,7 +18,7 @@
 <!-- Contenedor de botones en la esquina superior derecha -->
 <div class="fixed top-4 right-4 flex space-x-2 z-50 print:hidden">
   {#if $isLeftPanelVisible}
-    <ExpandButton />
+    <!-- <ExpandButton /> -->
   {/if}
   <MaximizeButton />
   <PictureToggleButton />
