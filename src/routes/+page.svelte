@@ -41,6 +41,9 @@
         <ShortEducation />
         <ShortProjects />
         <Footer />
+        {#if !$isLeftPanelVisible}
+          <Skills />
+        {/if}
       </div>
     </div>
   </section>

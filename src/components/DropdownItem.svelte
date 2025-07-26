@@ -34,14 +34,14 @@
   <li class="level-2" class:has-children={hasChildren}>
     <div class="title" role="button" tabindex="0" on:click={toggle} on:keydown={(e) => e.key === 'Enter' && toggle()}>
       <div class="title-content">
+        {#if hasChildren}
+          <i class="fa fa-chevron-right transition-transform text-[0.6rem] {(isOpen || $isExpanded) ? 'rotate-90' : ''}"></i>
+        {/if}
         {#if icon}
           <i class="{icon}"></i>
         {/if}
         <span>{title}</span>
       </div>
-      {#if hasChildren}
-        <i class="fa fa-chevron-right transition-transform text-xs {(isOpen || $isExpanded) ? 'rotate-90' : ''}"></i>
-      {/if}
     </div>
     
     {#if hasChildren && (isOpen || $isExpanded)}
@@ -70,11 +70,11 @@
   }
 
   .level-2 .title {
-    @apply flex items-center justify-between cursor-pointer mb-1 text-base;
+    @apply flex items-center cursor-pointer mb-1 text-base;
   }
 
   .level-2 .title-content {
-    @apply flex items-center gap-2;
+    @apply flex items-center gap-1.5;
   }
 
   .level-2 .title:hover {
@@ -93,4 +93,4 @@
   i {
     @apply text-pullover-400;
   }
-</style> 
+</style>

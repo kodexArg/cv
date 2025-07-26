@@ -8,14 +8,18 @@
     $isLeftPanelVisible = !$isLeftPanelVisible;
   }
 
+  let initialCheck = true;
+
   function updateVisibility() {
-    if (window.innerWidth < 768) { // Smaller than 'md' (768px)
-      $isLeftPanelVisible = false;
-      showButton = true;
-    } else if (window.innerWidth >= 768) { // 'md' or larger
-      $isLeftPanelVisible = true;
-      showButton = true;
+    if (initialCheck) {
+      if (window.innerWidth < 768) {
+        $isLeftPanelVisible = false;
+      } else {
+        $isLeftPanelVisible = true;
+      }
+      initialCheck = false;
     }
+    showButton = true;
   }
 
   onMount(() => {
