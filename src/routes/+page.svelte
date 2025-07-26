@@ -1,7 +1,7 @@
 <script>
   import Avatar from "../components/Avatar.svelte";
   import Contact from "../components/Contact.svelte";
-  import Skills from "../components/Skills.svelte";
+  import SemanticSkills from "../components/SemanticSkills.svelte";
   import Title from "../components/Title.svelte";
   import Line from "../components/Line.svelte";
   import AboutMe from "../components/AboutMe.svelte";
@@ -29,7 +29,7 @@
       {#if $isLeftPanelVisible}
         <div class="left-col bg-mate-100 rounded-l-md flex flex-col p-4 space-y-4 transition-all duration-300 ease-in-out">
           <Avatar />
-          <Skills />
+          <SemanticSkills />
         </div>
       {/if}
       <div class="right-col flex flex-col p-4 space-y-1 transition-all duration-300 ease-in-out" class:full-width={!$isLeftPanelVisible}>
@@ -42,7 +42,7 @@
         <ShortProjects />
         <Footer />
         {#if !$isLeftPanelVisible}
-          <Skills />
+          <SemanticSkills />
         {/if}
       </div>
     </div>

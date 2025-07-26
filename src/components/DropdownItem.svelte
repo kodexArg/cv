@@ -58,7 +58,7 @@
 
 <style lang="postcss">
   .level-1 {
-    @apply mb-4;
+    @apply mb-6;
   }
 
   .level-1 .title {
@@ -66,11 +66,11 @@
   }
 
   .level-2 {
-    @apply ml-5 mt-1 mb-2 font-normal leading-none;
+    @apply ml-4 mb-2 font-normal leading-none;
   }
 
   .level-2 .title {
-    @apply flex items-center cursor-pointer mb-1 text-base;
+    @apply flex items-center cursor-pointer mb-4 text-base;
   }
 
   .level-2 .title-content {
@@ -82,13 +82,10 @@
   }
 
   .level-3 {
-    @apply ml-2 mb-1 text-sm;
+    @apply mb-2 text-sm;
   }
 
-  .level-3 span::before {
-    content: "+ ";
-    @apply text-pullover-600;
-  }
+
 
   i {
     @apply text-pullover-400;
