@@ -1,8 +1,8 @@
 <script>
   import { isExpanded } from '../lib/stores';
-  
-  let isPlatziOpen = false;
-  
+
+  let isPlatziOpen = $state(false);
+
   function togglePlatzi() {
     if (!$isExpanded) {
       isPlatziOpen = !isPlatziOpen;
@@ -12,7 +12,7 @@
 
 <section>
   <h2>Educación Formal</h2>
-  
+
   <article>
     <h4>Educación Superior:</h4>
     <span>• Ingeniería Electromecánica (inconcluso) - UNSL, San Luis</span>
@@ -27,35 +27,35 @@
 
   <article>
     <div class="certification-item">
-      <button class="certification-title" on:click={togglePlatzi} on:keydown={(e) => e.key === 'Enter' && togglePlatzi()}>
+      <button class="certification-title" onclick={togglePlatzi} onkeydown={(e) => e.key === 'Enter' && togglePlatzi()}>
         Certificaciones Técnicas - Platzi:
-        <i class="fa fa-chevron-right ml-2 text-xs text-mate-400 transition-transform {(isPlatziOpen || $isExpanded) ? 'rotate-90' : ''}" />
+        <i class="fa fa-chevron-right ml-2 text-xs text-mate-400 transition-transform {(isPlatziOpen || $isExpanded) ? 'rotate-90' : ''}" aria-hidden="true"></i>
       </button>
-      
+
       {#if isPlatziOpen || $isExpanded}
         <span><strong>Inteligencia Artificial y Ciencia de Datos:</strong></span>
         <span>• Complejidad Algorítmica con Python</span>
         <span>• Estadística Computacional con Python</span>
         <span>• Fundamentos de Álgebra Lineal con Python</span>
         <span>• Introducción al Pensamiento Probabilístico</span>
-        
+
         <span><strong>Desarrollo Backend:</strong></span>
         <span>• Django Básico e Intermedio</span>
         <span>• Python Básico</span>
         <span>• Bases de Datos con SQL</span>
         <span>• Scrapy</span>
-        
+
         <span><strong>DevOps y Cloud:</strong></span>
         <span>• AWS Cloud Computing y EC2</span>
         <span>• Docker</span>
         <span>• Git y GitHub</span>
-        
+
         <span><strong>Frontend:</strong></span>
         <span>• Svelte</span>
         <span>• Clean Code con JavaScript</span>
-        
+
         <span>
-          <a href="https://platzi.com/p/gcavedal/">Platzi</a>
+          <a href="https://platzi.com/p/gcavedal/" target="_blank" rel="noopener noreferrer">Platzi</a>
         </span>
       {/if}
     </div>

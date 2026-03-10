@@ -34,7 +34,6 @@ h4 {
   @apply font-oswald text-lg text-mate-500 mt-3 mb-1 tracking-wide;
 }
 
-/* Estilos para títulos cuando está maximizado en viewports grandes */
 @media (min-width: 1100px) {
   .maximized h1,
   .maximized h2,
@@ -42,17 +41,15 @@ h4 {
   .maximized h4 {
     text-align: left !important;
   }
-  
+
   .maximized h1 {
     margin: 0 0 1rem 0 !important;
   }
-  
-  .maximized h2 {
-    text-align: left !important;
-  }
 }
 
-.maximized h1, .maximized h2, .maximized h3 {
+.maximized h1,
+.maximized h2,
+.maximized h3 {
   page-break-after: avoid;
 }
 
@@ -63,4 +60,37 @@ p {
 
 button {
   @apply text-sm text-pullover-400;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .background {
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  .a4 {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+  }
+
+  article, section {
+    page-break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
 }

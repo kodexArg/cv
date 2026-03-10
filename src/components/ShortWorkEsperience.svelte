@@ -56,27 +56,25 @@
     @apply text-sm italic text-mate-600 text-right;
   }
 
-  /* Layout horizontal en pantallas medianas y grandes */
   @media (min-width: 768px) {
     .job-item {
       @apply flex-row justify-between items-baseline;
     }
-    
+
     .job-item h4 {
       @apply flex-1 min-w-0 mr-4 mb-0;
     }
-    
+
     .job-item span {
       @apply flex-shrink-0 text-left;
     }
   }
 
-  /* Cambiar layout cuando está maximizado en viewports grandes */
   @media (min-width: 1100px) {
     :global(.maximized) .job-item {
       @apply flex-col items-start;
     }
-    
+
     :global(.maximized) .job-item span {
       @apply text-sm italic text-mate-300 ml-5 my-1 leading-tight block;
     }
@@ -84,9 +82,5 @@
 
   section {
     @apply border-b-2;
-  }
-
-  .grid-layout.maximized {
-    @apply lg:grid-cols-1 lg:gap-0;
   }
 </style>

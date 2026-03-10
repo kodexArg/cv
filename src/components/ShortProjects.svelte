@@ -4,14 +4,14 @@
   <p class="text-sm italic mb-2">
     Estos proyectos personales tienen como objetivo mostrar habilidades técnicas individuales.
   </p>
-  
+
   <article>
     <h3>
-      Welpdesk - Sistema de Tickets <i class="fa-regular fa-star text-xs ml-2"></i>
+      Welpdesk - Sistema de Tickets <i class="fa-regular fa-star text-xs ml-2" aria-hidden="true"></i>
     </h3>
     <p>
       <a href="https://github.com/kodexArg/welpdesk" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github"></i> kodexArg/welpdesk
+        <i class="fa-brands fa-github" aria-hidden="true"></i> kodexArg/welpdesk
       </a>
     </p>
     <p>
@@ -22,7 +22,7 @@
       <span>django 5, drf, bootstrap 5, javascript, postgresql, redis, celery, docker</span>
     </p>
     <p class="font-light italic text-sm">
-      Una versión funcional puede verse en 
+      Una versión funcional puede verse en
       <a href="https://helpdesk.grupoalvs.com/" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline">
         helpdesk.grupoalvs.com
       </a>
@@ -31,16 +31,16 @@
 
   <article>
     <h3>
-      Indoor Monitor IoT <i class="fa-regular fa-star text-xs ml-2"></i>
+      Indoor Monitor IoT <i class="fa-regular fa-star text-xs ml-2" aria-hidden="true"></i>
     </h3>
     <p>
       <a href="https://github.com/kodexArg/dj-indoor-monitor" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github"></i> kodexArg/dj-indoor-monitor
+        <i class="fa-brands fa-github" aria-hidden="true"></i> kodexArg/dj-indoor-monitor
       </a>
     </p>
     <p>
-      API REST y aplicación web en producción desarrollada con Django 5 + DRF. 
-      Centraliza datos de múltiples Raspberry Pi distribuidos para monitorear 
+      API REST y aplicación web en producción desarrollada con Django 5 + DRF.
+      Centraliza datos de múltiples Raspberry Pi distribuidos para monitorear
       variables ambientales en tiempo real.
     </p>
     <p class="text-sm">
@@ -48,7 +48,7 @@
       <span>django 5, drf, htmx, iot, raspberry pi, plotly, power bi, pandas</span>
     </p>
     <p class="font-light italic text-sm">
-      Una versión funcional puede verse en 
+      Una versión funcional puede verse en
       <a href="https://kcbd.grupoalvs.com/" target="_blank" rel="noopener noreferrer" class="text-gray-800 underline">
         kcbd.grupoalvs.com
       </a>
@@ -57,13 +57,11 @@
 
   <article>
     <h3>
-      Portal Web B2B - Estación de Servicio<i
-        class="fa-regular fa-star text-xs ml-2"
-      />
+      Portal Web B2B - Estación de Servicio<i class="fa-regular fa-star text-xs ml-2" aria-hidden="true"></i>
     </h3>
     <p>
       <a href="https://github.com/kodexArg/django-kmportal" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github" />kodexArg/django-kmportal
+        <i class="fa-brands fa-github" aria-hidden="true"></i> kodexArg/django-kmportal
       </a>
     </p>
     <p>
@@ -72,35 +70,28 @@
       carga efectiva e inclusión de documentos y fotos por staff interno.
     </p>
     <p class="text-sm">
-      <strong>keywords: </strong><span
-        >django v4, django-allauth, compressor, ssl, tailwind, flowbite, aws,
-        responsive</span
-      >
+      <strong>keywords: </strong><span>django v4, django-allauth, compressor, ssl, tailwind, flowbite, aws,
+        responsive</span>
     </p>
   </article>
 
   <article>
     <h3>
-      Seguimiento para Cultivos via Telegram<i
-        class="fa-regular fa-star text-xs ml-2"
-      />
+      Seguimiento para Cultivos via Telegram<i class="fa-regular fa-star text-xs ml-2" aria-hidden="true"></i>
     </h3>
     <p>
       <a href="https://github.com/kodexArg/raspberry-pi-temperature-to-telegram" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github" />kodexArg/raspberry-pi-temperature-to-telegram
+        <i class="fa-brands fa-github" aria-hidden="true"></i> kodexArg/raspberry-pi-temperature-to-telegram
       </a>
     </p>
-
     <p>
-      <i class="fa-brands fa-raspberry-pi" />Sistema IoT para sensar temperatura
+      <i class="fa-brands fa-raspberry-pi" aria-hidden="true"></i> Sistema IoT para sensar temperatura
       y humedad, guardar datos en ddbb remota y enviar la información (incluyendo
       fotos) por telegram.
     </p>
     <p class="text-sm">
-      <strong>keywords: </strong><span
-        >raspberry pi, python, opencv, pandas, matplotlib, telegram-bot, mysql,
-        sqlalchemy</span
-      >
+      <strong>keywords: </strong><span>raspberry pi, python, opencv, pandas, matplotlib, telegram-bot, mysql,
+        sqlalchemy</span>
     </p>
   </article>
 
@@ -112,9 +103,7 @@
       usuarios.
     </p>
     <p class="text-sm">
-      <strong>keywords: </strong><span
-        >mikrotik, ipsec, l2tp, aws, azure, s3</span
-      >
+      <strong>keywords: </strong><span>mikrotik, ipsec, l2tp, aws, azure, s3</span>
     </p>
   </article>
 
@@ -122,7 +111,7 @@
     <h3>Bot de Trading Algorítmico</h3>
     <p>
       <a href="https://github.com/kodexArg/PyTradingView" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github" />kodexArg/PyTradingView
+        <i class="fa-brands fa-github" aria-hidden="true"></i> kodexArg/PyTradingView
       </a>
     </p>
     <p>
@@ -131,10 +120,8 @@
     </p>
     <p class="text-sm">
       <strong>keywords: </strong>
-      <span
-        >flask, python-binance, pandas, tradingview, pine script, webhooks,
-        telegram-bot</span
-      >
+      <span>flask, python-binance, pandas, tradingview, pine script, webhooks,
+        telegram-bot</span>
     </p>
   </article>
 
@@ -147,15 +134,15 @@
 
   <article>
     <h3>
-      Sistema de Cartelería Digital<i class="fa-regular fa-star text-xs ml-2" />
+      Sistema de Cartelería Digital<i class="fa-regular fa-star text-xs ml-2" aria-hidden="true"></i>
     </h3>
     <p>
       <a href="https://github.com/kodexArg/multimedia-handler-for-rpi" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github" />kodexArg/multimedia-handler-for-rpi
+        <i class="fa-brands fa-github" aria-hidden="true"></i> kodexArg/multimedia-handler-for-rpi
       </a> *
     </p>
     <p>
-      <i class="fa-brands fa-raspberry-pi" />Sistema IoT para publicidades en
+      <i class="fa-brands fa-raspberry-pi" aria-hidden="true"></i> Sistema IoT para publicidades en
       televisión, con automatizaciones y centralización de videos en un
       repositorio que facilita la actualización de contenido.
     </p>
@@ -170,7 +157,7 @@
     <h3>Automatización AWS Route53 + EC2</h3>
     <p>
       <a href="https://github.com/kodexArg/lambda-update-route53" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-github"></i> kodexArg/lambda-update-route53
+        <i class="fa-brands fa-github" aria-hidden="true"></i> kodexArg/lambda-update-route53
       </a>
     </p>
     <p>
@@ -193,9 +180,7 @@
 
   <article>
     <h3>
-      Infraestructura IT Casino de Mendoza<i
-        class="fa-regular fa-star text-xs ml-2"
-      />
+      Infraestructura IT Casino de Mendoza<i class="fa-regular fa-star text-xs ml-2" aria-hidden="true"></i>
     </h3>
     <p>
       Arquitectura, dirección y soporte de la infraestructura en Casino de
@@ -203,10 +188,8 @@
       infraestructura virtual.
     </p>
     <p class="text-sm">
-      <strong>keywords: </strong><span
-        >rhel, oracle vm, virtualización, ncomputing thin clients, active
-        directory, oracle storage, cisco, fortigate, prtg, snmp</span
-      >
+      <strong>keywords: </strong><span>rhel, oracle vm, virtualización, ncomputing thin clients, active
+        directory, oracle storage, cisco, fortigate, prtg, snmp</span>
     </p>
   </article>
 
@@ -236,6 +219,7 @@
   h3 {
     @apply flex items-center;
   }
+
   p {
     @apply pl-5 text-left leading-tight;
   }

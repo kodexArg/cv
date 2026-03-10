@@ -1,2 +1,1 @@
-<div class="pt-8">
-</div>
+<div class="pt-8" aria-hidden="true"></div>
