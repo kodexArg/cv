@@ -1,12 +1,8 @@
 <script>
-  import { isExpanded } from '../lib/stores';
-
   let isPlatziOpen = $state(false);
 
   function togglePlatzi() {
-    if (!$isExpanded) {
-      isPlatziOpen = !isPlatziOpen;
-    }
+    isPlatziOpen = !isPlatziOpen;
   }
 </script>
 
@@ -29,10 +25,10 @@
     <div class="certification-item">
       <button class="certification-title" onclick={togglePlatzi} onkeydown={(e) => e.key === 'Enter' && togglePlatzi()}>
         Certificaciones Técnicas - Platzi:
-        <i class="fa fa-chevron-right ml-2 text-xs text-mate-400 transition-transform {(isPlatziOpen || $isExpanded) ? 'rotate-90' : ''}" aria-hidden="true"></i>
+        <i class="fa fa-chevron-right ml-2 text-xs text-mate-400 transition-transform {isPlatziOpen ? 'rotate-90' : ''}" aria-hidden="true"></i>
       </button>
 
-      {#if isPlatziOpen || $isExpanded}
+      {#if isPlatziOpen}
         <span><strong>Inteligencia Artificial y Ciencia de Datos:</strong></span>
         <span>• Complejidad Algorítmica con Python</span>
         <span>• Estadística Computacional con Python</span>

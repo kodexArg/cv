@@ -1,12 +1,10 @@
 <script>
-  import { isExpanded } from '../lib/stores';
-
   let { title = '', icon = '', hasChildren = false, level = 1, children } = $props();
 
   let isOpen = $state(false);
 
   function toggle() {
-    if (hasChildren && !$isExpanded) {
+    if (hasChildren) {
       isOpen = !isOpen;
     }
   }
@@ -32,7 +30,7 @@
     <div class="title" role="button" tabindex="0" onclick={toggle} onkeydown={(e) => e.key === 'Enter' && toggle()}>
       <div class="title-content">
         {#if hasChildren}
-          <i class="fa fa-chevron-right transition-transform text-[0.6rem] {(isOpen || $isExpanded) ? 'rotate-90' : ''}"></i>
+          <i class="fa fa-chevron-right transition-transform text-[0.6rem] {isOpen ? 'rotate-90' : ''}"></i>
         {/if}
         {#if icon}
           <i class={icon}></i>
@@ -41,7 +39,7 @@
       </div>
     </div>
 
-    {#if hasChildren && (isOpen || $isExpanded)}
+    {#if hasChildren && isOpen}
       <ul class="level-3">
         {@render children()}
       </ul>
