@@ -59,6 +59,8 @@
 </section>
 
 <style lang="postcss">
+  @reference '../styles/global.css';
+
   article {
     @apply border-b-0 -mt-2;
   }

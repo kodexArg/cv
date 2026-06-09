@@ -216,6 +216,8 @@
 </section>
 
 <style lang="postcss">
+  @reference '../styles/global.css';
+
   h3 {
     @apply flex items-center;
   }

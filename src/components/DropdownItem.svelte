@@ -52,6 +52,8 @@
 {/if}
 
 <style lang="postcss">
+  @reference '../styles/global.css';
+
   .level-1 {
     @apply mb-6;
   }

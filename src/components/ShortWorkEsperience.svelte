@@ -35,6 +35,8 @@
 </section>
 
 <style lang="postcss">
+  @reference '../styles/global.css';
+
   article {
     @apply border-b-0 mb-1 pb-2;
     border-bottom: 1px dashed #f0f2f0;

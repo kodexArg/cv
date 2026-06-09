@@ -1,8 +1,9 @@
+# build output is committed in docs/ for GitHub Pages — do not ignore it
 .DS_Store
 node_modules
-/.svelte-kit
+.astro
+dist
 .env
 .env.*
 !.env.example
 .vercel
-vite.config.js.timestamp-*
