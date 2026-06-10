@@ -1,9 +1,726 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
+
+const contact = [
+  { icon: 'fa-solid fa-envelope', label: 'gcavedal@gmail.com', href: 'mailto:gcavedal@gmail.com' },
+  { icon: 'fa-brands fa-linkedin', label: 'in/gabriel-cavedal', href: 'https://www.linkedin.com/in/gabriel-cavedal/' },
+  { icon: 'fa-brands fa-github', label: 'kodexArg', href: 'https://github.com/kodexArg' },
+  { icon: 'fa-brands fa-telegram', label: '@KodexArg', href: 'https://t.me/KodexArg' },
+  { icon: 'fa-solid fa-location-dot', label: 'Mendoza, AR — remote, EU-friendly hours', href: null },
+];
+
+const experience = [
+  {
+    role: 'Technical Lead — IT & Infrastructure',
+    company: 'Grupo ALVS · Mendoza, AR',
+    dates: '2016 — present',
+    bullets: [
+      'Lead a 4-person IT team (senior network engineer, senior generalist, two juniors) serving the business units of a fuel & retail group.',
+      'Designed and shipped the group’s production platforms on Django + AWS — B2B fuel-ordering portal, company-wide helpdesk, real-time IoT monitoring — all live today.',
+      'Drive AI adoption across the group: agentic automations with MCP servers, n8n and LLM orchestration, plus hands-on AI training for staff.',
+      'Architected the multi-site backbone: VPN mesh (MikroTik / IPsec) bridging on-premise sites with AWS, and group-wide VoIP.',
+    ],
+  },
+  {
+    role: 'Head of Organization & Systems',
+    company: 'Mendoza Central Entretenimiento (Casino de Mendoza)',
+    dates: '2005 — 2016',
+    bullets: [
+      'Ran IT end to end for a major casino: 700 networked slot machines, virtualized RHEL / Oracle VM infrastructure, enterprise networking and security.',
+      'Built the analytics the business ran on: BI dashboards, floor heatmaps and machine-learning models over gaming data.',
+    ],
+  },
+  {
+    role: 'Slot Systems Technician',
+    company: 'Casino Buenos Aires',
+    dates: '2002 — 2005',
+    bullets: ['Gaming hardware, networks and systems support — where it all started.'],
+  },
+];
+
+const projects = [
+  {
+    name: 'Welpdesk — ticketing platform',
+    stack: 'Django 5 · DRF · Redis/Celery · Docker',
+    text: 'Configurable helpdesk for organizations with multiple business units. In production at Grupo ALVS.',
+    repo: 'https://github.com/kodexArg/welpdesk',
+    live: 'https://helpdesk.grupoalvs.com/',
+  },
+  {
+    name: 'B2B fuel portal',
+    stack: 'Django · AWS · Tailwind',
+    text: 'End-to-end fuel ordering for corporate clients — from logistics request to delivery, with documents and photo evidence.',
+    repo: 'https://github.com/kodexArg/django-kmportal',
+    live: null,
+  },
+  {
+    name: 'Indoor Monitor — IoT telemetry',
+    stack: 'Django · DRF · HTMX · Raspberry Pi · Plotly',
+    text: 'Real-time environmental telemetry from a distributed Raspberry Pi fleet: REST API and dashboards, in production.',
+    repo: 'https://github.com/kodexArg/dj-indoor-monitor',
+    live: 'https://kcbd.grupoalvs.com/',
+  },
+  {
+    name: 'Agentic AI tooling',
+    stack: 'Python · MCP · n8n',
+    text: 'MCP servers published on the Glama registry, a Telegram-bot MCP bridge, and LLM-driven workflow automations.',
+    repo: 'https://github.com/kodexArg/syv-mcp-tools',
+    live: null,
+  },
+];
+
+const skills = [
+  {
+    icon: 'fa-solid fa-wand-magic-sparkles',
+    title: 'AI Engineering',
+    items: 'Agentic AI · MCP servers · LLM orchestration · RAG · Prompt engineering · n8n · Claude · GPT · Gemini',
+  },
+  {
+    icon: 'fa-brands fa-python',
+    title: 'Backend',
+    items: 'Python · Django · DRF · FastAPI · PostgreSQL · Redis · Celery · REST APIs',
+  },
+  {
+    icon: 'fa-brands fa-aws',
+    title: 'Cloud & DevOps',
+    items: 'AWS (EC2 · Lambda · S3 · RDS · Route 53 · App Runner) · Docker · CI/CD · GitHub Actions · Linux',
+  },
+  {
+    icon: 'fa-solid fa-code',
+    title: 'Frontend',
+    items: 'Astro · Svelte · Angular · Tailwind CSS · HTMX',
+  },
+  {
+    icon: 'fa-solid fa-network-wired',
+    title: 'Infrastructure & IoT',
+    items: 'Networking · VPN / IPsec · MikroTik · FortiGate · VoIP · Raspberry Pi · ESP32',
+  },
+  {
+    icon: 'fa-solid fa-people-group',
+    title: 'Leadership & Business',
+    items: 'Team leadership · Solutions architecture · Business process automation · Vendor & budget management · Power BI',
+  },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Gabriel Cavedal',
+    jobTitle: 'AI Solutions Architect & Fractional CTO',
+    email: 'mailto:gcavedal@gmail.com',
+    url: 'https://kodexarg.github.io/cv/',
+    image: 'https://kodexarg.github.io/cv/gabriel-cavedal.jpg',
+    sameAs: [
+      'https://www.linkedin.com/in/gabriel-cavedal/',
+      'https://github.com/kodexArg',
+      'https://t.me/KodexArg',
+    ],
+    worksFor: { '@type': 'Organization', name: 'Grupo ALVS' },
+    knowsAbout: [
+      'Agentic AI',
+      'LLM Orchestration',
+      'Model Context Protocol',
+      'Python',
+      'Django',
+      'AWS',
+      'Solutions Architecture',
+      'DevOps',
+      'Business Process Automation',
+    ],
+    knowsLanguage: ['es', 'en'],
+    address: { '@type': 'PostalAddress', addressLocality: 'Mendoza', addressCountry: 'AR' },
+  },
+};
 ---
 
-<Layout>
-  <main style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:sans-serif;color:#555;">
-    <p>Coming soon.</p>
-  </main>
+<Layout
+  lang="en"
+  title="Gabriel Cavedal — AI Solutions Architect & Fractional CTO"
+  description="AI Solutions Architect & Fractional CTO. Python, Django, AWS, agentic AI (MCP, LLM orchestration, n8n). 20+ years leading IT and shipping production systems. Remote consulting for Spain & Europe."
+  ogUrl="https://kodexarg.github.io/cv/"
+>
+  <div class="ncv-bg">
+    <div class="ncv">
+      <header class="masthead">
+        <div class="masthead-text">
+          <h1>Gabriel Cavedal</h1>
+          <p class="headline">AI Solutions Architect · Fractional CTO</p>
+          <p class="keywords">Python · Django · AWS · Agentic AI · LLM Orchestration</p>
+          <nav class="contact" aria-label="Contact">
+            {
+              contact.map((c) =>
+                c.href ? (
+                  <a href={c.href} target={c.href.startsWith('mailto') ? undefined : '_blank'} rel="noopener">
+                    <i class={c.icon} aria-hidden="true" />
+                    {c.label}
+                  </a>
+                ) : (
+                  <span>
+                    <i class={c.icon} aria-hidden="true" />
+                    {c.label}
+                  </span>
+                )
+              )
+            }
+          </nav>
+        </div>
+        <img class="photo" src={`${base}/gabriel-cavedal.jpg`} alt="Gabriel Cavedal" loading="eager" />
+      </header>
+
+      <div class="rule" role="presentation"></div>
+
+      <div class="columns">
+        <main>
+          <h2><i class="fa-solid fa-user" aria-hidden="true"></i>Profile</h2>
+          <p>
+            Hands-on architect and technical lead with 20+ years running IT for multi-business groups — and
+            writing the software they run on. I design systems end to end: cloud architecture on AWS, Django
+            platforms in production, agentic AI tooling with MCP and LLM orchestration. My edge is operational
+            business fluency: two decades inside real companies taught me to read a P&amp;L as comfortably as a
+            stack trace. Open to remote consulting for Spain and Europe — architecture reviews, AI adoption
+            scouting and rapid quick-win builds.
+          </p>
+
+          <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Experience</h2>
+          {
+            experience.map((job) => (
+              <section class="job">
+                <div class="job-head">
+                  <h3>{job.role}</h3>
+                  <span class="dates">{job.dates}</span>
+                </div>
+                <p class="company">{job.company}</p>
+                <ul>
+                  {job.bullets.map((b) => (
+                    <li>{b}</li>
+                  ))}
+                </ul>
+              </section>
+            ))
+          }
+
+          <h2><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Selected Work</h2>
+          {
+            projects.map((p) => (
+              <section class="project">
+                <div class="job-head">
+                  <h3>
+                    {p.name}
+                    <a class="proj-link" href={p.repo} target="_blank" rel="noopener" aria-label={`${p.name} on GitHub`}>
+                      <i class="fa-brands fa-github" aria-hidden="true" />
+                    </a>
+                    {p.live && (
+                      <a class="proj-link" href={p.live} target="_blank" rel="noopener" aria-label={`${p.name} live`}>
+                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" />
+                      </a>
+                    )}
+                  </h3>
+                  <span class="stack">{p.stack}</span>
+                </div>
+                <p>{p.text}</p>
+              </section>
+            ))
+          }
+        </main>
+
+        <aside>
+          <h2><i class="fa-solid fa-layer-group" aria-hidden="true"></i>Core Skills</h2>
+          {
+            skills.map((g) => (
+              <section class="skill-group">
+                <h3>
+                  <i class={g.icon} aria-hidden="true" />
+                  {g.title}
+                </h3>
+                <p>{g.items}</p>
+              </section>
+            ))
+          }
+
+          <h2><i class="fa-solid fa-language" aria-hidden="true"></i>Languages</h2>
+          <p class="side-line">Spanish — native</p>
+          <p class="side-line">English — professional working proficiency</p>
+
+          <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Education</h2>
+          <p class="side-line">Technical school — ENET N°1 «Ing. Pablo Nogués», Mendoza</p>
+          <p class="side-line">
+            Continuous certification —
+            <a href="https://platzi.com/p/gcavedal/" target="_blank" rel="noopener">Platzi</a>: AI &amp; data
+            science, backend (Django), cloud &amp; DevOps
+          </p>
+
+          <div class="freelance">
+            <h3><i class="fa-solid fa-handshake" aria-hidden="true"></i>Freelance &amp; Consulting</h3>
+            <p>
+              Available for architecture reviews, AI adoption scouting and quick-win engagements.
+              Remote-first, Europe-friendly hours.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <footer class="ncv-foot">
+      <p>
+        This page prints to a single A4 —
+        <button class="print-btn" onclick="window.print()">print / save as PDF</button>
+        &nbsp;·&nbsp;
+        <a href={`${base}/full/`}>full legacy CV (Spanish)</a>
+      </p>
+    </footer>
+  </div>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
 </Layout>
+
+<style is:global>
+  /* New one-page CV — all rules prefixed .ncv to stay clear of the legacy /full/ styles. */
+  .ncv-bg {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #b8bab7, var(--color-mate-300));
+    padding: 2.5rem 1rem 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .ncv {
+    max-width: 210mm;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px -5px rgb(55 65 81 / 0.6);
+    overflow: hidden;
+    color: var(--color-mate-600);
+  }
+
+  /* Masthead */
+  .ncv .masthead {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.75rem 1.75rem 1.25rem;
+  }
+  .ncv .masthead-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .ncv h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.05;
+    color: var(--color-mate-500);
+    margin: 0;
+    text-align: left;
+    filter: drop-shadow(0 2px 2px rgb(109 129 107 / 0.3));
+  }
+  .ncv .headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-pullover-500);
+    margin: 0.4rem 0 0;
+    text-align: left;
+  }
+  .ncv .keywords {
+    font-size: 0.92rem;
+    color: var(--color-mate-400);
+    margin: 0.3rem 0 0;
+    text-align: left;
+  }
+  .ncv .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.1rem;
+    margin-top: 0.85rem;
+    font-size: 0.85rem;
+  }
+  .ncv .contact a,
+  .ncv .contact span {
+    color: var(--color-mate-700);
+    text-decoration: none;
+    transition: color 0.15s ease;
+    white-space: nowrap;
+  }
+  .ncv .contact a:hover {
+    color: var(--color-pullover-300);
+  }
+  .ncv .contact i {
+    color: var(--color-pullover-400);
+    margin-right: 0.35rem;
+  }
+  .ncv .photo {
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    border: 2px solid var(--color-pullover-400);
+    box-shadow: 0 10px 15px -3px rgb(21 18 15 / 0.35);
+    flex-shrink: 0;
+  }
+
+  .ncv .rule {
+    height: 2px;
+    background: var(--color-pullover-50);
+    margin: 0 1.75rem;
+  }
+
+  /* Columns */
+  .ncv .columns {
+    display: flex;
+    flex-direction: column;
+  }
+  .ncv .columns > main {
+    padding: 0.5rem 1.75rem 1.75rem;
+    display: block;
+  }
+  .ncv .columns > aside {
+    background: var(--color-mate-100);
+    padding: 0.5rem 1.5rem 1.75rem;
+  }
+  @media (min-width: 768px) {
+    .ncv .columns {
+      flex-direction: row;
+      align-items: stretch;
+    }
+    .ncv .columns > main {
+      width: calc(100% * 8 / 13);
+    }
+    .ncv .columns > aside {
+      width: calc(100% * 5 / 13);
+    }
+  }
+
+  /* Typography overrides (the legacy global.css styles h1-h4/p/section/article at element level) */
+  .ncv h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-mate-500);
+    text-align: left;
+    margin: 1.5rem 0 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--color-pullover-50);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .ncv h2 i {
+    color: var(--color-pullover-400);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  .ncv h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.02rem;
+    font-weight: 500;
+    color: var(--color-mate-700);
+    margin: 0;
+  }
+  .ncv p {
+    font-size: 0.93rem;
+    line-height: 1.55;
+    text-align: left;
+    color: var(--color-mate-600);
+    margin: 0;
+  }
+  .ncv section {
+    display: block;
+    border: none;
+    padding: 0;
+  }
+
+  /* Experience & projects */
+  .ncv .job,
+  .ncv .project {
+    margin-top: 0.85rem;
+  }
+  .ncv .job:first-of-type,
+  .ncv .project:first-of-type {
+    margin-top: 0.2rem;
+  }
+  .ncv .job-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .ncv .dates,
+  .ncv .stack {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-pullover-400);
+    white-space: nowrap;
+  }
+  .ncv .stack {
+    white-space: normal;
+    text-align: right;
+    font-weight: 400;
+  }
+  .ncv .company {
+    font-size: 0.84rem;
+    color: var(--color-mate-500);
+    margin-top: 0.05rem;
+  }
+  .ncv main ul {
+    list-style: none;
+    margin: 0.3rem 0 0;
+    padding: 0;
+  }
+  .ncv main li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-mate-600);
+    position: relative;
+    padding-left: 1rem;
+    margin-top: 0.25rem;
+  }
+  .ncv main li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    font-size: 0.72rem;
+    color: var(--color-pullover-300);
+  }
+  .ncv .proj-link {
+    margin-left: 0.45rem;
+    color: var(--color-pullover-400);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.15s ease;
+  }
+  .ncv .proj-link:hover {
+    color: var(--color-pullover-300);
+  }
+  .ncv .proj-link i {
+    margin: 0;
+  }
+
+  /* Sidebar */
+  .ncv .skill-group {
+    margin-top: 0.7rem;
+  }
+  .ncv .skill-group h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.96rem;
+  }
+  .ncv .skill-group h3 i {
+    color: var(--color-pullover-500);
+    width: 1.15rem;
+    text-align: center;
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .ncv .skill-group p {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    padding-left: 1.65rem;
+    margin-top: 0.1rem;
+  }
+  .ncv .side-line {
+    font-size: 0.86rem;
+    line-height: 1.5;
+    margin-top: 0.2rem;
+  }
+  .ncv .side-line a {
+    color: var(--color-mate-700);
+    text-decoration: underline;
+    text-decoration-color: var(--color-pullover-200);
+    transition: color 0.15s ease;
+  }
+  .ncv .side-line a:hover {
+    color: var(--color-pullover-300);
+  }
+  .ncv .freelance {
+    margin-top: 1.4rem;
+    background: rgb(255 255 255 / 0.55);
+    border: 1px solid var(--color-pullover-100);
+    border-radius: 0.6rem;
+    padding: 0.85rem 1rem;
+  }
+  .ncv .freelance h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.96rem;
+  }
+  .ncv .freelance h3 i {
+    color: var(--color-pullover-500);
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .ncv .freelance p {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+  }
+
+  /* Screen-only footer */
+  .ncv-foot {
+    max-width: 210mm;
+    margin: 1rem auto 0;
+    text-align: center;
+  }
+  .ncv-foot p {
+    font-size: 0.85rem;
+    color: var(--color-mate-800);
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  .ncv-foot a {
+    color: var(--color-mate-800);
+    text-decoration: underline;
+  }
+  .ncv-foot .print-btn {
+    font-size: 0.85rem;
+    color: var(--color-mate-800);
+    text-decoration: underline;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+  }
+  .ncv-foot a:hover,
+  .ncv-foot .print-btn:hover {
+    color: var(--color-pullover-500);
+  }
+
+  /* Small screens */
+  @media (max-width: 520px) {
+    .ncv .masthead {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .ncv .photo {
+      width: 6rem;
+      height: 6rem;
+    }
+    .ncv h1 {
+      font-size: 2.1rem;
+    }
+  }
+
+  /* Print: exactly one A4 page */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  @media print {
+    .ncv-bg {
+      padding: 0;
+      background: #fff;
+      min-height: 0;
+    }
+    .ncv {
+      max-width: 100%;
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .ncv-foot {
+      display: none;
+    }
+    .ncv .columns {
+      flex-direction: row;
+    }
+    .ncv .columns > main {
+      width: calc(100% * 8 / 13);
+      padding: 0.15rem 1.4rem 0.5rem;
+    }
+    .ncv .columns > aside {
+      width: calc(100% * 5 / 13);
+      padding: 0.15rem 1.2rem 0.5rem;
+    }
+    .ncv .masthead {
+      padding: 0.9rem 1.4rem 0.5rem;
+    }
+    .ncv h1 {
+      font-size: 2rem;
+      filter: none;
+    }
+    .ncv .headline {
+      font-size: 0.95rem;
+      margin-top: 0.25rem;
+    }
+    .ncv .keywords {
+      font-size: 0.8rem;
+      margin-top: 0.2rem;
+    }
+    .ncv .photo {
+      width: 5.25rem;
+      height: 5.25rem;
+    }
+    .ncv h2 {
+      font-size: 1rem;
+      margin-top: 0.6rem;
+      margin-bottom: 0.35rem;
+      padding-bottom: 0.15rem;
+    }
+    .ncv h3 {
+      font-size: 0.95rem;
+    }
+    .ncv p,
+    .ncv main li {
+      font-size: 0.8rem;
+      line-height: 1.35;
+    }
+    .ncv main ul {
+      margin-top: 0.15rem;
+    }
+    .ncv main li {
+      margin-top: 0.12rem;
+    }
+    .ncv .job {
+      margin-top: 0.55rem;
+    }
+    .ncv .project {
+      margin-top: 0.45rem;
+    }
+    .ncv .company {
+      font-size: 0.75rem;
+    }
+    .ncv .dates,
+    .ncv .stack {
+      font-size: 0.72rem;
+    }
+    .ncv .skill-group {
+      margin-top: 0.45rem;
+    }
+    .ncv .skill-group p,
+    .ncv .side-line,
+    .ncv .freelance p {
+      font-size: 0.76rem;
+      line-height: 1.4;
+    }
+    .ncv .freelance {
+      margin-top: 0.8rem;
+      padding: 0.6rem 0.8rem;
+    }
+    .ncv .contact {
+      font-size: 0.76rem;
+      margin-top: 0.5rem;
+      gap: 0.25rem 0.9rem;
+    }
+    .ncv a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .ncv .job,
+    .ncv .project,
+    .ncv .skill-group {
+      page-break-inside: avoid;
+    }
+  }
+</style>

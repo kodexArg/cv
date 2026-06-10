@@ -2,24 +2,29 @@
 import '../styles/global.css';
 
 const base = import.meta.env.BASE_URL;
+
+const {
+  lang = 'es',
+  title = 'Gabriel Cavedal - CV',
+  description = 'CV de Gabriel Cavedal - Líder Técnico de Soporte e Infraestructura IT',
+  ogUrl = 'https://kodexarg.github.io/cv',
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href={`${base}/favicon.png`} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="CV de Gabriel Cavedal - Líder Técnico de Soporte e Infraestructura IT"
-    />
+    <meta name="description" content={description} />
     <meta name="theme-color" content="#6d816b" />
-    <meta property="og:title" content="Gabriel Cavedal - CV" />
-    <meta property="og:description" content="Líder Técnico de Soporte e Infraestructura IT" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kodexarg.github.io/cv" />
-    <title>Gabriel Cavedal - CV</title>
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:image" content="https://kodexarg.github.io/cv/gabriel-cavedal.jpg" />
+    <title>{title}</title>
   </head>
   <body>
     <slot />
