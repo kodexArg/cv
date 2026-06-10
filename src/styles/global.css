@@ -49,17 +49,24 @@ i {
   @apply mr-1;
 }
 
+/* Element styles below only matter on /full/ — the one-page CV (.ncv) overrides all of them.
+   They mirror the .ncv typography so jumping between both pages feels seamless. */
 h1 {
-  @apply font-oswald text-5xl text-mate-500 m-4 text-center;
-  @apply drop-shadow-lg shadow-mate-500;
+  @apply font-oswald text-5xl font-semibold text-mate-700 text-left m-0 leading-tight;
 }
 
 h2 {
-  @apply font-oswald text-3xl text-mate-500 text-center mt-8 mb-4;
+  @apply font-oswald text-2xl font-medium uppercase tracking-wide text-mate-500 text-left mt-8 mb-3;
+  @apply border-b-2 border-pullover-50 pb-1;
+  @apply flex items-center gap-2;
+}
+
+h2 > i {
+  @apply text-pullover-400 text-xl mr-0;
 }
 
 h3 {
-  @apply font-oswald text-xl text-mate-500 mt-3;
+  @apply font-oswald text-xl font-medium text-mate-700 mt-3;
 }
 
 h4 {

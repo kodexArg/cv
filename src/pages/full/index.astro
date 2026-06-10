@@ -5,6 +5,11 @@ import Cv from '../../components/Cv.svelte';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<Layout>
+<Layout
+  lang="es"
+  title="Gabriel Cavedal — CV completo"
+  description="CV completo de Gabriel Cavedal — AI Solutions Architect & Fractional CTO. Experiencia, QA y revisión de proyectos, habilidades y proyectos en detalle."
+  ogUrl="https://cv.kodexarg.com/full/"
+>
   <Cv {base} client:load />
 </Layout>

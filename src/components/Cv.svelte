@@ -6,6 +6,7 @@
   import Line from './Line.svelte';
   import AboutMe from './AboutMe.svelte';
   import ShortWorkEsperience from './ShortWorkEsperience.svelte';
+  import QaExperience from './QaExperience.svelte';
   import ShortEducation from './ShortEducation.svelte';
   import ShortProjects from './ShortProjects.svelte';
   import Footer from './Footer.svelte';
@@ -31,15 +32,16 @@
             <SemanticSkills />
           </aside>
         {/if}
-        <div class="right-col flex flex-col p-4 space-y-1" class:full-width={!$isLeftPanelVisible}>
+        <div class="right-col flex flex-col px-6 py-5 space-y-1" class:full-width={!$isLeftPanelVisible}>
           <Title />
           <Contact />
           <Line />
           <AboutMe />
           <ShortWorkEsperience />
-          <ShortEducation />
+          <QaExperience />
           <ShortProjects />
-          <Footer />
+          <ShortEducation />
+          <Footer {base} />
           {#if !$isLeftPanelVisible}
             <SemanticSkills />
           {/if}
@@ -53,8 +55,9 @@
   @reference '../styles/global.css';
 
   .a4 {
+    /* Same sheet width as the one-page CV (.ncv) so /  → /full/ feels like the same document. */
     @apply bg-white rounded-lg shadow-lg shadow-gray-700 flex flex-col p-0.5;
-    @apply w-[800px] mx-auto mt-12;
+    @apply w-full max-w-[1140px] mx-auto mt-10;
     transition: all 0.3s ease;
   }
 

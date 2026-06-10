@@ -1,36 +1,43 @@
 <section>
-  <h2>Experiencia Laboral</h2>
+  <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Experiencia Laboral</h2>
+
   <article>
-    <div class="job-item">
-      <h4>Grupo AVS: "Líder de Soporte Técnico"</h4>
-      <span>Diciembre 2016 - Presente</span>
+    <div class="job-head">
+      <h3>Technical Lead — IT & Infraestructura</h3>
+      <span class="dates">2016 — presente</span>
     </div>
+    <p class="company">Grupo ALVS · Mendoza, AR</p>
+    <p>
+      Lidero el equipo de IT del grupo en todas sus unidades de negocio. Diseñé y opero su
+      plataforma cloud en AWS —VPCs DEV/PROD, ECS Fargate, RDS PostgreSQL, Cognito, todo definido
+      con CloudFormation y desplegado vía GitHub Actions con OIDC— que corre el helpdesk en
+      producción, workflows de pagos, sitios institucionales y telemetría IoT sobre un backbone
+      VPN multi-sitio. Impulso la adopción de IA en todo el grupo: orquestación multi-agente con
+      servidores MCP, workflows automatizados y capacitación hands-on al personal.
+    </p>
   </article>
 
   <article>
-    <div class="job-item">
-      <h4>
-        Mendoza Central Entretenimiento S.A.:<br />"Jefe de Organización y
-        Sistemas"
-      </h4>
-      <span>2005 - Diciembre 2016</span>
+    <div class="job-head">
+      <h3>Jefe de Organización y Sistemas</h3>
+      <span class="dates">2005 — 2016</span>
     </div>
+    <p class="company">Mendoza Central Entretenimiento (Casino de Mendoza)</p>
+    <p>
+      Diseñé de punta a punta las redes y el floorplan del casino y construí los clusters de
+      servidores RHEL que corrieron toda la operación: sistemas de juego con 700 tragamonedas en
+      red, dashboards de BI y analítica con machine learning. Una década de operación continua
+      sin downtime.
+    </p>
   </article>
 
   <article>
-    <div class="job-item">
-      <h4>
-        Casino Buenos Aires:<br />"Técnico de Tragamonedas / Área Sistemas"
-      </h4>
-      <span>2003 - 2005</span>
+    <div class="job-head">
+      <h3>Técnico de Sistemas de Tragamonedas</h3>
+      <span class="dates">2002 — 2005</span>
     </div>
-  </article>
-
-  <article>
-    <div class="job-item">
-      <h4>Casino Buenos Aires: "Asistente de Tragamonedas"</h4>
-      <span>Octubre de 2002 - 2003</span>
-    </div>
+    <p class="company">Casino Buenos Aires</p>
+    <p>Hardware de juego, redes y soporte de sistemas.</p>
   </article>
 </section>
 
@@ -38,51 +45,22 @@
   @reference '../styles/global.css';
 
   article {
-    @apply border-b-0 mb-1 pb-2;
-    border-bottom: 1px dashed #f0f2f0;
+    @apply border-b-0 pb-2 mb-1;
   }
 
-  article:last-child {
-    border-bottom: none;
+  .job-head {
+    @apply flex flex-wrap items-baseline justify-between gap-x-4;
   }
 
-  .job-item {
-    @apply flex flex-col;
+  .job-head h3 {
+    @apply mt-1;
   }
 
-  .job-item h4 {
-    @apply mb-1;
+  .dates {
+    @apply text-sm font-semibold text-pullover-400 whitespace-nowrap;
   }
 
-  .job-item span {
-    @apply text-sm italic text-mate-600 text-right;
-  }
-
-  @media (min-width: 768px) {
-    .job-item {
-      @apply flex-row justify-between items-baseline;
-    }
-
-    .job-item h4 {
-      @apply flex-1 min-w-0 mr-4 mb-0;
-    }
-
-    .job-item span {
-      @apply flex-shrink-0 text-left;
-    }
-  }
-
-  @media (min-width: 1100px) {
-    :global(.maximized) .job-item {
-      @apply flex-col items-start;
-    }
-
-    :global(.maximized) .job-item span {
-      @apply text-sm italic text-mate-300 ml-5 my-1 leading-tight block;
-    }
-  }
-
-  section {
-    @apply border-b-2;
+  .company {
+    @apply text-base text-mate-500 mt-0 text-left;
   }
 </style>

@@ -1,57 +1,36 @@
 <script>
   let isPlatziOpen = $state(false);
-
-  function togglePlatzi() {
-    isPlatziOpen = !isPlatziOpen;
-  }
 </script>
 
 <section>
-  <h2>Educación Formal</h2>
-
-  <article>
-    <h4>Educación Superior:</h4>
-    <span>• Ingeniería Electromecánica (inconcluso) - UNSL, San Luis</span>
-    <span>• Diseño Gráfico (inconcluso) - Facultad Villa Mercedes, San Luis</span>
-    <span>• Contador Público Nacional (inconcluso) - Universidad Siglo XXI</span>
-  </article>
+  <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Educación</h2>
 
   <article>
     <h4>Educación Técnica:</h4>
-    <span>Ing. Pablo Nogués ENET I, Mendoza</span>
+    <span>Escuela técnica ENET N°1 «Ing. Pablo Nogués», Mendoza</span>
+  </article>
+
+  <article>
+    <h4>Educación Superior:</h4>
+    <span>• Ingeniería Electromecánica (inconclusa) — UNSL, San Luis</span>
+    <span>• Diseño Gráfico (inconcluso) — Villa Mercedes, San Luis</span>
   </article>
 
   <article>
     <div class="certification-item">
-      <button class="certification-title" onclick={togglePlatzi} onkeydown={(e) => e.key === 'Enter' && togglePlatzi()}>
-        Certificaciones Técnicas - Platzi:
+      <button class="certification-title" onclick={() => (isPlatziOpen = !isPlatziOpen)}>
+        Certificación continua — Platzi
         <i class="fa fa-chevron-right ml-2 text-xs text-mate-400 transition-transform {isPlatziOpen ? 'rotate-90' : ''}" aria-hidden="true"></i>
       </button>
 
       {#if isPlatziOpen}
-        <span><strong>Inteligencia Artificial y Ciencia de Datos:</strong></span>
-        <span>• Complejidad Algorítmica con Python</span>
-        <span>• Estadística Computacional con Python</span>
-        <span>• Fundamentos de Álgebra Lineal con Python</span>
-        <span>• Introducción al Pensamiento Probabilístico</span>
-
-        <span><strong>Desarrollo Backend:</strong></span>
-        <span>• Django Básico e Intermedio</span>
-        <span>• Python Básico</span>
-        <span>• Bases de Datos con SQL</span>
-        <span>• Scrapy</span>
-
-        <span><strong>DevOps y Cloud:</strong></span>
-        <span>• AWS Cloud Computing y EC2</span>
-        <span>• Docker</span>
-        <span>• Git y GitHub</span>
-
-        <span><strong>Frontend:</strong></span>
-        <span>• Svelte</span>
-        <span>• Clean Code con JavaScript</span>
-
+        <span><strong>IA y Ciencia de Datos:</strong> complejidad algorítmica, estadística computacional, álgebra lineal y pensamiento probabilístico con Python</span>
+        <span><strong>Backend:</strong> Django, Python, SQL, Scrapy</span>
+        <span><strong>DevOps y Cloud:</strong> AWS (Cloud Computing, EC2), Docker, Git y GitHub</span>
+        <span><strong>Frontend:</strong> Svelte, Clean Code con JavaScript</span>
         <span>
-          <a href="https://platzi.com/p/gcavedal/" target="_blank" rel="noopener noreferrer">Platzi</a>
+          Perfil completo en
+          <a href="https://platzi.com/p/gcavedal/" target="_blank" rel="noopener noreferrer">platzi.com/p/gcavedal</a>
         </span>
       {/if}
     </div>
@@ -66,24 +45,27 @@
   }
 
   span {
-    @apply text-sm italic text-mate-300 ml-5 my-1 leading-tight block;
+    @apply text-sm italic text-mate-500 ml-5 my-1 leading-snug block;
   }
 
   span strong {
     @apply not-italic text-mate-600 font-medium;
   }
 
+  span a {
+    @apply underline;
+  }
+
   section {
-    @apply border-b-2;
+    @apply border-b-2 border-pullover-50;
   }
 
   .certification-title {
-    @apply cursor-pointer flex items-center justify-between bg-transparent border-none p-0 text-left w-full;
-    font-family: inherit;
-    color: inherit;
+    @apply cursor-pointer flex items-center bg-transparent border-none p-0 text-left w-full;
+    @apply font-oswald text-lg text-mate-500 mt-3 mb-1 tracking-wide;
   }
 
   .certification-title:hover {
-    @apply text-mate-400;
+    @apply text-pullover-400;
   }
 </style>
