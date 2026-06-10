@@ -290,9 +290,8 @@ const schema = {
 
     <footer class="ncv-foot">
       <p>
-        <button class="print-btn" id="print-ready">ready to print</button>
-        &nbsp;·&nbsp;
-        <a class="lang-flag" href={`${base}/es/`} title="Versión en castellano" aria-label="Versión en castellano">🇪🇸</a>
+        <button class="print-btn" id="print-ready"><i class="fa-solid fa-print" aria-hidden="true"></i>ready to print</button>
+        <a class="lang-flag" href={`${base}/es/`}><span aria-hidden="true">🇪🇸</span> Cambiar a Español</a>
         <a class="full-link" href={`${base}/full/`}><i class="fa-solid fa-link" aria-hidden="true"></i>full</a>
       </p>
     </footer>
@@ -588,14 +587,17 @@ const schema = {
   .ncv-foot {
     max-width: 1140px;
     margin: 1.2rem auto 0;
-    text-align: center;
-    position: relative;
+  }
+  .ncv-foot p {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
   }
   .ncv-foot .full-link {
-    position: absolute;
-    right: 0;
+    margin-left: auto;
   }
-  .ncv-foot .full-link i {
+  .ncv-foot .full-link i,
+  .ncv-foot .print-btn i {
     margin-right: 0.35rem;
   }
   .ncv-foot p {
