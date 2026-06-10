@@ -1,0 +1,69 @@
+name: Deploy to Cloudflare Pages
+
+# cv.kodexarg.com — Pages project kdx-cv.
+# GitHub Pages (kodexarg.github.io/cv) deploys separately from docs/ on push;
+# this workflow covers the Cloudflare side with the CF_PAGES=1 build variant.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+  workflow_dispatch:
+
+concurrency:
+  group: cf-pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Cloudflare credentials
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::CLOUDFLARE_API_TOKEN secret is not set. Create a token (Account → Cloudflare Pages → Edit) and run: gh secret set CLOUDFLARE_API_TOKEN -R kodexArg/cv"
+            exit 1
+          fi
+
+      - uses: oven-sh/setup-bun@v2
+
+      - run: bun install --frozen-lockfile
+
+      - name: Build (Cloudflare variant, base /)
+        run: bun run build
+        env:
+          CF_PAGES: '1'
+
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist-cf --project-name=kdx-cv --branch=main
+
+  smoke:
+    name: Smoke prod
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Wait for CF Pages propagation
+        run: sleep 20
+
+      - name: Check deployed pages
+        run: |
+          for path in / /es/ /full/; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "https://kdx-cv.pages.dev${path}")
+            echo "kdx-cv.pages.dev${path} -> $code"
+            [ "$code" = "200" ] || exit 1
+          done
+          curl -s https://kdx-cv.pages.dev/ | grep -q 'Gabriel Cavedal' || { echo "::error::content check failed"; exit 1; }
