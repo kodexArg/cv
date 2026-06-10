@@ -1,6 +1,7 @@
 # build output is committed in docs/ for GitHub Pages — do not ignore it
 .DS_Store
 node_modules
+package-lock.json
 .astro
 dist
 .env
