@@ -18,8 +18,9 @@ const experience = [
     company: 'Grupo ALVS · Mendoza, AR',
     dates: '2016 — present',
     bullets: [
-      'Lead the group’s IT team across its business units — fuel, retail and more.',
-      'Designed and operate the group’s AWS cloud platform — IaC, OIDC-secured CI/CD — running its production helpdesk, payment workflows, B2B fuel portal, institutional sites and IoT telemetry.',
+      'Lead the group’s IT team across all of its business units.',
+      'Designed and operate the group’s AWS cloud platform, running its production helpdesk, payment workflows, institutional sites and IoT telemetry.',
+      'Shipped countless micro-solutions connecting employees’ daily reality with hardware, processes and other systems.',
       'Drive AI adoption group-wide: multi-agent orchestration with MCP servers wired into the infrastructure, automated workflows, hands-on AI training for staff.',
       'Architected the multi-site backbone: VPN mesh (MikroTik / IPsec) bridging on-premise sites with AWS.',
     ],
@@ -29,7 +30,9 @@ const experience = [
     company: 'Mendoza Central Entretenimiento (Casino de Mendoza)',
     dates: '2005 — 2016',
     bullets: [
-      'Ran IT end to end for a major casino: virtualized infrastructure, BI dashboards and machine-learning analytics over gaming data.',
+      'Designed the casino’s floorplan end to end — above all its networks — and built the RHEL server clusters that sustained the entire infrastructure.',
+      'Partnered closely with Forward System (Unidesa / CIRSA) to implement their gaming software on that cluster, becoming an expert in its configuration and parametrization.',
+      'BI dashboards and machine-learning analytics over gaming data.',
     ],
   },
   {
@@ -91,11 +94,11 @@ const projects = [
     live: null,
   },
   {
-    name: 'Subordinación y Valor — agentic world-building',
-    stack: 'Creative writing · Godot 4.4 · specs',
-    text: 'Story writing and world building with agentic AI: game specs, character kit, Godot client.',
+    name: 'Subordinación y Valor — a game as playground',
+    stack: 'Godot 4.4 · world building · multi-agent',
+    text: 'My adventure into game-making, and the sandbox where every new technology lands first — a rich world-building universe run as a multi-agent experiment.',
     repo: 'https://github.com/kodexArg/gdt-syv',
-    live: null,
+    live: 'https://kodexarg.github.io/syv/',
   },
 ];
 
@@ -191,7 +194,7 @@ const schema = {
         <div class="masthead-text">
           <h1>Gabriel Cavedal</h1>
           <p class="headline">AI Solutions Architect · Fractional CTO</p>
-          <p class="keywords">Python · Django / DRF · AWS · Cloudflare · Agentic AI · Spec-Driven Development</p>
+          <p class="keywords">Python · Django / DRF · AWS · Cloudflare · Agentic AI</p>
           <nav class="contact" aria-label="Contact">
             {
               contact.map((c) =>
@@ -218,9 +221,10 @@ const schema = {
           <h2><i class="fa-solid fa-user" aria-hidden="true"></i>Profile</h2>
           <p>
             Infrastructure and software architect; multi-company technical lead for 20+ years. I design
-            systems end to end — cloud platforms, production web applications, IoT fleets — working
-            spec-driven with fleets of AI agents under BDD/TDD discipline. Django/DRF expert. Open to remote
-            consulting: architecture reviews, AI adoption scouting, quick wins.
+            systems end to end — cloud platforms, production web applications, IoT fleets — working, and
+            coaching people, in spec-driven development with fleets of AI agents under BDD/TDD discipline.
+            Django/DRF expert. Open to remote consulting: architecture reviews, AI adoption scouting, quick
+            wins.
           </p>
 
           <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Experience</h2>
@@ -377,9 +381,11 @@ const schema = {
     text-align: left;
   }
   .ncv .contact {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem 1.4rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+    justify-content: start;
+    gap: 0.45rem 1.8rem;
     margin-top: 1.1rem;
     font-size: 1.12rem;
   }
@@ -467,6 +473,14 @@ const schema = {
     text-align: left;
     color: var(--color-mate-600);
     margin: 0;
+  }
+  .ncv main p,
+  .ncv main li {
+    text-align: justify;
+    hyphens: auto;
+  }
+  .ncv main .company {
+    text-align: left;
   }
   .ncv section {
     display: block;
@@ -653,6 +667,7 @@ const schema = {
     }
     .ncv .contact {
       font-size: 1rem;
+      grid-template-rows: repeat(3, auto);
     }
     .ncv .columns > main,
     .ncv .columns > aside {
@@ -685,19 +700,19 @@ const schema = {
       flex-direction: row;
     }
     .ncv .columns > main {
-      width: calc(100% * 8 / 13);
-      padding: 0.15rem 1.4rem 0.5rem;
+      width: 64%;
+      padding: 0.15rem 1.3rem 0.4rem;
     }
     .ncv .columns > aside {
-      width: calc(100% * 5 / 13);
-      padding: 0.15rem 1.2rem 0.5rem;
+      width: 36%;
+      padding: 0.15rem 1.1rem 0.4rem;
     }
     .ncv .masthead {
       padding: 0.6rem 1.4rem 0.45rem;
       gap: 1.4rem;
     }
     .ncv h1 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       filter: none;
     }
     .ncv .headline {
@@ -715,8 +730,8 @@ const schema = {
     }
     .ncv h2 {
       font-size: 0.98rem;
-      margin-top: 0.45rem;
-      margin-bottom: 0.25rem;
+      margin-top: 0.38rem;
+      margin-bottom: 0.22rem;
       padding-bottom: 0.1rem;
       gap: 0.5rem;
     }
@@ -724,38 +739,38 @@ const schema = {
       font-size: 0.85rem;
     }
     .ncv h3 {
-      font-size: 0.9rem;
+      font-size: 0.86rem;
     }
     .ncv .project h3 {
-      font-size: 0.86rem;
+      font-size: 0.82rem;
     }
     .ncv p,
     .ncv main li {
-      font-size: 0.76rem;
-      line-height: 1.24;
+      font-size: 0.74rem;
+      line-height: 1.21;
     }
     .ncv main ul {
-      margin-top: 0.1rem;
+      margin-top: 0.08rem;
     }
     .ncv main li {
-      margin-top: 0.1rem;
+      margin-top: 0.06rem;
       padding-left: 1rem;
     }
     .ncv main li::before {
       font-size: 0.6rem;
     }
     .ncv .job {
-      margin-top: 0.4rem;
+      margin-top: 0.34rem;
     }
     .ncv .project {
-      margin-top: 0.22rem;
+      margin-top: 0.2rem;
     }
     .ncv .company {
       font-size: 0.7rem;
     }
     .ncv .dates,
     .ncv .stack {
-      font-size: 0.66rem;
+      font-size: 0.62rem;
     }
     .ncv .job-head {
       gap: 0.5rem;
