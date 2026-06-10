@@ -295,8 +295,7 @@ const schema = {
         <button class="print-btn" id="print-ready">ready to print</button>
         &nbsp;·&nbsp;
         <a class="lang-flag" href={`${base}/`} title="English version" aria-label="English version">🇬🇧</a>
-        &nbsp;·&nbsp;
-        <a href={`${base}/full/`}>full</a>
+        <a class="full-link" href={`${base}/full/`}><i class="fa-solid fa-link" aria-hidden="true"></i>full</a>
       </p>
     </footer>
   </div>
@@ -592,6 +591,14 @@ const schema = {
     max-width: 1140px;
     margin: 1.2rem auto 0;
     text-align: center;
+    position: relative;
+  }
+  .ncv-foot .full-link {
+    position: absolute;
+    right: 0;
+  }
+  .ncv-foot .full-link i {
+    margin-right: 0.35rem;
   }
   .ncv-foot p {
     font-size: 1.05rem;
