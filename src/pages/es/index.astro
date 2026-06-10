@@ -17,29 +17,19 @@ const experience = [
     role: 'Technical Lead — IT & Infraestructura',
     company: 'Grupo ALVS · Mendoza, AR',
     dates: '2016 — presente',
-    bullets: [
-      'Lidero el equipo de IT del grupo en todas sus unidades de negocio.',
-      'Diseñé y opero la plataforma cloud del grupo en AWS, que corre su helpdesk en producción, workflows de pagos, sitios institucionales y telemetría IoT.',
-      'Entregué incontables micro-soluciones que conectan la realidad diaria de los empleados con hardware, procesos y otros sistemas.',
-      'Impulso la adopción de IA en todo el grupo: orquestación multi-agente con servidores MCP integrados a la infraestructura, workflows automatizados, capacitación hands-on en IA para el personal.',
-      'Arquitecté el backbone multi-sitio: malla VPN (MikroTik / IPsec) uniendo los sitios on-premise con AWS.',
-    ],
+    text: 'Lidero el equipo de IT del grupo en todas sus unidades de negocio. Diseñé y opero su plataforma cloud en AWS, que corre el helpdesk en producción, workflows de pagos, sitios institucionales y telemetría IoT sobre un backbone VPN multi-sitio. Impulso la adopción de IA en todo el grupo: orquestación multi-agente con servidores MCP, workflows automatizados y capacitación hands-on al personal.',
   },
   {
     role: 'Jefe de Organización y Sistemas',
     company: 'Mendoza Central Entretenimiento (Casino de Mendoza)',
     dates: '2005 — 2016',
-    bullets: [
-      'Diseñé el floorplan del casino de punta a punta — sobre todo sus redes — y construí los clusters de servidores RHEL que sostuvieron toda la infraestructura.',
-      'Trabajé codo a codo con Forward System (Unidesa / CIRSA) para implementar su software de juego sobre ese cluster, convirtiéndome en experto en su configuración y parametrización.',
-      'Dashboards de BI y analítica con machine learning sobre datos de juego.',
-    ],
+    text: 'Diseñé las redes y el floorplan del casino de punta a punta y construí los clusters de servidores RHEL que sostuvieron toda la operación: sistemas de juego, dashboards de BI y analítica con machine learning.',
   },
   {
     role: 'Técnico de Sistemas de Slots',
     company: 'Casino Buenos Aires',
     dates: '2002 — 2005',
-    bullets: ['Hardware de juego, redes y soporte de sistemas — donde empezó todo.'],
+    text: 'Hardware de juego, redes y soporte de sistemas.',
   },
 ];
 
@@ -47,28 +37,28 @@ const projects = [
   {
     name: 'Casino de Mendoza',
     stack: 'Clusters RHEL · Oracle VM · 700 slot machines',
-    text: 'Una década operando clusters de servidores Linux RHEL construidos a medida detrás de 700 slot machines en red — la infraestructura nunca se cayó.',
+    text: 'Una década de clusters Linux RHEL construidos a medida detrás de 700 slot machines en red, sin caídas.',
     repo: null,
     live: null,
   },
   {
     name: 'KCBD — laboratorio e IoT',
     stack: 'Raspberry Pi · Django / DRF · Angular',
-    text: 'Co-construí el laboratorio de cultivo y su red de sensores a escala de sala; KCBD Monitor transmite su telemetría en producción — hoy API headless + Angular sobre AWS.',
+    text: 'Co-construí la red de sensores del laboratorio de cultivo; su telemetría corre en producción sobre AWS.',
     repo: 'https://github.com/kodexArg/dj-indoor-monitor',
     live: 'https://kcbd.grupoalvs.com/',
   },
   {
     name: 'Welp — helpdesk y pagos',
     stack: 'Django 5 · HTMX · App Runner',
-    text: 'Ticketing más workflows purchase-to-payment, testeado con BDD; en producción en Grupo ALVS.',
+    text: 'Ticketing y workflows purchase-to-payment; en producción en Grupo ALVS.',
     repo: 'https://github.com/kodexArg/welpdesk',
     live: 'https://helpdesk.grupoalvs.com/',
   },
   {
     name: 'Tooling de IA agéntica',
     stack: 'Python · MCP · Antigravity SDK',
-    text: 'Servidores MCP públicos (terminal, Telegram, pipelines de contenido); agentes autónomos de triage de issues; orquestación multi-agente privada.',
+    text: 'Servidores MCP públicos, agentes autónomos de triage de issues y orquestación multi-agente.',
     repo: 'https://github.com/kodexArg/syv-mcp-tools',
     live: null,
   },
@@ -82,23 +72,16 @@ const projects = [
   {
     name: 'Sociedad Rural del Oeste Argentino',
     stack: 'Astro SSR · Svelte 5 · AWS',
-    text: 'Desarrollo Full Stack spec-driven para la sociedad rural; en producción (repo privado).',
+    text: 'Desarrollo full-stack spec-driven; en producción.',
     repo: null,
     live: 'https://sroa.grupoalvs.com/',
   },
   {
     name: 'Coveris — SaaS de salud',
     stack: 'Angular 21 · Django / DRF · AWS',
-    text: 'SaaS spec-driven construido con un pipeline multi-tier de agentes de IA; MVP corriendo en AWS.',
+    text: 'SaaS construido con un pipeline multi-tier de agentes de IA; MVP en AWS.',
     repo: 'https://github.com/kodexArg/kdx-ng-coveris',
     live: null,
-  },
-  {
-    name: 'Subordinación y Valor',
-    stack: 'Godot 4.4 · world building · multi-agente',
-    text: 'Mi aventura en el desarrollo de videojuegos, y el sandbox donde aterriza primero cada nueva tecnología — un universo rico de world building llevado como experimento multi-agente.',
-    repo: 'https://github.com/kodexArg/gdt-syv',
-    live: 'https://kodexarg.github.io/syv/',
   },
 ];
 
@@ -106,27 +89,27 @@ const skills = [
   {
     icon: 'fa-brands fa-python',
     title: 'Backend',
-    items: 'Python · Django / DRF (experto) · FastAPI · PostgreSQL · Redis · pytest',
+    items: 'Python · Django / DRF · FastAPI · PostgreSQL',
   },
   {
     icon: 'fa-brands fa-aws',
     title: 'Cloud & DevOps',
-    items: 'AWS (end to end) · Cloudflare · Docker · CloudFormation / IaC · CI/CD',
+    items: 'AWS · Cloudflare · Docker · CloudFormation / IaC · CI/CD',
   },
   {
     icon: 'fa-solid fa-network-wired',
     title: 'Infraestructura & IoT',
-    items: 'Networking · VPN / IPsec · MikroTik · flotas de Raspberry Pi y ESP32 · redes de sensores a escala de sala · videovigilancia con IA',
+    items: 'Networking · VPN / IPsec · MikroTik · flotas de Raspberry Pi y ESP32 · videovigilancia con IA',
   },
   {
     icon: 'fa-brands fa-linux',
     title: 'Linux SysAdmin',
-    items: 'Debian · RHEL · clustering y alta disponibilidad · Nginx · systemd · sistemas agénticos self-hosted (Hermes Agent · OpenClaw)',
+    items: 'Debian · RHEL · clustering y alta disponibilidad · sistemas agénticos self-hosted',
   },
   {
     icon: 'fa-solid fa-code',
     title: 'Full Stack',
-    items: 'Angular (CSR & SSR) · Astro · Svelte · HTMX',
+    items: 'Angular · Astro · Svelte · HTMX · diseño de APIs REST · AWS Amplify · Fargate · ECS/ECR',
   },
   {
     icon: 'fa-solid fa-wand-magic-sparkles',
@@ -192,6 +175,7 @@ const schema = {
   <div class="ncv-bg">
     <div class="ncv">
       <header class="masthead">
+        <img class="photo" src={`${base}/gabriel-cavedal.jpg`} alt="Gabriel Cavedal" loading="eager" />
         <div class="masthead-text">
           <h1>Gabriel Cavedal</h1>
           <p class="headline">AI Solutions Architect · Fractional CTO</p>
@@ -214,7 +198,6 @@ const schema = {
             }
           </nav>
         </div>
-        <img class="photo" src={`${base}/gabriel-cavedal.jpg`} alt="Gabriel Cavedal" loading="eager" />
       </header>
 
       <div class="columns">
@@ -222,10 +205,10 @@ const schema = {
           <h2><i class="fa-solid fa-user" aria-hidden="true"></i>Perfil</h2>
           <p>
             Arquitecto de infraestructura y software; líder técnico multi-empresa desde hace más de 20
-            años. Diseño sistemas de punta a punta — plataformas cloud, aplicaciones web en producción,
-            flotas IoT — trabajando, y formando equipos, en spec-driven development con flotas de agentes
-            de IA bajo disciplina BDD/TDD. Experto en Django/DRF. Disponible para consultoría remota:
-            architecture reviews, scouting de adopción de IA, quick wins.
+            años. Diseño sistemas de punta a punta, trabajando, y formando equipos, en spec-driven
+            development con flotas de agentes de IA bajo disciplina BDD/TDD. Experto en Django/DRF.
+            Disponible para consultoría remota: architecture reviews, scouting de adopción de IA, quick
+            wins.
           </p>
 
           <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Experiencia</h2>
@@ -237,11 +220,7 @@ const schema = {
                   <span class="dates">{job.dates}</span>
                 </div>
                 <p class="company">{job.company}</p>
-                <ul>
-                  {job.bullets.map((b) => (
-                    <li>{b}</li>
-                  ))}
-                </ul>
+                <p class="job-text">{job.text}</p>
               </section>
             ))
           }
@@ -296,8 +275,8 @@ const schema = {
           <p class="side-line">Diseño Gráfico (incompleto) — Villa Mercedes, San Luis</p>
           <p class="side-line">
         Certificación continua —
-        <a href="https://platzi.com/p/gcavedal/" target="_blank" rel="noopener">Platzi</a>: IA &amp; data
-        science, backend (Django), cloud &amp; DevOps
+        <a href="https://platzi.com/p/gcavedal/" target="_blank" rel="noopener">Platzi</a>: IA, backend,
+        cloud &amp; DevOps
           </p>
 
           <div class="freelance">
@@ -313,16 +292,21 @@ const schema = {
 
     <footer class="ncv-foot">
       <p>
-        Esta página imprime en un único A4 —
-        <button class="print-btn" onclick="window.print()">imprimir / guardar como PDF</button>
+        <button class="print-btn" id="print-ready">ready to print</button>
         &nbsp;·&nbsp;
-        <a href={`${base}/`}>English version</a>
+        <a class="lang-flag" href={`${base}/`} title="English version" aria-label="English version">🇬🇧</a>
         &nbsp;·&nbsp;
-        <a href={`${base}/full/`}>CV legacy completo (castellano)</a>
+        <a href={`${base}/full/`}>full</a>
       </p>
     </footer>
   </div>
 
+  <script is:inline>
+    document.getElementById('print-ready').addEventListener('click', (event) => {
+      const ready = document.querySelector('.ncv-bg').classList.toggle('print-ready');
+      event.currentTarget.textContent = ready ? 'press Ctrl + P' : 'ready to print';
+    });
+  </script>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
 </Layout>
 
@@ -348,7 +332,7 @@ const schema = {
   /* Masthead — deep mate band, light text, photo pops against it. */
   .ncv .masthead {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 2.25rem;
     padding: 2.25rem 2.25rem 1.8rem;
     background: linear-gradient(to right, var(--color-mate-600), var(--color-mate-700));
@@ -410,8 +394,10 @@ const schema = {
     margin-right: 0.4rem;
   }
   .ncv .photo {
-    width: 11rem;
-    height: 11rem;
+    /* Width ≈ masthead text-block height; align-items: stretch then pins the height
+       exactly from the top of the h1 to the base of the contact tags. */
+    width: 13.75rem;
+    height: auto;
     object-fit: cover;
     border-radius: 0.85rem;
     border: 3px solid var(--color-pullover-300);
@@ -480,8 +466,7 @@ const schema = {
     color: var(--color-mate-600);
     margin: 0;
   }
-  .ncv main p,
-  .ncv main li {
+  .ncv main p {
     text-align: justify;
     hyphens: auto;
   }
@@ -497,7 +482,7 @@ const schema = {
   /* Experience & projects */
   .ncv .job,
   .ncv .project {
-    margin-top: 1.1rem;
+    margin-top: 1.35rem;
   }
   .ncv .job:first-of-type,
   .ncv .project:first-of-type {
@@ -527,26 +512,8 @@ const schema = {
     color: var(--color-mate-500);
     margin-top: 0.1rem;
   }
-  .ncv main ul {
-    list-style: none;
-    margin: 0.4rem 0 0;
-    padding: 0;
-  }
-  .ncv main li {
-    font-size: 1.26rem;
-    line-height: 1.48;
-    color: var(--color-mate-600);
-    position: relative;
-    padding-left: 1.3rem;
+  .ncv .job-text {
     margin-top: 0.35rem;
-  }
-  .ncv main li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    top: 0.12em;
-    font-size: 0.95rem;
-    color: var(--color-pullover-300);
   }
   .ncv .proj-link {
     margin-left: 0.55rem;
@@ -564,7 +531,7 @@ const schema = {
 
   /* Sidebar */
   .ncv .skill-group {
-    margin-top: 1rem;
+    margin-top: 1.2rem;
   }
   .ncv .skill-group h3 {
     display: flex;
@@ -652,11 +619,22 @@ const schema = {
   .ncv-foot .print-btn:hover {
     color: var(--color-pullover-500);
   }
+  .ncv-foot .lang-flag {
+    text-decoration: none;
+  }
+
+  /* "ready to print" mode: whole screen goes white, sheet sits flush — user prints with Ctrl+P */
+  .ncv-bg.print-ready {
+    background: #fff;
+  }
+  .ncv-bg.print-ready .ncv {
+    box-shadow: none;
+  }
 
   /* Small screens */
   @media (max-width: 640px) {
     .ncv .masthead {
-      flex-direction: column-reverse;
+      flex-direction: column;
       align-items: flex-start;
       gap: 1.2rem;
       padding: 1.5rem;
@@ -730,13 +708,12 @@ const schema = {
       margin-top: 0.12rem;
     }
     .ncv .photo {
-      width: 4.8rem;
-      height: 4.8rem;
+      width: 7.2rem;
       border-width: 2px;
     }
     .ncv h2 {
       font-size: 0.98rem;
-      margin-top: 0.38rem;
+      margin-top: 0.6rem;
       margin-bottom: 0.22rem;
       padding-bottom: 0.1rem;
       gap: 0.5rem;
@@ -750,26 +727,18 @@ const schema = {
     .ncv .project h3 {
       font-size: 0.82rem;
     }
-    .ncv p,
-    .ncv main li {
+    .ncv p {
       font-size: 0.74rem;
-      line-height: 1.21;
+      line-height: 1.32;
     }
-    .ncv main ul {
-      margin-top: 0.08rem;
-    }
-    .ncv main li {
-      margin-top: 0.06rem;
-      padding-left: 1rem;
-    }
-    .ncv main li::before {
-      font-size: 0.6rem;
+    .ncv .job-text {
+      margin-top: 0.1rem;
     }
     .ncv .job {
-      margin-top: 0.34rem;
+      margin-top: 0.6rem;
     }
     .ncv .project {
-      margin-top: 0.2rem;
+      margin-top: 0.32rem;
     }
     .ncv .company {
       font-size: 0.7rem;
@@ -786,7 +755,7 @@ const schema = {
       margin-left: 0.4rem;
     }
     .ncv .skill-group {
-      margin-top: 0.4rem;
+      margin-top: 0.55rem;
     }
     .ncv .skill-group h3,
     .ncv .freelance h3 {
