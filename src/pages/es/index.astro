@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const base = import.meta.env.BASE_URL;
 
 const contact = [
   { icon: 'fa-solid fa-envelope', label: 'gcavedal@gmail.com', href: 'mailto:gcavedal@gmail.com' },
@@ -14,89 +14,89 @@ const contact = [
 
 const experience = [
   {
-    role: 'Technical Lead — IT & Infrastructure',
+    role: 'Technical Lead — IT & Infraestructura',
     company: 'Grupo ALVS · Mendoza, AR',
-    dates: '2016 — present',
+    dates: '2016 — presente',
     bullets: [
-      'Lead the group’s IT team across all of its business units.',
-      'Designed and operate the group’s AWS cloud platform, running its production helpdesk, payment workflows, institutional sites and IoT telemetry.',
-      'Shipped countless micro-solutions connecting employees’ daily reality with hardware, processes and other systems.',
-      'Drive AI adoption group-wide: multi-agent orchestration with MCP servers wired into the infrastructure, automated workflows, hands-on AI training for staff.',
-      'Architected the multi-site backbone: VPN mesh (MikroTik / IPsec) bridging on-premise sites with AWS.',
+      'Lidero el equipo de IT del grupo en todas sus unidades de negocio.',
+      'Diseñé y opero la plataforma cloud del grupo en AWS, que corre su helpdesk en producción, workflows de pagos, sitios institucionales y telemetría IoT.',
+      'Entregué incontables micro-soluciones que conectan la realidad diaria de los empleados con hardware, procesos y otros sistemas.',
+      'Impulso la adopción de IA en todo el grupo: orquestación multi-agente con servidores MCP integrados a la infraestructura, workflows automatizados, capacitación hands-on en IA para el personal.',
+      'Arquitecté el backbone multi-sitio: malla VPN (MikroTik / IPsec) uniendo los sitios on-premise con AWS.',
     ],
   },
   {
-    role: 'Head of Organization & Systems',
+    role: 'Jefe de Organización y Sistemas',
     company: 'Mendoza Central Entretenimiento (Casino de Mendoza)',
     dates: '2005 — 2016',
     bullets: [
-      'Designed the casino’s floorplan end to end — above all its networks — and built the RHEL server clusters that sustained the entire infrastructure.',
-      'Partnered closely with Forward System (Unidesa / CIRSA) to implement their gaming software on that cluster, becoming an expert in its configuration and parametrization.',
-      'BI dashboards and machine-learning analytics over gaming data.',
+      'Diseñé el floorplan del casino de punta a punta — sobre todo sus redes — y construí los clusters de servidores RHEL que sostuvieron toda la infraestructura.',
+      'Trabajé codo a codo con Forward System (Unidesa / CIRSA) para implementar su software de juego sobre ese cluster, convirtiéndome en experto en su configuración y parametrización.',
+      'Dashboards de BI y analítica con machine learning sobre datos de juego.',
     ],
   },
   {
-    role: 'Slot Systems Technician',
+    role: 'Técnico de Sistemas de Slots',
     company: 'Casino Buenos Aires',
     dates: '2002 — 2005',
-    bullets: ['Gaming hardware, networks and systems support — where it all started.'],
+    bullets: ['Hardware de juego, redes y soporte de sistemas — donde empezó todo.'],
   },
 ];
 
 const projects = [
   {
-    name: 'Casino de Mendoza — mission-critical infrastructure',
-    stack: 'RHEL clusters · Oracle VM · 700 slot machines',
-    text: 'A decade running self-built Linux RHEL server clusters behind 700 networked slot machines — the infrastructure never went down.',
+    name: 'Casino de Mendoza — infraestructura mission-critical',
+    stack: 'Clusters RHEL · Oracle VM · 700 slot machines',
+    text: 'Una década operando clusters de servidores Linux RHEL construidos a medida detrás de 700 slot machines en red — la infraestructura nunca se cayó.',
     repo: null,
     live: null,
   },
   {
-    name: 'KCBD — grow lab & IoT telemetry',
+    name: 'KCBD — laboratorio de cultivo y telemetría IoT',
     stack: 'Raspberry Pi · Django / DRF · Angular',
-    text: 'Co-built the cultivation lab and its room-scale sensor network; KCBD Monitor streams its telemetry in production — now headless API + Angular on AWS.',
+    text: 'Co-construí el laboratorio de cultivo y su red de sensores a escala de sala; KCBD Monitor transmite su telemetría en producción — hoy API headless + Angular sobre AWS.',
     repo: 'https://github.com/kodexArg/dj-indoor-monitor',
     live: 'https://kcbd.grupoalvs.com/',
   },
   {
-    name: 'Welp — helpdesk & payment workflows',
+    name: 'Welp — helpdesk y workflows de pagos',
     stack: 'Django 5 · HTMX · App Runner',
-    text: 'Ticketing plus purchase-to-payment workflows, BDD-tested; in production at Grupo ALVS.',
+    text: 'Ticketing más workflows purchase-to-payment, testeado con BDD; en producción en Grupo ALVS.',
     repo: 'https://github.com/kodexArg/welpdesk',
     live: 'https://helpdesk.grupoalvs.com/',
   },
   {
-    name: 'Agentic AI tooling',
+    name: 'Tooling de IA agéntica',
     stack: 'Python · MCP · Antigravity SDK',
-    text: 'Public MCP servers (terminal, Telegram, content pipelines); autonomous issue-triage agents; private multi-agent orchestration.',
+    text: 'Servidores MCP públicos (terminal, Telegram, pipelines de contenido); agentes autónomos de triage de issues; orquestación multi-agente privada.',
     repo: 'https://github.com/kodexArg/syv-mcp-tools',
     live: null,
   },
   {
-    name: 'Eurotrip 2026 — trip planner',
+    name: 'Eurotrip 2026 — planificador de viaje',
     stack: 'Angular 21 · Cloudflare (Pages · D1 · R2)',
-    text: 'Personal travel companion running fully on Cloudflare.',
+    text: 'Compañero de viaje personal corriendo íntegramente sobre Cloudflare.',
     repo: 'https://github.com/kodexArg/cf-ng-eurotrip2026',
     live: 'https://eurotrip2026.kodexarg.com/',
   },
   {
-    name: 'Sociedad Rural del Oeste Argentino — site & blog',
+    name: 'Sociedad Rural del Oeste Argentino — sitio y blog',
     stack: 'Astro SSR · Svelte 5 · AWS',
-    text: 'Spec-driven full-stack build for the rural society; in production (private repo).',
+    text: 'Desarrollo Full Stack spec-driven para la sociedad rural; en producción (repo privado).',
     repo: null,
     live: 'https://sroa.grupoalvs.com/',
   },
   {
-    name: 'Coveris — healthcare capacity-planning SaaS',
+    name: 'Coveris — SaaS de capacity planning para salud',
     stack: 'Angular 21 · Django / DRF · AWS',
-    text: 'Spec-driven SaaS built with a multi-tier AI-agent pipeline; MVP running on AWS.',
+    text: 'SaaS spec-driven construido con un pipeline multi-tier de agentes de IA; MVP corriendo en AWS.',
     repo: 'https://github.com/kodexArg/kdx-ng-coveris',
     live: null,
   },
   {
-    name: 'Subordinación y Valor — a game as playground',
-    stack: 'Godot 4.4 · world building · multi-agent',
-    text: 'My adventure into game-making, and the sandbox where every new technology lands first — a rich world-building universe run as a multi-agent experiment.',
+    name: 'Subordinación y Valor — un juego como playground',
+    stack: 'Godot 4.4 · world building · multi-agente',
+    text: 'Mi aventura en el desarrollo de videojuegos, y el sandbox donde aterriza primero cada nueva tecnología — un universo rico de world building llevado como experimento multi-agente.',
     repo: 'https://github.com/kodexArg/gdt-syv',
     live: 'https://kodexarg.github.io/syv/',
   },
@@ -106,7 +106,7 @@ const skills = [
   {
     icon: 'fa-brands fa-python',
     title: 'Backend',
-    items: 'Python · Django / DRF (expert) · FastAPI · PostgreSQL · Redis · pytest',
+    items: 'Python · Django / DRF (experto) · FastAPI · PostgreSQL · Redis · pytest',
   },
   {
     icon: 'fa-brands fa-aws',
@@ -115,13 +115,13 @@ const skills = [
   },
   {
     icon: 'fa-solid fa-network-wired',
-    title: 'Infrastructure & IoT',
-    items: 'Networking · VPN / IPsec · MikroTik · Raspberry Pi & ESP32 fleets · room-scale sensor networks · video surveillance with AI',
+    title: 'Infraestructura & IoT',
+    items: 'Networking · VPN / IPsec · MikroTik · flotas de Raspberry Pi y ESP32 · redes de sensores a escala de sala · videovigilancia con IA',
   },
   {
     icon: 'fa-brands fa-linux',
     title: 'Linux SysAdmin',
-    items: 'Debian · RHEL · clustering & high availability · Nginx · systemd · self-hosted agentic systems (Hermes Agent · OpenClaw)',
+    items: 'Debian · RHEL · clustering y alta disponibilidad · Nginx · systemd · sistemas agénticos self-hosted (Hermes Agent · OpenClaw)',
   },
   {
     icon: 'fa-solid fa-code',
@@ -130,30 +130,31 @@ const skills = [
   },
   {
     icon: 'fa-solid fa-wand-magic-sparkles',
-    title: 'AI & Agents',
-    items: 'Multi-agent orchestration · MCP servers & clients · Claude Code · n8n · RAG',
+    title: 'IA & Agentes',
+    items: 'Orquestación multi-agente · Servidores y clientes MCP · Claude Code · n8n · RAG',
   },
   {
     icon: 'fa-solid fa-people-group',
-    title: 'Leadership & Business',
-    items: 'Team leadership · Solutions architecture · Business process automation · Vendor & budget management',
+    title: 'Liderazgo & Negocio',
+    items: 'Liderazgo de equipos · Arquitectura de soluciones · Automatización de procesos de negocio · Gestión de proveedores y presupuesto',
   },
   {
     icon: 'fa-solid fa-compass-drafting',
-    title: 'Method',
-    items: 'Spec-driven development · Contract-first APIs · BDD / TDD · Docs-as-code',
+    title: 'Método',
+    items: 'Spec-driven development · APIs contract-first · BDD / TDD · Docs-as-code',
   },
 ];
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'ProfilePage',
+  inLanguage: 'es',
   mainEntity: {
     '@type': 'Person',
     name: 'Gabriel Cavedal',
     jobTitle: 'AI Solutions Architect & Fractional CTO',
     email: 'mailto:gcavedal@gmail.com',
-    url: 'https://cv.kodexarg.com/',
+    url: 'https://cv.kodexarg.com/es/',
     image: 'https://kodexarg.github.io/cv/gabriel-cavedal.jpg',
     sameAs: [
       'https://www.linkedin.com/in/gabriel-cavedal/',
@@ -183,10 +184,10 @@ const schema = {
 ---
 
 <Layout
-  lang="en"
+  lang="es"
   title="Gabriel Cavedal — AI Solutions Architect & Fractional CTO"
-  description="Infrastructure & software architect, multi-company technical lead. Spec-driven development with AI agent fleets. Django/DRF expert; production platforms on AWS and Cloudflare. Open to remote consulting."
-  ogUrl="https://cv.kodexarg.com/"
+  description="Arquitecto de infraestructura y software, líder técnico multi-empresa. Spec-driven development con flotas de agentes de IA. Experto en Django/DRF; plataformas en producción sobre AWS y Cloudflare. Disponible para consultoría remota."
+  ogUrl="https://cv.kodexarg.com/es/"
 >
   <div class="ncv-bg">
     <div class="ncv">
@@ -194,8 +195,8 @@ const schema = {
         <div class="masthead-text">
           <h1>Gabriel Cavedal</h1>
           <p class="headline">AI Solutions Architect · Fractional CTO</p>
-          <p class="keywords">Python · Django / DRF · AWS · Cloudflare · Agentic AI</p>
-          <nav class="contact" aria-label="Contact">
+          <p class="keywords">Python · Django / DRF · AWS · Cloudflare · IA agéntica</p>
+          <nav class="contact" aria-label="Contacto">
             {
               contact.map((c) =>
                 c.href ? (
@@ -218,16 +219,16 @@ const schema = {
 
       <div class="columns">
         <main>
-          <h2><i class="fa-solid fa-user" aria-hidden="true"></i>Profile</h2>
+          <h2><i class="fa-solid fa-user" aria-hidden="true"></i>Perfil</h2>
           <p>
-            Infrastructure and software architect; multi-company technical lead for 20+ years. I design
-            systems end to end — cloud platforms, production web applications, IoT fleets — working, and
-            coaching people, in spec-driven development with fleets of AI agents under BDD/TDD discipline.
-            Django/DRF expert. Open to remote consulting: architecture reviews, AI adoption scouting, quick
-            wins.
+            Arquitecto de infraestructura y software; líder técnico multi-empresa desde hace más de 20
+            años. Diseño sistemas de punta a punta — plataformas cloud, aplicaciones web en producción,
+            flotas IoT — trabajando, y formando equipos, en spec-driven development con flotas de agentes
+            de IA bajo disciplina BDD/TDD. Experto en Django/DRF. Disponible para consultoría remota:
+            architecture reviews, scouting de adopción de IA, quick wins.
           </p>
 
-          <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Experience</h2>
+          <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Experiencia</h2>
           {
             experience.map((job) => (
               <section class="job">
@@ -245,7 +246,7 @@ const schema = {
             ))
           }
 
-          <h2><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Selected Work</h2>
+          <h2><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Proyectos destacados</h2>
           {
             projects.map((p) => (
               <section class="project">
@@ -253,12 +254,12 @@ const schema = {
                   <h3>
                     {p.name}
                     {p.repo && (
-                      <a class="proj-link" href={p.repo} target="_blank" rel="noopener" aria-label={`${p.name} on GitHub`}>
+                      <a class="proj-link" href={p.repo} target="_blank" rel="noopener" aria-label={`${p.name} en GitHub`}>
                         <i class="fa-brands fa-github" aria-hidden="true" />
                       </a>
                     )}
                     {p.live && (
-                      <a class="proj-link" href={p.live} target="_blank" rel="noopener" aria-label={`${p.name} live`}>
+                      <a class="proj-link" href={p.live} target="_blank" rel="noopener" aria-label={`${p.name} en vivo`}>
                         <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true" />
                       </a>
                     )}
@@ -285,24 +286,24 @@ const schema = {
             ))
           }
 
-          <h2><i class="fa-solid fa-language" aria-hidden="true"></i>Languages</h2>
-          <p class="side-line">Spanish — native</p>
-          <p class="side-line">English — professional working proficiency</p>
+          <h2><i class="fa-solid fa-language" aria-hidden="true"></i>Idiomas</h2>
+          <p class="side-line">Español — nativo</p>
+          <p class="side-line">Inglés — competencia profesional</p>
 
-          <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Education</h2>
-          <p class="side-line">Technical school — ENET N°1 «Ing. Pablo Nogués», Mendoza</p>
-          <p class="side-line">Electromechanical Engineering (incomplete) — UNSL, San Luis</p>
-          <p class="side-line">Graphic Design (incomplete) — Villa Mercedes, San Luis</p>
+          <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Educación</h2>
+          <p class="side-line">Escuela técnica — ENET N°1 «Ing. Pablo Nogués», Mendoza</p>
+          <p class="side-line">Ingeniería Electromecánica (incompleta) — UNSL, San Luis</p>
+          <p class="side-line">Diseño Gráfico (incompleto) — Villa Mercedes, San Luis</p>
           <p class="side-line">
-        Continuous certification —
-        <a href="https://platzi.com/p/gcavedal/" target="_blank" rel="noopener">Platzi</a>: AI &amp; data
+        Certificación continua —
+        <a href="https://platzi.com/p/gcavedal/" target="_blank" rel="noopener">Platzi</a>: IA &amp; data
         science, backend (Django), cloud &amp; DevOps
           </p>
 
           <div class="freelance">
-            <h3><i class="fa-solid fa-handshake" aria-hidden="true"></i>Freelance &amp; Consulting</h3>
+            <h3><i class="fa-solid fa-handshake" aria-hidden="true"></i>Freelance &amp; Consultoría</h3>
             <p>
-              Available for architecture reviews, AI adoption scouting and quick-win engagements.
+              Disponible para architecture reviews, scouting de adopción de IA y proyectos quick-win.
               Remote-first.
             </p>
           </div>
@@ -312,10 +313,12 @@ const schema = {
 
     <footer class="ncv-foot">
       <p>
-        This page prints to a single A4 —
-        <button class="print-btn" onclick="window.print()">print / save as PDF</button>
+        Esta página imprime en un único A4 —
+        <button class="print-btn" onclick="window.print()">imprimir / guardar como PDF</button>
         &nbsp;·&nbsp;
-        <a href={`${base}/full/`}>full legacy CV (Spanish)</a>
+        <a href={`${base}/`}>English version</a>
+        &nbsp;·&nbsp;
+        <a href={`${base}/full/`}>CV legacy completo (castellano)</a>
       </p>
     </footer>
   </div>
