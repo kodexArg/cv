@@ -1,11 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const contact = [
   { icon: 'fa-solid fa-envelope', label: 'gcavedal@gmail.com', href: 'mailto:gcavedal@gmail.com' },
-  { icon: 'fa-solid fa-globe', label: 'cv.kodexarg.com', href: 'https://cv.kodexarg.com/' },
+  { flag: '🇬🇧', label: 'cv.kodexarg.com/en', href: `${base}/en/` },
   { icon: 'fa-brands fa-linkedin', label: 'in/gabriel-cavedal', href: 'https://www.linkedin.com/in/gabriel-cavedal/' },
   { icon: 'fa-brands fa-github', label: 'kodexArg', href: 'https://github.com/kodexArg' },
   { icon: 'fa-brands fa-telegram', label: '@KodexArg', href: 'https://t.me/KodexArg' },
@@ -200,8 +200,8 @@ const schema = {
             {
               contact.map((c) =>
                 c.href ? (
-                  <a href={c.href} target={c.href.startsWith('mailto') ? undefined : '_blank'} rel="noopener">
-                    <i class={c.icon} aria-hidden="true" />
+                  <a href={c.href} target={c.href.startsWith('mailto') || c.flag ? undefined : '_blank'} rel="noopener">
+                    {c.flag ? <span class="flag" aria-hidden="true">{c.flag}</span> : <i class={c.icon} aria-hidden="true" />}
                     {c.label}
                   </a>
                 ) : (
@@ -404,6 +404,9 @@ const schema = {
   }
   .ncv .contact i {
     color: var(--color-pullover-300);
+    margin-right: 0.4rem;
+  }
+  .ncv .contact .flag {
     margin-right: 0.4rem;
   }
   .ncv .photo {
