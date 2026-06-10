@@ -9,7 +9,7 @@ const contact = [
   { icon: 'fa-brands fa-linkedin', label: 'in/gabriel-cavedal', href: 'https://www.linkedin.com/in/gabriel-cavedal/' },
   { icon: 'fa-brands fa-github', label: 'kodexArg', href: 'https://github.com/kodexArg' },
   { icon: 'fa-brands fa-telegram', label: '@KodexArg', href: 'https://t.me/KodexArg' },
-  { icon: 'fa-solid fa-location-dot', label: 'Mendoza, AR — remote, EU-friendly hours', href: null },
+  { icon: 'fa-solid fa-location-dot', label: 'Mendoza, Argentina', href: null },
 ];
 
 const experience = [
@@ -18,10 +18,10 @@ const experience = [
     company: 'Grupo ALVS · Mendoza, AR',
     dates: '2016 — present',
     bullets: [
-      'Lead a 4-person IT team (senior network engineer, senior generalist, two juniors) serving the business units of a fuel & retail group.',
-      'Designed and operate the group’s AWS platform — ECS Fargate, RDS, Amplify, Cognito, CloudFormation, OIDC-secured CI/CD — running its production systems: helpdesk and payment workflows, B2B fuel portal, institutional sites, IoT telemetry.',
-      'Drive AI adoption group-wide: multi-agent orchestration with MCP servers wired into the infrastructure, LLM-automated workflows (n8n), hands-on AI training for staff.',
-      'Architected the multi-site backbone: VPN mesh (MikroTik / IPsec) bridging on-premise sites with AWS, and group-wide VoIP.',
+      'Lead the group’s IT team across its business units — fuel, retail and more.',
+      'Designed and operate the group’s AWS cloud platform — IaC, OIDC-secured CI/CD — running its production helpdesk, payment workflows, B2B fuel portal, institutional sites and IoT telemetry.',
+      'Drive AI adoption group-wide: multi-agent orchestration with MCP servers wired into the infrastructure, automated workflows, hands-on AI training for staff.',
+      'Architected the multi-site backbone: VPN mesh (MikroTik / IPsec) bridging on-premise sites with AWS.',
     ],
   },
   {
@@ -29,7 +29,7 @@ const experience = [
     company: 'Mendoza Central Entretenimiento (Casino de Mendoza)',
     dates: '2005 — 2016',
     bullets: [
-      'Ran IT end to end for a major casino: 700 networked slot machines, virtualized RHEL / Oracle VM infrastructure, BI dashboards and machine-learning analytics over gaming data.',
+      'Ran IT end to end for a major casino: virtualized infrastructure, BI dashboards and machine-learning analytics over gaming data.',
     ],
   },
   {
@@ -42,51 +42,58 @@ const experience = [
 
 const projects = [
   {
-    name: 'Coveris — healthcare capacity-planning SaaS',
-    stack: 'Angular 21 · Django/DRF · ECS Fargate',
-    text: 'Spec-driven: 25+ ADRs, contract-first API with test-enforced coverage, multi-tier AI-agent pipeline; MVP on AWS.',
-    repo: 'https://github.com/kodexArg/kdx-ng-coveris',
+    name: 'Casino de Mendoza — mission-critical infrastructure',
+    stack: 'RHEL clusters · Oracle VM · 700 slot machines',
+    text: 'A decade running self-built Linux RHEL server clusters behind 700 networked slot machines — the infrastructure never went down.',
+    repo: null,
     live: null,
   },
   {
-    name: 'Welp — helpdesk & payment workflows',
-    stack: 'Django 5 · HTMX · App Runner',
-    text: 'Ticketing plus purchase-to-payment workflows, five-tier roles, BDD-tested; in production at Grupo ALVS.',
-    repo: 'https://github.com/kodexArg/welpdesk',
-    live: 'https://helpdesk.grupoalvs.com/',
-  },
-  {
-    name: 'kcbd Monitor — IoT telemetry',
-    stack: 'Django/DRF · Angular · CloudFormation',
-    text: 'Raspberry-Pi fleet telemetry in production for years; re-platformed as headless API + Angular on Amplify/ECS.',
+    name: 'KCBD — grow lab & IoT telemetry',
+    stack: 'Raspberry Pi · Django / DRF · Angular',
+    text: 'Co-built the cultivation lab and its room-scale sensor network; KCBD Monitor streams its telemetry in production — now headless API + Angular on AWS.',
     repo: 'https://github.com/kodexArg/dj-indoor-monitor',
     live: 'https://kcbd.grupoalvs.com/',
   },
   {
-    name: 'SROA — institutional site & blog',
-    stack: 'Astro SSR · Svelte 5 · ECS Fargate',
-    text: 'Full-stack spec-driven build for a rural society, on the group’s AWS platform; in production (private repo).',
-    repo: null,
-    live: 'https://sroa.grupoalvs.com/',
+    name: 'Welp — helpdesk & payment workflows',
+    stack: 'Django 5 · HTMX · App Runner',
+    text: 'Ticketing plus purchase-to-payment workflows, BDD-tested; in production at Grupo ALVS.',
+    repo: 'https://github.com/kodexArg/welpdesk',
+    live: 'https://helpdesk.grupoalvs.com/',
   },
   {
     name: 'Agentic AI tooling',
     stack: 'Python · MCP · Antigravity SDK',
-    text: 'Public MCP servers (terminal, Telegram bot, game pipeline); autonomous issue-triage agents; a private multi-agent orchestration control plane.',
+    text: 'Public MCP servers (terminal, Telegram, content pipelines); autonomous issue-triage agents; private multi-agent orchestration.',
     repo: 'https://github.com/kodexArg/syv-mcp-tools',
     live: null,
   },
   {
-    name: 'Eurotrip 2026 — trip planner on the edge',
-    stack: 'Angular 21 · Cloudflare Pages · D1 · R2',
-    text: 'Personal travel companion, live on Cloudflare’s edge stack.',
+    name: 'Eurotrip 2026 — trip planner',
+    stack: 'Angular 21 · Cloudflare (Pages · D1 · R2)',
+    text: 'Personal travel companion running fully on Cloudflare.',
     repo: 'https://github.com/kodexArg/cf-ng-eurotrip2026',
     live: 'https://eurotrip2026.kodexarg.com/',
   },
   {
-    name: 'SyV — strategy-game ecosystem',
-    stack: 'Godot 4.4 · FastAPI · PRD/GDDR specs',
-    text: 'Turn-based wargame designed as paper-replicable specs, with its own MCP server.',
+    name: 'Sociedad Rural del Oeste Argentino — site & blog',
+    stack: 'Astro SSR · Svelte 5 · AWS',
+    text: 'Spec-driven full-stack build for the rural society; in production (private repo).',
+    repo: null,
+    live: 'https://sroa.grupoalvs.com/',
+  },
+  {
+    name: 'Coveris — healthcare capacity-planning SaaS',
+    stack: 'Angular 21 · Django / DRF · AWS',
+    text: 'Spec-driven SaaS built with a multi-tier AI-agent pipeline; MVP running on AWS.',
+    repo: 'https://github.com/kodexArg/kdx-ng-coveris',
+    live: null,
+  },
+  {
+    name: 'Subordinación y Valor — agentic world-building',
+    stack: 'Creative writing · Godot 4.4 · specs',
+    text: 'Story writing and world building with agentic AI: game specs, character kit, Godot client.',
     repo: 'https://github.com/kodexArg/gdt-syv',
     live: null,
   },
@@ -94,39 +101,44 @@ const projects = [
 
 const skills = [
   {
-    icon: 'fa-solid fa-wand-magic-sparkles',
-    title: 'AI & Agent Engineering',
-    items: 'Multi-agent orchestration · MCP servers & clients · Claude Code · Hermes Agent · OpenClaw · Antigravity SDK · n8n · RAG · Prompt engineering',
-  },
-  {
-    icon: 'fa-solid fa-compass-drafting',
-    title: 'Method',
-    items: 'Spec-driven development · PRD / ADR discipline · Contract-first APIs · BDD / TDD · Docs-as-code',
-  },
-  {
     icon: 'fa-brands fa-python',
     title: 'Backend',
-    items: 'Python · Django / DRF (expert) · FastAPI · PostgreSQL · Redis · Celery · pytest',
+    items: 'Python · Django / DRF (expert) · FastAPI · PostgreSQL · Redis · pytest',
   },
   {
     icon: 'fa-brands fa-aws',
     title: 'Cloud & DevOps',
-    items: 'AWS (ECS Fargate · App Runner · Amplify · Lambda · RDS · Cognito · CloudFormation) · Cloudflare (Pages · Workers · D1 · R2) · Docker · GitHub Actions / OIDC · Linux',
-  },
-  {
-    icon: 'fa-solid fa-code',
-    title: 'Frontend',
-    items: 'Angular 21 · Astro · Svelte · PrimeNG · Tailwind CSS · HTMX',
+    items: 'AWS (end to end) · Cloudflare · Docker · CloudFormation / IaC · CI/CD',
   },
   {
     icon: 'fa-solid fa-network-wired',
     title: 'Infrastructure & IoT',
-    items: 'Networking · VPN / IPsec · MikroTik · FortiGate · VoIP · Raspberry Pi fleets · ESP32',
+    items: 'Networking · VPN / IPsec · MikroTik · Raspberry Pi & ESP32 fleets · room-scale sensor networks · video surveillance with AI',
+  },
+  {
+    icon: 'fa-brands fa-linux',
+    title: 'Linux SysAdmin',
+    items: 'Debian · RHEL · clustering & high availability · Nginx · systemd · self-hosted agentic systems (Hermes Agent · OpenClaw)',
+  },
+  {
+    icon: 'fa-solid fa-code',
+    title: 'Full Stack',
+    items: 'Angular (CSR & SSR) · Astro · Svelte · HTMX',
+  },
+  {
+    icon: 'fa-solid fa-wand-magic-sparkles',
+    title: 'AI & Agents',
+    items: 'Multi-agent orchestration · MCP servers & clients · Claude Code · n8n · RAG',
   },
   {
     icon: 'fa-solid fa-people-group',
     title: 'Leadership & Business',
-    items: 'Team leadership · Solutions architecture · Business process automation · Vendor & budget management · Power BI',
+    items: 'Team leadership · Solutions architecture · Business process automation · Vendor & budget management',
+  },
+  {
+    icon: 'fa-solid fa-compass-drafting',
+    title: 'Method',
+    items: 'Spec-driven development · Contract-first APIs · BDD / TDD · Docs-as-code',
   },
 ];
 
@@ -150,17 +162,16 @@ const schema = {
       'Agentic AI',
       'Multi-agent Orchestration',
       'Model Context Protocol',
-      'LLM Orchestration',
       'Spec-Driven Development',
       'Python',
       'Django',
       'Django REST Framework',
       'AWS',
-      'CloudFormation',
       'Cloudflare',
+      'Linux',
+      'IoT',
       'Solutions Architecture',
       'DevOps',
-      'Business Process Automation',
     ],
     knowsLanguage: ['es', 'en'],
     address: { '@type': 'PostalAddress', addressLocality: 'Mendoza', addressCountry: 'AR' },
@@ -171,7 +182,7 @@ const schema = {
 <Layout
   lang="en"
   title="Gabriel Cavedal — AI Solutions Architect & Fractional CTO"
-  description="AI Solutions Architect & Fractional CTO. Spec-driven development with AI agent fleets (MCP, multi-agent orchestration). Django/DRF expert; production platforms on AWS and Cloudflare. 20+ years leading IT. Remote consulting for Spain & Europe."
+  description="Infrastructure & software architect, multi-company technical lead. Spec-driven development with AI agent fleets. Django/DRF expert; production platforms on AWS and Cloudflare. Open to remote consulting."
   ogUrl="https://cv.kodexarg.com/"
 >
   <div class="ncv-bg">
@@ -206,12 +217,10 @@ const schema = {
         <main>
           <h2><i class="fa-solid fa-user" aria-hidden="true"></i>Profile</h2>
           <p>
-            Hands-on architect and technical lead with 20+ years running IT for multi-business groups — and
-            shipping the software they run on. Today I design more than I type: spec-driven development
-            (PRD → ADR → test-enforced API contracts) executed with fleets of AI agents under BDD/TDD
-            discipline. Django/DRF expert; production platforms on AWS and Cloudflare’s edge. My edge is
-            business fluency — I read a P&amp;L as comfortably as a stack trace. Open to remote consulting
-            for Spain and Europe: architecture reviews, AI adoption scouting, quick wins.
+            Infrastructure and software architect; multi-company technical lead for 20+ years. I design
+            systems end to end — cloud platforms, production web applications, IoT fleets — working
+            spec-driven with fleets of AI agents under BDD/TDD discipline. Django/DRF expert. Open to remote
+            consulting: architecture reviews, AI adoption scouting, quick wins.
           </p>
 
           <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Experience</h2>
@@ -278,17 +287,19 @@ const schema = {
 
           <h2><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>Education</h2>
           <p class="side-line">Technical school — ENET N°1 «Ing. Pablo Nogués», Mendoza</p>
+          <p class="side-line">Electromechanical Engineering (incomplete) — UNSL, San Luis</p>
+          <p class="side-line">Graphic Design (incomplete) — Villa Mercedes, San Luis</p>
           <p class="side-line">
-            Continuous certification —
-            <a href="https://platzi.com/p/gcavedal/" target="_blank" rel="noopener">Platzi</a>: AI &amp; data
-            science, backend (Django), cloud &amp; DevOps
+        Continuous certification —
+        <a href="https://platzi.com/p/gcavedal/" target="_blank" rel="noopener">Platzi</a>: AI &amp; data
+        science, backend (Django), cloud &amp; DevOps
           </p>
 
           <div class="freelance">
             <h3><i class="fa-solid fa-handshake" aria-hidden="true"></i>Freelance &amp; Consulting</h3>
             <p>
               Available for architecture reviews, AI adoption scouting and quick-win engagements.
-              Remote-first, Europe-friendly hours.
+              Remote-first.
             </p>
           </div>
         </aside>
@@ -315,11 +326,10 @@ const schema = {
     background: linear-gradient(to bottom right, #b8bab7, var(--color-mate-300));
     padding: 2.5rem 1rem 2rem;
     font-family: 'Source Sans Pro', sans-serif;
-    transition: padding 0.2s ease, background 0.2s ease;
   }
 
   .ncv {
-    max-width: 210mm;
+    max-width: 1140px;
     margin: 0 auto;
     background: #fff;
     border-radius: 0.5rem;
@@ -332,8 +342,8 @@ const schema = {
   .ncv .masthead {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    padding: 1.75rem 1.75rem 1.4rem;
+    gap: 2.25rem;
+    padding: 2.25rem 2.25rem 1.8rem;
     background: linear-gradient(to right, var(--color-mate-600), var(--color-mate-700));
   }
   .ncv .masthead-text {
@@ -342,7 +352,7 @@ const schema = {
   }
   .ncv h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 2.6rem;
+    font-size: 3.6rem;
     font-weight: 600;
     line-height: 1.05;
     color: var(--color-mate-50);
@@ -352,26 +362,26 @@ const schema = {
   }
   .ncv .headline {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.05rem;
+    font-size: 1.5rem;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--color-pullover-200);
-    margin: 0.4rem 0 0;
+    margin: 0.5rem 0 0;
     text-align: left;
   }
   .ncv .keywords {
-    font-size: 0.92rem;
+    font-size: 1.28rem;
     color: var(--color-mate-200);
-    margin: 0.3rem 0 0;
+    margin: 0.4rem 0 0;
     text-align: left;
   }
   .ncv .contact {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem 1.1rem;
-    margin-top: 0.85rem;
-    font-size: 0.85rem;
+    gap: 0.45rem 1.4rem;
+    margin-top: 1.1rem;
+    font-size: 1.12rem;
   }
   .ncv .contact a,
   .ncv .contact span {
@@ -385,14 +395,14 @@ const schema = {
   }
   .ncv .contact i {
     color: var(--color-pullover-300);
-    margin-right: 0.35rem;
+    margin-right: 0.4rem;
   }
   .ncv .photo {
-    width: 7rem;
-    height: 7rem;
+    width: 11rem;
+    height: 11rem;
     object-fit: cover;
-    border-radius: 0.75rem;
-    border: 2px solid var(--color-pullover-300);
+    border-radius: 0.85rem;
+    border: 3px solid var(--color-pullover-300);
     box-shadow: 0 10px 15px -3px rgb(21 18 15 / 0.45);
     flex-shrink: 0;
   }
@@ -403,14 +413,14 @@ const schema = {
     flex-direction: column;
   }
   .ncv .columns > main {
-    padding: 0.5rem 1.75rem 1.75rem;
+    padding: 0.75rem 2.25rem 2.25rem;
     display: block;
   }
   .ncv .columns > aside {
     background: var(--color-mate-100);
-    padding: 0.5rem 1.5rem 1.75rem;
+    padding: 0.75rem 2rem 2.25rem;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     .ncv .columns {
       flex-direction: row;
       align-items: stretch;
@@ -426,34 +436,34 @@ const schema = {
   /* Typography overrides (the legacy global.css styles h1-h4/p/section/article at element level) */
   .ncv h2 {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1.6rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--color-mate-500);
     text-align: left;
-    margin: 1.5rem 0 0.5rem;
-    padding-bottom: 0.3rem;
+    margin: 2rem 0 0.7rem;
+    padding-bottom: 0.35rem;
     border-bottom: 2px solid var(--color-pullover-50);
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.65rem;
   }
   .ncv h2 i {
     color: var(--color-pullover-400);
-    font-size: 0.95rem;
+    font-size: 1.3rem;
     margin: 0;
   }
   .ncv h3 {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.02rem;
+    font-size: 1.45rem;
     font-weight: 500;
     color: var(--color-mate-700);
     margin: 0;
   }
   .ncv p {
-    font-size: 0.93rem;
-    line-height: 1.55;
+    font-size: 1.3rem;
+    line-height: 1.5;
     text-align: left;
     color: var(--color-mate-600);
     margin: 0;
@@ -467,22 +477,22 @@ const schema = {
   /* Experience & projects */
   .ncv .job,
   .ncv .project {
-    margin-top: 0.85rem;
+    margin-top: 1.1rem;
   }
   .ncv .job:first-of-type,
   .ncv .project:first-of-type {
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
   }
   .ncv .job-head {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    gap: 0.75rem;
+    gap: 1rem;
     flex-wrap: wrap;
   }
   .ncv .dates,
   .ncv .stack {
-    font-size: 0.78rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--color-pullover-400);
     white-space: nowrap;
@@ -493,36 +503,36 @@ const schema = {
     font-weight: 400;
   }
   .ncv .company {
-    font-size: 0.84rem;
+    font-size: 1.15rem;
     color: var(--color-mate-500);
-    margin-top: 0.05rem;
+    margin-top: 0.1rem;
   }
   .ncv main ul {
     list-style: none;
-    margin: 0.3rem 0 0;
+    margin: 0.4rem 0 0;
     padding: 0;
   }
   .ncv main li {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 1.26rem;
+    line-height: 1.48;
     color: var(--color-mate-600);
     position: relative;
-    padding-left: 1rem;
-    margin-top: 0.25rem;
+    padding-left: 1.3rem;
+    margin-top: 0.35rem;
   }
   .ncv main li::before {
     content: '▸';
     position: absolute;
     left: 0;
-    top: 0.1em;
-    font-size: 0.72rem;
+    top: 0.12em;
+    font-size: 0.95rem;
     color: var(--color-pullover-300);
   }
   .ncv .proj-link {
-    margin-left: 0.45rem;
+    margin-left: 0.55rem;
     color: var(--color-pullover-400);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.25rem;
     transition: color 0.15s ease;
   }
   .ncv .proj-link:hover {
@@ -534,31 +544,31 @@ const schema = {
 
   /* Sidebar */
   .ncv .skill-group {
-    margin-top: 0.7rem;
+    margin-top: 1rem;
   }
   .ncv .skill-group h3 {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.96rem;
+    gap: 0.65rem;
+    font-size: 1.35rem;
   }
   .ncv .skill-group h3 i {
     color: var(--color-pullover-500);
-    width: 1.15rem;
+    width: 1.5rem;
     text-align: center;
     margin: 0;
-    font-size: 0.85rem;
+    font-size: 1.15rem;
   }
   .ncv .skill-group p {
-    font-size: 0.84rem;
+    font-size: 1.15rem;
     line-height: 1.5;
-    padding-left: 1.65rem;
-    margin-top: 0.1rem;
+    padding-left: 2.15rem;
+    margin-top: 0.15rem;
   }
   .ncv .side-line {
-    font-size: 0.86rem;
+    font-size: 1.18rem;
     line-height: 1.5;
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
   }
   .ncv .side-line a {
     color: var(--color-mate-700);
@@ -570,37 +580,37 @@ const schema = {
     color: var(--color-pullover-300);
   }
   .ncv .freelance {
-    margin-top: 1.4rem;
+    margin-top: 1.8rem;
     background: rgb(255 255 255 / 0.55);
     border: 1px solid var(--color-pullover-100);
-    border-radius: 0.6rem;
-    padding: 0.85rem 1rem;
+    border-radius: 0.7rem;
+    padding: 1.1rem 1.3rem;
   }
   .ncv .freelance h3 {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.96rem;
+    gap: 0.65rem;
+    font-size: 1.35rem;
   }
   .ncv .freelance h3 i {
     color: var(--color-pullover-500);
     margin: 0;
-    font-size: 0.85rem;
+    font-size: 1.15rem;
   }
   .ncv .freelance p {
-    font-size: 0.84rem;
+    font-size: 1.15rem;
     line-height: 1.5;
-    margin-top: 0.25rem;
+    margin-top: 0.35rem;
   }
 
   /* Screen-only footer */
   .ncv-foot {
-    max-width: 210mm;
-    margin: 1rem auto 0;
+    max-width: 1140px;
+    margin: 1.2rem auto 0;
     text-align: center;
   }
   .ncv-foot p {
-    font-size: 0.85rem;
+    font-size: 1.05rem;
     color: var(--color-mate-800);
     font-family: 'Source Sans Pro', sans-serif;
   }
@@ -609,7 +619,7 @@ const schema = {
     text-decoration: underline;
   }
   .ncv-foot .print-btn {
-    font-size: 0.85rem;
+    font-size: 1.05rem;
     color: var(--color-mate-800);
     text-decoration: underline;
     cursor: pointer;
@@ -624,18 +634,30 @@ const schema = {
   }
 
   /* Small screens */
-  @media (max-width: 520px) {
+  @media (max-width: 640px) {
     .ncv .masthead {
       flex-direction: column-reverse;
       align-items: flex-start;
-      gap: 1rem;
+      gap: 1.2rem;
+      padding: 1.5rem;
     }
     .ncv .photo {
-      width: 6rem;
-      height: 6rem;
+      width: 8rem;
+      height: 8rem;
     }
     .ncv h1 {
-      font-size: 2.1rem;
+      font-size: 2.5rem;
+    }
+    .ncv .keywords {
+      font-size: 1.1rem;
+    }
+    .ncv .contact {
+      font-size: 1rem;
+    }
+    .ncv .columns > main,
+    .ncv .columns > aside {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
   }
 
@@ -671,7 +693,8 @@ const schema = {
       padding: 0.15rem 1.2rem 0.5rem;
     }
     .ncv .masthead {
-      padding: 0.7rem 1.4rem 0.55rem;
+      padding: 0.6rem 1.4rem 0.45rem;
+      gap: 1.4rem;
     }
     .ncv h1 {
       font-size: 1.8rem;
@@ -686,14 +709,19 @@ const schema = {
       margin-top: 0.12rem;
     }
     .ncv .photo {
-      width: 4.6rem;
-      height: 4.6rem;
+      width: 4.8rem;
+      height: 4.8rem;
+      border-width: 2px;
     }
     .ncv h2 {
       font-size: 0.98rem;
-      margin-top: 0.5rem;
-      margin-bottom: 0.28rem;
+      margin-top: 0.45rem;
+      margin-bottom: 0.25rem;
       padding-bottom: 0.1rem;
+      gap: 0.5rem;
+    }
+    .ncv h2 i {
+      font-size: 0.85rem;
     }
     .ncv h3 {
       font-size: 0.9rem;
@@ -704,19 +732,23 @@ const schema = {
     .ncv p,
     .ncv main li {
       font-size: 0.76rem;
-      line-height: 1.26;
+      line-height: 1.24;
     }
     .ncv main ul {
       margin-top: 0.1rem;
     }
     .ncv main li {
-      margin-top: 0.08rem;
+      margin-top: 0.1rem;
+      padding-left: 1rem;
+    }
+    .ncv main li::before {
+      font-size: 0.6rem;
     }
     .ncv .job {
       margin-top: 0.4rem;
     }
     .ncv .project {
-      margin-top: 0.26rem;
+      margin-top: 0.22rem;
     }
     .ncv .company {
       font-size: 0.7rem;
@@ -728,14 +760,31 @@ const schema = {
     .ncv .job-head {
       gap: 0.5rem;
     }
+    .ncv .proj-link {
+      font-size: 0.8rem;
+      margin-left: 0.4rem;
+    }
     .ncv .skill-group {
-      margin-top: 0.35rem;
+      margin-top: 0.4rem;
+    }
+    .ncv .skill-group h3,
+    .ncv .freelance h3 {
+      font-size: 0.85rem;
+      gap: 0.45rem;
+    }
+    .ncv .skill-group h3 i,
+    .ncv .freelance h3 i {
+      font-size: 0.72rem;
+      width: 1rem;
     }
     .ncv .skill-group p,
     .ncv .side-line,
     .ncv .freelance p {
       font-size: 0.74rem;
-      line-height: 1.38;
+      line-height: 1.36;
+    }
+    .ncv .skill-group p {
+      padding-left: 1.45rem;
     }
     .ncv .freelance {
       margin-top: 0.7rem;
